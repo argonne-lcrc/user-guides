@@ -1,7 +1,7 @@
 [data-md-color-scheme="alcf"] {
 	/* Colors */
   --md-primary-fg-color:        #edf1f5;
-  --md-primary-fg-color--light: #FFFFFF;
+  --md-primary-fg-color--light: #edf1f5;
   --md-primary-fg-color--dark:  #080813;
   --md-accent-fg-color:                #118ACB;
   --md-accent-fg-color--transparent:   hsla(#{hex2hsl($md-accent-fg-color)}, 0.1);
@@ -21,7 +21,7 @@ body {
 }
 
 .md-typeset h1, .md-typeset h2 {
-	color: #1d1651;
+	color: #118acb;
 }
 
 .md-typeset h1 {
@@ -89,6 +89,10 @@ body {
 .md-header__inner .md-logo img {
 	height: auto;
 	width: 100px;
+}
+
+main {
+	background-color: var(--md-primary-fg-color);
 }
 
 
@@ -309,6 +313,21 @@ body {
 	font-size: 15px;
 	line-height: 18px;
 }
+
+
+.md-search__form {
+  background-color: #badef5;
+  color: #1d1651;
+  border-radius: 0.1rem;
+  height: 1.8rem;
+}
+
+.md-search__input+.md-search__icon,
+.md-search__input::placeholder {
+	color: #1d1651;
+	opacity: 1;
+}
+
 
 
 
