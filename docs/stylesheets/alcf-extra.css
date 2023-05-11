@@ -845,8 +845,9 @@ footer .grid{
 }
 
 .footer--address {
-	grid-column: 3 / span 1;
+	grid-column: 3 / span 3;
 	grid-row: 1;
+	margin-top: .55rem;
 }
 
 @media only screen and (max-width: 960px) {
@@ -916,6 +917,25 @@ footer a {
 
 footer a:hover {
 	color: #6e6e78;
+}
+
+.social {
+	display: inline-block;
+	margin-left: .25rem;
+	position: relative;
+	top: 3px;
+	&:first-child{
+		margin-left: .75rem;
+	}
+}
+
+.social svg {
+	fill: #badef5;
+	height: .85rem;
+}
+
+.social:hover svg {
+	fill: #6e6e78;
 }
 
 .footer--logos img {
