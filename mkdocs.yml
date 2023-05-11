@@ -68,14 +68,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-repo_name: 'argonne-lcf/ALCF-AI-Testbed'
-repo_url: 'https://github.com/argonne-lcf/ALCF-AI-Testbed'
-site_url: 'https://argonne-lcf.github.io/ai-testbed-userdocs/'
+repo_name: 'argonne-lcrc/user-guides'
+repo_url: 'https://github.com/argonne-lcrc/user-guides'
+site_url: 'https://argonne-lcrc.github.io/user-guides'
 
 extra:
   social:
     - icon: 'fontawesome/brands/github-alt'
-      link: 'https://github.com/argonne-lcf/ALCF-AI-Testbed'
+      link: 'https://github.com/argonne-lcrc/user-guides'
 
 plugins:
   - search
