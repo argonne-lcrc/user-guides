@@ -269,7 +269,7 @@ main {
 
 @media screen and (min-width: 60em) {
 		.header--primary .header__nav-secondary .md-search__inner {
-			width: 8rem;
+			width: 4rem;
 		} 	
 }
 
@@ -317,15 +317,20 @@ main {
 
 .md-search__form {
   background-color: #badef5;
-  color: #1d1651;
   border-radius: 0.1rem;
   height: 1.8rem;
+  &:hover {
+  	background-color: #d7e6f3;
+  }
 }
 
-.md-search__input+.md-search__icon,
-.md-search__input::placeholder {
+.md-search__input+.md-search__icon {
 	color: #1d1651;
 	opacity: 1;
+}
+
+.md-search__input::placeholder {
+	opacity: 0;
 }
 
 
