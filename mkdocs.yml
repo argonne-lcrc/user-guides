@@ -1,31 +1,5 @@
-site_name: AI Testbed User Guide
-nav:
-  - Home: index.md
-  - Cerebras:
-    - System Overview: cerebras/System-Overview.md
-    - Getting Started: cerebras/Connect-to-a-CS-2-Node.md
-    - Steps to Run a Model/Program: cerebras/Steps-to-run-a-model-or-program.md
-    - Job Queuing and Submission: cerebras/Job-Queuing-and-Submission.md
-    - Example Programs: cerebras/Example-Programs.md
-    - Customizing environments: cerebras/Using-virtual-environments-to-customize-environment.md
-    - Performance Tools: cerebras/Performance-Tools.md
-    - Tunneling and Forwarding Ports: cerebras/Tunneling-and-forwarding-ports.md
-    - Miscellaneous: cerebras/Miscellaneous.md
-  - SambaNova:
-    - System Overview: sambanova/System-Overview.md
-    - Getting Started: sambanova/Logging-into-a-SambaNova-Node.md
-    - Virtual Environment: sambanova/Virtual-Environment.md
-    - Steps to Run a Model/Program: sambanova/Steps-to-Run-a-Model-or-Program.md
-    - Job Queuing and Submission: sambanova/Job-Queuing-and-Submission.md
-    - Example Programs: sambanova/Example-Programs.md
-    - Example Multi-Node Programs: sambanova/Example-Multi-Node-Programs.md
-    - Steps to Run BERT Large on Sambanova DataScale SN10-8R: sambanova/Steps-to-Run-BERT-Large-on-Sambanova-DataScale-SN10-8R.md
-    - Tunneling and Forwarding Ports: sambanova/Tunneling-and-forwarding-ports.md
-    #- DataParallel: sambanova/DataParallel.md
-    - Miscellaneous: sambanova/Miscellaneous.md
-    - Documentation: sambanova/Documentation.md
-  - Storage: common/storage.md
-  - Publication Policy: common/pub-policy.md
+site_name: LCRC User Guide
+
 
 theme:
   name: 'material'
