@@ -73,6 +73,11 @@ body {
     --md-scroll-margin: 9rem;
 }
 
+.md-nav--primary .md-nav__title {
+	background: none;
+	box-shadow: none;
+}
+
 
 
 
