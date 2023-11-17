@@ -1,6 +1,8 @@
 site_name: LCRC User Guide
-
-
+nav:
+  - Home: index.md
+  - Account and Project Management:
+    - Accounts and Access: account-project-management/accounts-and-access.md
 theme:
   name: 'material'
   custom_dir: overrides
