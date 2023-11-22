@@ -1,4 +1,5 @@
 # Running Jobs on Improv
+
 ## Introduction
 
 At a high level, getting computational tasks run on an HPC system is a two-step process:
@@ -15,9 +16,9 @@ The new LCRC production cluster named Improv has 825 dual-socket compute nodes w
 ## Logging Into Improv
 
 Please be sure to following our [Getting Started documentation](http://www.lcrc.anl.gov/for-users/getting-started/) in order to make sure you’ve completed the necessary steps so that you can login to LCRC clusters. Once you’ve done this, you can SSH to Improv by running the following:
-```
-ssh <your_argonne_username>@improv.lcrc.anl.gov
-```
+
+`ssh <your_argonne_username>@improv.lcrc.anl.gov`
+
 The LCRC **login nodes should not be used to run jobs**. Doing so may impact other users and require these login nodes to be rebooted.
 
 All LCRC clusters share the same global GPFS filesystem. All of your home and project directories noted in our [storage documentation](http://www.lcrc.anl.gov/systems/resources/storage/) will be available between clusters.
@@ -38,10 +39,9 @@ sbank is the accounting system used within the LCRC Improv (this is completely s
 The sbank accounting system helps users manage their allocations and usage per job. It gives the PIs the ability to monitor their allocation usage by user, job, and machine. It also allows the user to monitor their usage per allocation and provides insight on how many hours are left on the project.
 
 Allocations on Improv are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. This is a change from other LCRC clusters such as Bebop that currently reports in Core Hours. On Improv, the compute nodes charge as follows for each job:
-```
-Improv Nodes
-# of Nodes * Time Used
-```
+
+`# of Nodes * Time Used`
+
 Accounts will be charged for a full node no matter how many CPUs are used per node.
 
 We have provided [some basic information about sbank](https://www.lcrc.anl.gov/for-users/using-lcrc/running-jobs/running-jobs-on-improv/accounting-on-improv/) and also [some examples commands](https://www.lcrc.anl.gov/for-users/using-lcrc/running-jobs/running-jobs-on-improv/accounting-on-improv/sbank-example-commands/) that you may use.
@@ -50,6 +50,7 @@ Balances, transactions and other sbank details displayed from sbank commands wil
 Any charges or transactions that use less than .05 of a node hour will display as 0, however, the correct charge is being made to the project account.
 
 ## Obtaining and Managing Compute Resources
+
 ### Definitions and Notes
 
 `chunk`: A set of resources allocated as a unit to a job. Specified inside a selection directive. All parts of a chunk come from the same host. In a typical MPI (Message-Passing Interface) job, there is one chunk per MPI process.
@@ -61,6 +62,7 @@ Any charges or transactions that use less than .05 of a node hour will display a
 `job`: A job equates to a qsub. A set of resources allocated to you for a period of time. Your will execute one or more tasks on those resources during your job.
 
 `task`: A single execution on the resources of your job, often an mpirun invocation. You may run one task or many tasks during your job. You may run tasks sequentially or divide your resources up and run several tasks concurrently. Also sometimes referred to as job steps.
+
 ### Quick Start
 
 If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro commands very similar though the options to qsub are quite different. We have added a handy conversion “cheat sheet” here. Here are the “Big Four” commands you will use with PBS Pro:
@@ -76,8 +78,8 @@ If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro c
     * Try these variations and see which you like best: `qstat, qstat -was, qstat -was1, qstat -wan, qstat -wan1`. Add `-x` to see jobs that have completed. We keep one week of history.
         PBS Documentation: Users Guide Sec. 10.2, page UG-175; Reference Guide Sec. 2.55, page RG-200
 3. `qalter`: update your request for resources
-    * Just like qsub, just add a jobid at the end. Only works before the job starts;
-    * If you want to change the walltime to 30 minutes: qalter -l walltime=30:00:00 <jobid>
+    * Just like `qsub`, just add a jobid at the end. Only works before the job starts;
+    * If you want to change the walltime to 30 minutes: `qalter -l walltime=30:00:00 <jobid>`
     * PBS Documentation: Users Guide Sec. 9.2, page UG-168; Reference Guide Sec. 2.40, page RG-130
 4. `qdel`: cancel a job that you don’t need. This will also kill a running job
     * `qdel <jobid>`
@@ -102,16 +104,15 @@ There are 825 available nodes on Improv. Several publicly available queues are d
 
 At the LCRC, your qsub will likely use the following parameters:
 
-```
-qsub -A <project> -l select=<#>,walltime=HH:MM:SS <your job script>
-```
+`qsub -A <project> -l select=<#>,walltime=HH:MM:SS <your job script>`
+
 Where:
 
-   * `<project>` is the project name associated with your allocation. What you check the balance of with the `sbank` command. This is a mandatory option at the LCRC. If you don’t include it you will get `qsub: Account_Name is required to be set`.
-   * `walltime=HH:MM:SS` specifying a wall time is mandatory at the LCRC. Jobs on Improv can run up to 72 hours maximum.
-   * `<your job script>`: For options that won’t change, you do have the option of taking things off the command line and putting them in your job script. For instance the above command line could be simplified to `qsub -l select=<#> <your job script>` if you added the following to the top (the PBS directives have to be before any executable line) of your job script:
+* `<project>` is the project name associated with your allocation. What you check the balance of with the `sbank` command. This is a mandatory option at the LCRC. If you don’t include it you will get `qsub: Account_Name is required to be set`.
+* `walltime=HH:MM:SS` specifying a wall time is mandatory at the LCRC. Jobs on Improv can run up to 72 hours maximum.
+* `<your job script>`: For options that won’t change, you do have the option of taking things off the command line and putting them in your job script. For instance the above command line could be simplified to `qsub -l select=<#> <your job script>` if you added the following to the top (the PBS directives have to be before any executable line) of your job script:
 
-```
+```bash
 #PBS -A <project>
 #PBS -l walltime=HH:MM:SS
 ```
@@ -124,23 +125,23 @@ Section 2.57.2.6 RG-219 Requesting Resources and Placing jobs in the [Reference 
 
 Resources come in two flavors:
 
-   * Job Wide: Walltime is the most common example of a job wide resource. You use the `-l` option to specify job wide resources, i.e. `-l walltime=06:00:00`. All the resources in the job have the same walltime.
-   * `-l <resource name>=<value>[,<resource name>=<value> ...]`
-   * Chunks: (see the definition above) This is how you describe what your needs are to run your job. You do this with the `-l select=` syntax. In the LCRC, we do whole node scheduling. This means you can typically get away with the very simple `-l select=4` which will give you 4 nodes with all of the available cpus.
-   * `<resource name>=<value>[:<resource name>=<value> ...]`
+* Job Wide: Walltime is the most common example of a job wide resource. You use the `-l` option to specify job wide resources, i.e. `-l walltime=06:00:00`. All the resources in the job have the same walltime.
+* `-l <resource name>=<value>[,<resource name>=<value> ...]`
+* Chunks: (see the definition above) This is how you describe what your needs are to run your job. You do this with the `-l select=` syntax. In the LCRC, we do whole node scheduling. This means you can typically get away with the very simple `-l select=4` which will give you 4 nodes with all of the available cpus.
+* `<resource name>=<value>[:<resource name>=<value> ...]`
 
 You can also tell PBS how you want the chunks distributed across the physical hardware. You do that via the `-l place` option (scatter is our default):
 
-   * `-l place=[<arrangement>][: <sharing> ][: <grouping>]` where
-    * arrangement is one of `free | pack | scatter`
-    * unless you have a specific reason to do otherwise, you probably want to set this to scatter, otherwise you may not get what you expect. For instance on a host with ncpus=128, if you requested -l select=8:ncpus=8:mpiprocs=8 you could end up with all of our chunks on one node.
-    * `free` means PBS can distribute them as it sees fit
-    * `pack` means all chunks from one host. Note that this is not the minimum number of hosts, it is one host. If the chunks can’t fit on one host, the qsub will fail.
+* `-l place=[<arrangement>][: <sharing> ][: <grouping>]` where
+* arrangement is one of `free | pack | scatter`
+* unless you have a specific reason to do otherwise, you probably want to set this to scatter, otherwise you may not get what you expect. For instance on a host with ncpus=128, if you requested -l select=8:ncpus=8:mpiprocs=8 you could end up with all of our chunks on one node.
+* `free` means PBS can distribute them as it sees fit
+* `pack` means all chunks from one host. Note that this is not the minimum number of hosts, it is one host. If the chunks can’t fit on one host, the qsub will fail.
     * `scatter` means take only one chunk from any given host.
 
 Here is a heavily commented sample PBS submission script that shows some more of the options, but remember that the PBS manuals referenced at the bottom of this page are the ultimate resource. If you create a file named hello.pbs for example, you can add:
 
-```
+```bash
 #!/bin/bash -l
 # UG Section 2.5, page UG-24 Job Submission Options
 # Add another # at the beginning of the line to comment out a line
@@ -180,19 +181,20 @@ mpirun ./hello_mpi         # Run a script
 ```
 
 You would be able to submit the above script with:
-```
-qsub hello.pbs
-```
+
+`qsub hello.pbs`
+
 ### qsub example
 
 If you don’t want to use a script, you could submit via the command line as well. For example:
 
-   * `qsub -A <project_name> -l select=4:mpiprocs=128 -l walltime=30:00 -- a.out`
-    * run a.out on 4 chunks with a walltime of 30 minutes ; charge project_name;
-    * run on 128 CPUs (ncpus) per node. On Improv by default, we allocate 128 cpus per node. Set ncpus if you want less. All jobs will be charged a whole node no matter how many cpus are requested.
-    * Allocate 128 MPI slots (mpiprocs) per node. Note: When using MPI, you must specify mpiprocs. We recommend it to be the same as ncpus.
-    * Since we allocate full nodes on Improv, 4 chunks will be 4 nodes. If we shared nodes, that would be 4 threads.
-    * use the `--` (dash dash) syntax when directly running an executable.
+`qsub -A <project_name> -l select=4:mpiprocs=128 -l walltime=30:00 -- a.out`
+
+* run a.out on 4 chunks with a walltime of 30 minutes ; charge project_name;
+* run on 128 CPUs (ncpus) per node. On Improv by default, we allocate 128 cpus per node. Set ncpus if you want less. All jobs will be charged a whole node no matter how many cpus are requested.
+* Allocate 128 MPI slots (mpiprocs) per node. Note: When using MPI, you must specify mpiprocs. We recommend it to be the same as ncpus.
+* Since we allocate full nodes on Improv, 4 chunks will be 4 nodes. If we shared nodes, that would be 4 threads.
+* use the `--` (dash dash) syntax when directly running an executable.
 
 ### qstat: Query the status of jobs/queues
 
@@ -200,7 +202,7 @@ If you don’t want to use a script, you could submit via the command line as we
 
 At it’s most basic, you just type qstat and it will list all the jobs currently running, queued, or held on the system. If you are interested in a specific job or jobs, you can provide a space separated list on the command line: qstat job1 job2....
 
-```
+```sh
 % qstat
 Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
@@ -208,6 +210,7 @@ Job id            Name             User              Time Use S Queue
 336987.imgt1      inf_clDB         user2                    0 H compute
 353205.imgt1      3d-2.sub         user3             2044:14* R compute
 ```
+
 One of the annoying things about `qstat` is that the output fields are fixed with and it will truncate the output. This is indicated by an asterisk as the last character. You can add -w for wide. It doesn’t prevent truncation, but makes it less likely. A useful variant is `qstat -was1`. It shows the number of nodes, tasks, the requested walltime, and the comment, all on one line. `qstat -wan` will give you the node list you ran on, just remember that can be long. If you want an estimate of when the job will start, add the `-T` option. Note that start time is not available for all jobs, just the next N jobs that are expected to run. If you want to know everything there is to know about the job, add the `-f` flag.
 
 The comment field is your friend. Wondering why your job isn’t running? Check the comment. Wondering about the fate of a finished job? Add the -x option to see finished jobs (our history retention is currently set at one week) and check the comment. This cannot be stressed enough. Often, when a user ticket comes in about PBS, we answer it by looking at the comment.
@@ -221,21 +224,18 @@ Basically takes the same options as `qsub`; Say you typoed and set the walltime 
 ### qdel: Delete a queued or running job:
 
 [Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.3, page UG-170; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.41, page RG-143
-```
-qdel <jobid> [<jobid> <jobid>...]
-```
+
+`qdel <jobid> [<jobid> <jobid>...]`
+
 ### qhold,qrls: Place / release a user hold on a job
 
 [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec 2.44, page RG-150 and Sec 2.50, page RG-183
 
-```
-[qhold | qrls] <jobid> [<jobid> <jobid>...]
-```
+`[qhold | qrls] <jobid> [<jobid> <jobid>...]`
 
 ### qselect: Query jobids for use in commands
 
 [Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 10.1, page UG-175; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.52, page RG-189
-
 
 `qdel $(qselect -N test1)` will delete all the jobs that had the job name set to test1.
 
@@ -243,9 +243,8 @@ qdel <jobid> [<jobid> <jobid>...]
 
 [Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.4, page UG-171; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.47, page RG-177
 
-```    
-qmsg -E -O "This is the message" <jobid> [<jobid> <jobid>...]
-```
+`qmsg -E -O "This is the message" <jobid> [<jobid> <jobid>...]`
+
 `-E` writes it to standard error, `-O` writes it to standard out
 
 ### qsig: Send a signal to a job
