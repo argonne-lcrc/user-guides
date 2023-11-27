@@ -1,75 +1,34 @@
 # sbank Example Commands
-Below is a set of helpful commands to help you better manage the projects you have running at the ALCF.
+
+Below is a set of helpful commands to help you better manage the projects you have running at the LCRC.
 
 ## View your project's allocations
+
 ### **Command:** sbank-list-allocations
 
-Use this command to list all of your active allocations for a specific project [Project-X]. This is useful when you need to provide this information in a report.
-```
-> sbank-list-allocations -p ProjectX -r all
- Id         Start       End         Resource   Project          Jobs        Charged          Available Balance 
- ---------  ----------  ----------  ---------  ---------------  ----------  ---------------  ----------------- 
- 2106       2016-01-04  2017-01-01  cooley     ProjectX              1,139          6,032.8           43,967.2 
- 2146       2016-01-14  2017-01-10  theta      ProjectX                983      1,084,770.3       25,483,927.5
- 6438       2020-09-22  2022-01-01  thetagpu   ProjectX                  3              0.0            2,000.0 
+Use this command to list all of your active allocations for a specific project [support]. This is useful when you need to provide this information in a report.
 
-
-Totals:
-  Rows: 3
-  Cooley:
-    Available Balance: 43,967.2 node hours
-    Charged          : 6,032.8 node hours
-    Jobs             : 1,139 
- Theta:
-    Available Balance: 25,483,927.5 node hours 
-    Charged          : 1,084,770.3 node hours 
-    Jobs             : 983 
- Thetagpu:
-    Available Balance: 2,000.0 node hours
-    Charged          : 0.0 node hours
-    Jobs             : 3 
-```
-
-### List your project's quota on Grand and/or Eagle File system
-```
-> sbank-list-allocations -p ProjectX -r grand
- Allocation  Suballocation  Start       End         Resource  Project      Quota
- ----------  -------------  ----------  ----------  --------  -----------  -----
- 6687        6555           2020-12-16  2022-01-01  grand     ProjectX    1.0
+```sh
+$ sbank-list-allocations -p support -r all
+ Allocation  Suballocation  Start       End         Resource  Project  Jobs  Charged  Available Balance
+ ----------  -------------  ----------  ----------  --------  -------  ----  -------  -----------------
+ 2           2              2023-10-01  2024-01-01  improv    support   961  1,456.5            8,621.6
+ 116         116            2023-10-01  2024-01-01  improv    support     3      7.0              496.9
 
 Totals:
-  Rows: 1
-  Grand:
-    Quota: 1.0 TB
+  Rows: 2
+  Improv:
+    Available Balance: 9,118.5 node hours
+    Charged          : 1,463.5 node hours
+    Jobs             : 964
 
-> sbank-list-allocations -p ProjectX -r eagle
- Allocation  Suballocation  Start       End         Resource  Project      Quota
- ----------  -------------  ----------  ----------  --------  -----------  -----
- 6688        6556           2020-12-16  2022-01-01  eagle     ProjectX    1.0
-
-Totals:
-  Rows: 1
-  Eagle:
-    Quota: 1.0 TB
-```
-
-### List only the created timestamp field for all allocations that were created before 01-01-2015 for ProjectX accross all resources
-```
-> sbank-list-allocations  --created "<20150101" -r all -p ProjectX "-f created"
- Created    
- ---------- 
- 2016-01-04 
- 2016-01-14 
- 2016-01-15 
-
-Totals:
-  Rows: 3
-Date  filters (UTC): created < "2015-01-01 00:00:00",  
+All transactions displayed are in Node Hours. Each Node Hour is 128 Core Hours. Balances and transactions displayed will update every 5 minutes.
 ```
 
 ### List all active allocations for all resources for project ProjectX and add the field Created ﻿to the display list
-```
-shrubbery~ > sbank-list-allocations -r all  -p ProjectX -f "+created"
+
+```sh
+$ sbank-list-allocations -r all  -p ProjectX -f "+created"
  Id         Start       End         Resource   Project          Jobs        Charged          Available Balance  Created    
  ---------  ----------  ----------  ---------  ---------------  ----------  ---------------  -----------------  ---------- 
  279        2011-08-30  2020-01-01  theta      ProjectX              6,361     12,332,699.9      -12,332,699.9  2013-02-22 
@@ -88,10 +47,12 @@ Totals:
 ```
 
 ### List all available fields for the sbank-list-allocations command
-```
-> sbank-list-allocations  -f "?"
+
+```sh
+$ sbank-list-allocations  -f "?"
 available fields:
- id
+ allocation
+ suballocation
  start_timestamp
  end_timestamp
  resource
@@ -99,36 +60,50 @@ available fields:
  jobs_count
  charged_sum
  available_balance_sum
- created_timestamp
+ allocation_created_timestamp
  award_category
  award_type_name
  admin_name
- cbank_ref
+ subname
+ primary
+ restricted
+ deposits
+ pullbacks
+ sub_deposits
+ sub_withdraws
+ disable_message
+ submanagement_enabled
+ users_list
  comment
+ last_updated_timestamp
 ```
 
 ## View your project's users
+
 ### **Command:** sbank-list-users
 
-List all charges for userx on theta on project ProjectX
-```
-> sbank-list-users -p ProjectX -r theta -u userx
+List all charges for userx on project support
+
+```sh
+$ sbank-list-users -p support -u userx
  User             Jobs        Charged         
  ---------------  ----------  --------------- 
  userx                 1,814          9,884.5
 
 Totals:
   Rows: 1
-  Resources: theta
+  Resources: improv
+  Projects: support
   Charged: 9,884.5 node hours
   Jobs   : 1,814 
-  ```
+```
 
-### List charges for all users in ProjectX on Cooley.
+### List charges for all users in support.
+
 This works for project leads (i.e. PIs, Co-PIs, Proxies), since they can see everything in their own projects.
 
-```
-> sbank-list-users -p ProjectX -r theta
+```sh
+$ sbank-list-users -p support
  User             Jobs        Charged         
  ---------------  ----------  --------------- 
  user1                   120          4,243.7 
@@ -146,53 +121,58 @@ This works for project leads (i.e. PIs, Co-PIs, Proxies), since they can see eve
 
 Totals:
   Rows: 11
-  Resources: theta
+  Resources: improv
+  Projects: support
   Charged: 16,311.4 node hours
   Jobs   : 2,868 
   
 ```
 
 ## View your project's jobs
+
 List jobs for user "userx" for jobs that started in the range 2016-02-15<= started < 2016-02-29 and add the transactions related to the job
 
 ### **Command:** sbank-list-jobs
 
 **Note:** The job with the refund ```transaction_ids_list field can be shorten all the way to "t" in the -f "+ t"```
 
-```
-shrubbery~ > sbank-list-jobs -u userx -f "+ t" -S "2016-02-15...2016-02-29"
- Id         Jobid      Resource   Project          Allocation  User       Duration   Charged          Transaction Ids 
- ---------  ---------  ---------  ---------------  ----------  ---------  ---------  ---------------  --------------- 
- 1013857    730417     theta       ProjectX         1740        userx      1:53:07           61,776.8  CHARGE-1011230  
- 1013860    730558     theta       ProjectX         1740        userx      1:53:07           61,776.8  CHARGE-1011233  
- 1014168    730668     theta       ProjectX         1740        userx      1:53:25           61,940.6  CHARGE-1011541  
+```sh
+$ sbank-list-jobs -u userx -f "+ t" -S "2023-10-01...2023-11-20"
+ Eventid  Jobid       Resource  Project          Allocation  Suballocation  User      Duration  Charged  Transaction Ids
+ -------  ----------  --------  ---------------  ----------  -------------  --------  --------  -------  ---------------
+ ...
+ 5488     6333.imgt1  improv    support          2           2              userx     0:01:26       2.4  CHARGE-5408
+ 5710     6557.imgt1  improv    support          2           2              userx     0:00:27       0.8  CHARGE-5555
+ 5711     6558.imgt1  improv    support          2           2              userx     0:00:26       0.7  CHARGE-5556
 
 Totals:
-  Rows: 3
-  Theta:
-    Charged      : 185,494.2 node hours
-    Duration     : 6:44:00 
-Date  filters (UTC): "2016-02-15 00:00:00" <= start < "2016-02-29 00:00:00",
+  Rows: 317
+  Improv:
+    Charged      : 792.8 node hours
+Date  filters (UTC):"2023-10-01 00:00:00" <= start < "2023-11-20 00:00:00"
 ```
 
-### List the nodes used, runtime and start timestamp for Cooley job 744160
+### List the nodes used, runtime and start timestamp for Improv job 744160
+
 **Note**: To display the date and time we increased the the number of characters of start_timestamp to 19
 
-```
-catapult~ > sbank l j -r theta -j 50576 -f "jobid nodes_used runtime start_timestamp:19" Jobid Nodes Used Runtime Start --------- ---------- --------- ------------------- 50576 512 1:00:49 2013-01-16 21:49:30 Totals: Rows: 1
+```sh
+$ sbank l j -r improv -j 50576 -f "jobid nodes_used runtime start_timestamp:19" Jobid Nodes Used Runtime Start --------- ---------- --------- ------------------- 50576 512 1:00:49 2013-01-16 21:49:30 Totals: Rows: 1
 ```
 
 ## View your project's transactions
+
 ### **Command:** sbank-list-transactions
 
 List of transactions that where at or after 2016-02-29 for ProjectX add fields: job_duration, nodes_used and hosts
 
-**Note**: 
+**Note**:
+
 - job_duration, nodes_used and hosts are shorten, but they are still uniquely identified
 - host has the left justified width of 20, specified as "h:-20"
 
-```
-catapult~ > sbank-list-transactions -p ProjectX --at "ge 2016-02-29" -f "+ job_d nodes_u h:-20" -r theta
+```sh
+$ sbank-list-transactions -p ProjectX --at "ge 2016-02-29" -f "+ job_d nodes_u h:-20" -r theta
  Id         Resource   Project          Allocation  At          User             Transaction Type  Amount           Jobid      Job Duration  Nodes Used  Hosts                
  ---------  ---------  ---------------  ----------  ----------  ---------------  ----------------  ---------------  ---------  ------------  ----------  -------------------- 
  1025426    theta       ProjectX         2147        2016-02-29  userx            CHARGE                   48,005.1  740587     1:27:54       2048        MIR-00800-33BF1-2048 
