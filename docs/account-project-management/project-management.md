@@ -188,17 +188,17 @@ After the project owner approves your membership request, you'll have access to 
 
 If you hold the role of a Project Owner (PI) or a Proxy (Co-PI), you're empowered to manage and tailor your LCRC project. Follow this structured guide:
 
-**1. Access the LCRC Account Page**: 
-   
+**1. Access the LCRC Account Page**:
+
 * Visit the [LCRC Accounts page](https://accounts.lcrc.anl.gov).
 * Sign in with your Argonne credentials.
 
-**2. Find Your Project**: 
-   
+**2. Find Your Project**:
+
 * Go to **_Projects > Owned_** on the left sidebar.
 * Select the project you'd like to oversee.
 
-**3. Project Management Options**: 
+**3. Project Management Options**:
 
 Within the project management dashboard, you can:
 
@@ -208,9 +208,8 @@ Within the project management dashboard, you can:
 * Seek more project allocations or storage.
 * Update project information.
 
-**4. Save Your Adjustments**: 
+**4. Save Your Adjustments**:
 
 * Remember to hit the **Save Project info** button post-modifications.
 
 For support or inquiries, email [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
-

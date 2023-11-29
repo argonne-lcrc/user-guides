@@ -1,12 +1,43 @@
-# Managing Your Allocations
+# Allocations on LCRC Computing Resources
 
 ## Overview of LCRC Clusters
 
 The LCRC operates three distinct clusters, each with its own scheduling and allocation systems:
 
-1. **Improv**: Operates with the PBS Pro job scheduler and measures allocations in **node hours**.
-2. **Bebop**: Utilizes the Slurm scheduler and measures allocations in **core hours**.
-3. **Swing**: Employs the Slurm scheduler but measures allocations in **GPU hours**.
+1. **Improv**: Operates with the [PBS Pro](running-jobs-at-lcrc/pbs-pro-clusters.md) job scheduler and measures allocations in **node hours**.
+2. **Bebop**: Utilizes the [Slurm](running-jobs-at-lcrc/slurm-clusters.md) job scheduler and measures allocations in **core hours**.
+3. **Swing**: Also uses Slurm but charges allocations in **GPU hours**.
+
+## Allocations Metrics for Each Cluster
+
+### GPU Hours (Swing Cluster)
+
+Unlike other LCRC clusters, Swing charges time based on GPU hours instead of CPU core hours. You need to factor this in when applying for time on Swing.
+
+On Swing, the compute nodes charge as follows for each job:
+
+`GPU Hours = Number of Nodes Used x GPUs Per Node x Time in Hours`
+
+- **Number of Nodes Used**: The number of compute nodes employed for the job.
+- **GPUs per Node**: How many GPUs used in each node.
+- **Time in Hours**: The duration for which these nodes and GPUs are used.
+
+### Core Hours (Bebop Cluster)
+
+`Core Hours = Number of Nodes Used x Cores per Node x Time in Hours`
+
+- **Number of Nodes Used**: How many separate computing nodes are being used.
+- **Cores per Node**: Number of CPU cores in each node.
+- **Time in Hours**: Duration for which these nodes (and therefore the cores within them) are used.
+
+### Node Hours (Improv Cluster)
+
+Allocations on Improv are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
+
+`Node Hours = Number of Nodes Used × Time in Hours`
+
+- **Number of Nodes Used**: The quantity of compute nodes utilized for the job.
+- **Time in Hours**: The duration for which these nodes are used.
 
 ## Mid-Quarter Allocations
 
@@ -32,10 +63,11 @@ Mid-Quarter Allocations by the LCRC are detailed here. Principal Investigators (
 - Maximum request: allocation one can request is either **250K core-hours** or **half of the initial allocation**, whichever is less.
 - This amount is pro-rated based on the remaining time in the quarter.
 
-#### Examples
+**Examples**
 
-1. If your initial allocation was **600K core-hours** or **4688 node hours**  and you request an additional **500K** 6 weeks into the quarter, you may be granted up to **125K additional core-hours** (`250K * 6/12`).
-2. If your initial request was **200K core-hours** and you request **300K** after 7 weeks, the maximum you may receive is approximately **58K additional core-hours** (`200K * 0.5 * 5/12`).
+1. **Initial Allocation of 600K Core-Hours**: If you request an additional 500K core-hours 6 weeks into a 12-week quarter, you may be granted up to **125K additional core-hours**. This is calculated as half of the maximum requestable amount, since half the quarter has passed (`250K * 6/12`).
+
+2. **Initial Allocation of 200K Core-Hours**: If you request an additional 300K core-hours after 7 weeks into the quarter, the maximum you may receive is approximately **58K additional core-hours**. This is calculated by taking half of the initial allocation, prorated for the remaining 5 weeks of the quarter (`200K * 0.5 * 5/12`).
 
 ### Other Important Notes
 
@@ -46,7 +78,7 @@ Mid-Quarter Allocations by the LCRC are detailed here. Principal Investigators (
 
 ## Startup Projects and Allocations
 
-### Overview
+### Startup Projects Overview
 
 New Argonne employee accounts receive a "startup project" with 20,000 core-hours on the **Bebop** and **Swing** systems.
 
@@ -86,13 +118,28 @@ Your startup project is set as your default project in the Slurm job scheduler. 
 - **Project Suspension**: If a project runs out of allocation time, all users on the project will not be able to run any jobs until time is added again. At the present time, no steps will be taken to stop any jobs associated with that project from running and sitting idle in the job queue.
 - **Usage Tracking**
 
-Requesting Additional Project Time
+## Requesting Additional Project Time
 
-Occasionally, some LCRC projects might use up their quarterly time allocation well before the start of their next quarterly allocation. This can happen if the computations require more time than anticipated or if more case studies need to be completed. Under such circumstances, the project PIs can request additional time with proper justification at the LCRC Accounts page via the project management screens.
+### When to Request Additional Time
 
-The LCRC core team meets every Tuesday and reviews all time requests for both new and existing projects. The LCRC core team can grant additional time up to 150K core-hours with requests above this needing approval from the LCRC allocations committee. PIs are reminded that any unused additional time will also expire at the end of the quarter. For instance, if a PI requested 100K core-hours for the first quarter and used only 40K core-hours, 60K core-hours would be lost at the end of the quarter.
+Projects at LCRC may deplete their quarterly time allocation sooner than expected due to unforeseen computational demands or additional case studies. In these instances, Principal Investigators (PIs) have the option to request extra time.
 
-The LCRC Account page is also used for requesting time for the entire next fiscal year after the first week of September until October 1st for existing projects. New projects will always have the full year to request time for the remaining quarters. After October 1st, existing projects can only request time for the current quarter.
-Allocations Note
-Swing, unlike other LCRC clusters, charges allocation time based on GPU Hours instead of Core Hours. Please factor this in when applying for time on Swing.Please see GPU Hour Usage for more details.
+### How to Request
 
+PIs can submit requests for additional project time through the LCRC Accounts page by accessing the project management screens. Requests must include proper justification for the additional time needed.
+
+### Review Process
+
+- The LCRC core team convenes every Tuesday to assess time requests for both new and ongoing projects.
+- Additional time can be granted up to 150K core-hours directly by the LCRC core team.
+- Requests exceeding 150K core-hours require approval from the LCRC allocations committee.
+
+### Expiration of Additional Time
+
+PIs should note that any extra time granted but not used within the quarter will expire at the quarter's end. For example, if a PI is allocated an extra 100K core-hours and only utilizes 40K, the remaining 60K core-hours will be forfeited at the quarter's conclusion.
+
+### Annual Time Requests for Projects
+
+- **Existing Projects**: Time requests for the upcoming fiscal year can be made from the first week of September until October 1st.
+- **New Projects**: New projects may request time throughout the year for the remaining quarters.
+- **Post-October 1st**: After October 1st, existing projects can only request time for the current quarter.
