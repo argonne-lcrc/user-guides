@@ -66,13 +66,13 @@ Your public key is safe to share. It may also have your username and hostname or
 Configuring OpenSSH (Optional)
 ------------------------------
 
-LCRC currently runs several clusters. Following the directions below, you may interchange the cluster name based on your needs as they both use the same SSH keypair and filesystems. Bebop is currently the primary cluster and most users will be using this. When logging in, OpenSSH needs to know a few things. At the bare minimum, it needs to know the hostname of the computer you want to log in to. If the username on your computer is different than the username on LCRC clusters, you'll need to specify that too. If you didn't use the default `~/.ssh/id_rsa` filename for your SSH key when creating your SSH keypair, you'll need to specify that as well.
+LCRC currently runs several clusters. Following the directions below, you may interchange the cluster name based on your needs as they both use the same SSH keypair and filesystems. When logging in, OpenSSH needs to know a few things. At the bare minimum, it needs to know the hostname of the computer you want to log in to. If the username on your computer is different than the username on LCRC clusters, you'll need to specify that too. If you didn't use the default `~/.ssh/id_rsa` filename for your SSH key when creating your SSH keypair, you'll need to specify that as well.
 
-`$ ssh -i /path/to/your/ssh_private_key <username>@bebop.lcrc.anl.gov`
+`$ ssh -i /path/to/your/ssh_private_key <username>@improv.lcrc.anl.gov`
 
 Luckily, OpenSSH provides a way to permanently store these settings so that logging in is as simple as:
 
-`$ ssh bebop`
+`$ ssh improv`
 
 These settings are stored in the `~/.ssh/config` file. If you don't already have one, create a new one. The general format of the SSH config file looks like:
 
@@ -88,39 +88,35 @@ Host <aliasB>
     Key2 <valueD>
 ```
 
-You can have multiple Hosts and multiple key-value pairs per Host. For example, here is a basic SSH config file for logging into Bebop:
+You can have multiple Hosts and multiple key-value pairs per Host. For example, here is a basic SSH config file for logging into Improv:
 
 ```sh
-Host bebop
-    HostName bebop.lcrc.anl.gov
+Host improv
+    HostName improv.lcrc.anl.gov
     User <username>
 ```
 
 If your SSH key is named something different than `id_rsa`, you can specify that as well:
 
 ```sh
-Host bebop
-    HostName bebop.lcrc.anl.gov
+Host improv 
+    HostName improv.lcrc.anl.gov
     User <username>
-    IdentityFile ~/.ssh/id_rsa_bebop
+    IdentityFile ~/.ssh/id_rsa_lcrc
 ```
 
 Logging In
 ----------
 
-LCRC currently runs several clusters. Following the directions below, you may interchange the cluster name based on your needs as they both use the same SSH keypair and filesystems. Bebop is currently the primary cluster and most users will be using this. Once you have uploaded your public key to the clusters, you can try logging in. If you followed our **Configuring OpenSSH** instructions above, logging in is as simple as:
+LCRC currently runs several clusters. Following the directions below, you may interchange the cluster name based on your needs as they both use the same SSH keypair and filesystems. Once you have uploaded your public key to the clusters, you can try logging in. If you followed our **Configuring OpenSSH** instructions above, logging in is as simple as:
 
-`$ ssh bebop`
+`$ ssh improv`
 
-If you skipped those instructions, you'll have to be a little more specific. For most users, you'll run the following command(s), substituting <username> for your LCRC username. **To access Bebop**:
+If you skipped those instructions, you'll have to be a little more specific. For most users, you'll run the following command(s), substituting <username> for your LCRC username. **To access Improv**:
 
-`$ ssh <username>@bebop.lcrc.anl.gov`
+`$ ssh <username>@improv.lcrc.anl.gov`
 
-**To access Blues**:
-
-`$ ssh <username>@blues.lcrc.anl.gov`
-
-Once you've logged in successfully, you're good to go. If you have any problems logging in, see **Debugging a Failed Connection** below.
+You can change the cluster name as needed based on our available resources. Once you've logged in successfully, you're good to go. If you have any problems logging in, see **Debugging a Failed Connection** below.
 
 Debugging a Failed Connection
 -----------------------------
@@ -174,7 +170,7 @@ These are all of the default permissions. If you made the mistake of giving ever
 
 If you didn't use the default `~/.ssh/id_rsa` filename for your SSH key when creating your SSH keypair, you'll need to specify that as well.
 
-`$ ssh -i /path/to/your/ssh_private_key <username>@bebop.lcrc.anl.gov`
+`$ ssh -i /path/to/your/ssh_private_key <username>@improv.lcrc.anl.gov`
 
 ##### .ssh/config Misconfiguration
 
@@ -186,22 +182,20 @@ Once per month, usually on the second Monday of the month, we have a maintenance
 
 #### Downed Login Nodes
 
-Occasionally LCRC login nodes may become unresponsive due to a number of various failures unexpectedly. Because of the round-robin nature of the connection, you may land on one of these bad nodes when you try to SSH to LCRC. We'll try to make sure each node is up at all times, but you may attempt to connect to the clusters during this unexpected down time. To test whether or not the problem is on your end or on the LCRC side and if you've already exhausted the other troubleshooting steps, try to connect to a specific login node. To do this, you can substitute your SSH commands of `ssh bebop.lcrc.anl.gov`, for example, with these instead. For Bebop:
+Occasionally LCRC login nodes may become unresponsive due to a number of various failures unexpectedly. Because of the round-robin nature of the connection, you may land on one of these bad nodes when you try to SSH to LCRC. We'll try to make sure each node is up at all times, but you may attempt to connect to the clusters during this unexpected down time. To test whether or not the problem is on your end or on the LCRC side and if you've already exhausted the other troubleshooting steps, try to connect to a specific login node. To do this, you can substitute your SSH commands of `ssh improv.lcrc.anl.gov`, for example, with these instead. For Improv:
+```sh
+ssh ilogin1.lcrc.anl.gov
+ssh ilogin2.lcrc.anl.gov
+ssh ilogin3.lcrc.anl.gov
+ssh ilogin4.lcrc.anl.gov
+```
 
+For Bebop:
 ```sh
 ssh beboplogin1.lcrc.anl.gov
 ssh beboplogin2.lcrc.anl.gov
 ssh beboplogin3.lcrc.anl.gov
 ssh beboplogin4.lcrc.anl.gov
-```
-
-For Blues:
-
-```sh
-ssh blueslogin1.lcrc.anl.gov
-ssh blueslogin2.lcrc.anl.gov
-ssh blueslogin3.lcrc.anl.gov
-ssh blueslogin4.lcrc.anl.gov
 ```
 
 If you try a couple of these nodes and still can't connect, you can continue troubleshooting. Of course in extremely rare cases most of our login nodes can be down so you can always contact us if you've exhausted all of your connection options.
@@ -211,7 +205,7 @@ If you try a couple of these nodes and still can't connect, you can continue tro
 If for whatever reason you cannot successfully log in, shoot us an email at [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov). We'll need 3 things from you to diagnose your problem. Run the following commands and give us the output:
 
 ```sh
-ssh -vvv <username>@bebop.lcrc.anl.gov
+ssh -vvv <username>@improv.lcrc.anl.gov
 ls -la ~/.ssh
 cat ~/.ssh/config
 ```
@@ -223,15 +217,15 @@ X11 Forwarding
 
 In order to run programs with a graphical user interface (GUI) over SSH, you will need to enable X11 forwarding. This is fairly simple with OpenSSH. You can either run the following command:
 
-`ssh -X <username>@bebop.lcrc.anl.gov`
+`ssh -X <username>@improv.lcrc.anl.gov`
 
 or add the following to your `~/.ssh/config` file:
 
 ```sh
-Host bebop
-    HostName bebop.lcrc.anl.gov
+Host improv 
+    HostName improv.lcrc.anl.gov
     User <username>
     ForwardX11 yes
 ```
 
-and run `ssh bebop` normally.
+and run `ssh improv` normally.
