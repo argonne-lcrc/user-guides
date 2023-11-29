@@ -18,7 +18,10 @@ nav:
     - Using Software:
       - Getting Started: using-software/getting-started.md 
       - Software Specific Guides: 
-        - Using Jupyter Notebooks: using-software/software-specific-guides/using-jupyter-notebooks.md
+        - Conda: using-software/software-specific-guides/conda.md
+        - Jupyter Notebooks: using-software/software-specific-guides/jupyter-notebooks.md
+        - Paraview: using-software/software-specific-guides/paraview.md
+        - Tensorflow: using-software/software-specific-guides/tensorflow.md
   - Data Management:
     - Data Transfer:
       - SFTP and SCP: data-management/data-transfer/sftp-scp.md
