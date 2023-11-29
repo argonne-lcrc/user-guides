@@ -95,7 +95,6 @@ There are 825 available nodes on Improv. Several publicly available queues are d
 |-------------------|-------------|-----------------|----------|----------------|-----------------|--------------------|--------------|
 | compute | Standard Compute Nodes | 737 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB DDR4 | 960GB | 72 Hours (3 Days) |
 | bigmem | Large Memory Compute Nodes | 12 | 2x AMD EPYC 7713 64-Core Processor | 128 | 1TB DDR4 | 6TB | 72 Hours (3 Days) |
-| bigdata | Large Scratch Compute Nodes | 68 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB DDR4 | 6TB | 72 Hours (3 Days) |
 | debug | Reduced Walltime Compute Nodes | 8 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB DDR4 | 960GB | 1 Hour |
 
 ### qsub: Submit a job to run
