@@ -12,7 +12,7 @@ First, login to Bebop for this example:
 
 Make note of the login node name and number that you end up on. As mentioned for this example, it is beboplogin3, but may be different for you.
 
-Now, load the Paraview module:
+Now, load the Paraview module (in this example we are using paraview 5.4.0. Users can check the available versions of paraview by using the command `module spider paraview`. Load any of the modules of paraview available and ensure that you have the same version available on your local machine.):
 ```
 # module load paraview/5.4.0
 ```
