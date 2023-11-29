@@ -6,8 +6,8 @@ nav:
     - Managing Projects: account-project-management/project-management.md
     - SSH: account-project-management/ssh.md
   - Allocations:
-    - Allocations on LCRC Computing Resources: allocation-management/overview.md
-    - Managing Your Allocations: allocation-management/allocation-management.md
+    - Allocations on LCRC Computing Resources: allocation-management/allocations.md
+#    - Managing Your Allocations: allocation-management/allocation-management.md
     - lcrc-sbank Allocation Accounting System (Slurm Clusters): allocation-management/lcrc-sbank-allocation-accounting-system.md
     - sbank Allocation Accounting System (PBS Clusters): allocation-management/sbank-allocation-accounting-system.md
   #- Running Jobs with Slurm at LCRC:
