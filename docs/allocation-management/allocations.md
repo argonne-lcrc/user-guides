@@ -32,6 +32,8 @@ On Swing, the compute nodes charge as follows for each job:
 
 ### Node Hours (Improv Cluster)
 
+Allocations on Improv are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
+
 `Node Hours = Number of Nodes Used × Time in Hours`
 
 - **Number of Nodes Used**: The quantity of compute nodes utilized for the job.

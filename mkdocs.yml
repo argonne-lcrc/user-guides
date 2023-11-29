@@ -25,6 +25,7 @@ nav:
   - Improv:
     - Getting Started: improv/getting-started.md
     - Hardware Overview: improv/hardware-overview.md
+    - Running Jobs: improv/running-jobs.md
   - Data Management:
     - Data Transfer:
       - SFTP and SCP: data-management/data-transfer/sftp-scp.md
@@ -35,7 +36,7 @@ nav:
       - Disk Quota: data-management/filesystem-and-storage/disk-quota.md
   - Best Practices and Policies:
     - Allocations Expiration Policy: best-practices-and-policies/allocation-expiration-policy.md
-    - Cybersecurity Policy: best-practices-and-policies/cybersecurity.md
+    - Cybersecurity Policy: best-practices-and-policies/cybersecurity-policy.md
     - Data Policy: best-practices-and-policies/data-policy.md
     - Job Scheduling Policy: best-practices-and-policies/job-scheduling-policy.md
     - Monthly Maintenance Day: best-practices-and-policies/monthly-maintenance-day.md

@@ -1,27 +1,4 @@
-# Running Jobs on PBS Clusters 
-
-## Introduction
-
-At a high level, getting computational tasks run on an HPC system is a two-step process:
-
-1. You request and get allocated resources (we allocate at the node level, but some facilities you request number of cores and RAM, etc.) on one or more of the systems. This is accomplished by interacting with the job scheduler / workload manager. On LCRC Improv, we use PBS Professional.
-2. You execute your tasks on those resources. This is accomplished in your job script by interacting with various system services (MPI, OpenMP, etc.)
-
-Below is LCRC specific documentation to get you started. If you want to learn all about PBS, including referencing specific commands on the User’s Guide for example, please see the [“Documentation and Tools”](#documentation-and-tools)  section at the end of this page.
-
-General Description of Improv
-
-The new LCRC production cluster named Improv has 825 dual-socket compute nodes with AMD 7713 64-core processors (2.0 GHz) (or 128 cores per node) and 256 GB DDR4 memory. 68 nodes have 4TB NVMe SSD, and 12 of those have 1024 GB DDR4, instead of 256 GB. The high-performance interconnect is Nvidia/Mellanox HDR200 (14 core, 35 edge switches). There are 12 HDR200 connections to LCRC’s existing data storage system so you will have access to all of the same files between LCRC clusters.
-
-## Logging Into Improv
-
-Please be sure to following our [Getting Started documentation](http://www.lcrc.anl.gov/for-users/getting-started/) in order to make sure you’ve completed the necessary steps so that you can login to LCRC clusters. Once you’ve done this, you can SSH to Improv by running the following:
-
-`ssh <your_argonne_username>@improv.lcrc.anl.gov`
-
-The LCRC **login nodes should not be used to run jobs**. Doing so may impact other users and require these login nodes to be rebooted.
-
-All LCRC clusters share the same global GPFS filesystem. All of your home and project directories noted in our [storage documentation](http://www.lcrc.anl.gov/systems/resources/storage/) will be available between clusters.
+# Running Jobs on PBS Clusters
 
 ## Software Modules
 
@@ -31,23 +8,6 @@ Currently **no modules** are loaded by default on Improv. Modules are also uniqu
 Users can check and load modules as needed using the normal [Lmod commands](http://www.lcrc.anl.gov/for-users/software/cheat-sheet/)
 
 The compilers and versions available on Improv are different from those on other LCRC clusters. If you are planning on testing/running in a case directory with codes compiled on another cluster, please ensure that you remove all compiled files (.o files, .lib files, executables, etc.) to ensure you have a clean build with the new compilers loaded. Failing to do so will likely produce core-dumps.
-
-## Allocation Accounting System
-
-sbank is the accounting system used within the LCRC Improv (this is completely separate from lcrc-sbank on other LCRC clusters). [All projects must have an allocation](https://www.lcrc.anl.gov/for-users/getting-started/projects-in-lcrc/) to be able to submit jobs.
-
-The sbank accounting system helps users manage their allocations and usage per job. It gives the PIs the ability to monitor their allocation usage by user, job, and machine. It also allows the user to monitor their usage per allocation and provides insight on how many hours are left on the project.
-
-Allocations on Improv are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. This is a change from other LCRC clusters such as Bebop that currently reports in Core Hours. On Improv, the compute nodes charge as follows for each job:
-
-`# of Nodes * Time Used`
-
-Accounts will be charged for a full node no matter how many CPUs are used per node.
-
-We have provided [some basic information about sbank](https://www.lcrc.anl.gov/for-users/using-lcrc/running-jobs/running-jobs-on-improv/accounting-on-improv/) and also [some examples commands](https://www.lcrc.anl.gov/for-users/using-lcrc/running-jobs/running-jobs-on-improv/accounting-on-improv/sbank-example-commands/) that you may use.
-
-Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
-Any charges or transactions that use less than .05 of a node hour will display as 0, however, the correct charge is being made to the project account.
 
 ## Obtaining and Managing Compute Resources
 
@@ -87,15 +47,6 @@ If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro c
 
 **Note: The page numbers in the PBS guides are unique. If you search for the specified page number it will take you directly to the relevant page.**
 
-### Available Queues
-
-There are 825 available nodes on Improv. Several publicly available queues are defined. Use the -q option with qsub to select a queue. The default queue is compute. We allow up to 15 jobs per user to run at the same time while 100 total jobs can be queued to run.
-
-| Improv Queue Name | Description | Number of Nodes | CPU Type | Cores Per Node	| Memory Per Node | Local Scratch Disk | Max Walltime |
-|-------------------|-------------|-----------------|----------|----------------|-----------------|--------------------|--------------|
-| compute | Standard Compute Nodes | 737 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB DDR4 | 960GB | 72 Hours (3 Days) |
-| bigmem | Large Memory Compute Nodes | 12 | 2x AMD EPYC 7713 64-Core Processor | 128 | 1TB DDR4 | 6TB | 72 Hours (3 Days) |
-| debug | Reduced Walltime Compute Nodes | 8 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB DDR4 | 960GB | 1 Hour |
 
 ### qsub: Submit a job to run
 
@@ -136,7 +87,7 @@ You can also tell PBS how you want the chunks distributed across the physical ha
 * unless you have a specific reason to do otherwise, you probably want to set this to scatter, otherwise you may not get what you expect. For instance on a host with ncpus=128, if you requested -l select=8:ncpus=8:mpiprocs=8 you could end up with all of our chunks on one node.
 * `free` means PBS can distribute them as it sees fit
 * `pack` means all chunks from one host. Note that this is not the minimum number of hosts, it is one host. If the chunks can’t fit on one host, the qsub will fail.
-    * `scatter` means take only one chunk from any given host.
+  * `scatter` means take only one chunk from any given host.
 
 Here is a heavily commented sample PBS submission script that shows some more of the options, but remember that the PBS manuals referenced at the bottom of this page are the ultimate resource. If you create a file named hello.pbs for example, you can add:
 

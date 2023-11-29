@@ -1,5 +1,6 @@
 # Manpage for sbank Commands
 
+
 ## sbank <meta-command> <command> [options] <args>
 
 ### DESCRIPTION
@@ -23,7 +24,7 @@ HPC Accounting System Command Line Interface
 #### - list <command> [options] (DEFAULT)
 
 **DETAIL COMMANDS**
-  * allocations [-a|-e|-f|-j|-n|-p|-r|-t|-u|-w|-E|-H|-I|-O|-S|-T|...] [<allocation_id> ... <allocation_id>] (DEFAULT) 
+  * allocations [-a | -e |-f|-j|-n|-p|-r|-t|-u|-w|-E|-H|-I|-O|-S|-T|...] [<allocation_id> ... <allocation_id>] (DEFAULT) 
   * jobs [-a|-e|-f|-j|-n|-p|-r|-t|-u|-w|-E|-H|-S|-T|...] [<jobid|event_id> ... <jobid|event_id>] 
   * projects [-a|-f|-n|-p|-r|-u|-w|-E|-H|-I|-S|...] [<project name or id> ... <project name or id>] 
   * transactions [-a|-e|-f|-j|-n|-p|-r|-t|-u|-w|-E|-H|-S|-T|...] [<transaction_id> ... <transaction_id>] 
@@ -313,7 +314,7 @@ Range date-string examples:
 
 **Example 3: Command invocation examples**
 
-- > sbank-list-projects list projects full command invocation 
+* > sbank-list-projects list projects full command invocation 
 - > sbank list projects list projects meta command invocation
 - > sbank s p list projects partial meta command invocation 
 - > sbank p list projects where "list" is the default
@@ -328,5 +329,4 @@ Range date-string examples:
 - > sbank list allocations -h will give you help on the "list allocations" command
 - > sbank-list-allocations -h will give you help on the "list allocations" command 
 - > sbank l a --help will give you help on the "list allocations" command
-  
 
