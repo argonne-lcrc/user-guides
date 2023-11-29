@@ -22,6 +22,9 @@ nav:
         - Jupyter Notebooks: using-software/software-specific-guides/jupyter-notebooks.md
         - Paraview: using-software/software-specific-guides/paraview.md
         - Tensorflow: using-software/software-specific-guides/tensorflow.md
+  - Improv:
+    - Getting Started: improv/getting-started.md
+    - Hardware Overview: improv/hardware-overview.md
   - Data Management:
     - Data Transfer:
       - SFTP and SCP: data-management/data-transfer/sftp-scp.md
