@@ -1,5 +1,13 @@
 # Running Jobs on Improv
 
+## Job Scheduling System
+
+Improv's job scheduling system is characterized by:
+
+- Uses [**PBS Pro**](../running-jobs-at-lcrc/pbs-pro-clusters.md)
+- Uses the [**`sbank`**](../allocation-management/sbank-allocation-accounting-system.md) accounting system 
+- Allocations are calculated in [**node hours**](../allocation-management/allocations.md#node-hours-improv-cluster)
+
 ## Queues
 
 Use the `-q` option with `qsub` to select a queue. The default queue is `compute`. We allow up to 15 jobs per user to run at the same time while 100 total jobs can be queued to run.
@@ -76,9 +84,3 @@ mpirun ./hello_mpi
 **Important things to note:**
 
 * PBS Pro on Improv is currently **not** configured to allow sharing nodes. When have a node allocated to you, you receive the ENTIRE node. Ensure that you use all of your allocated nodes' resources unless you have a reason not to.
-
-## Other Important Pages
-
-**[PBS Pro Job Scheduler](../running-jobs-at-lcrc/pbs-pro-clusters.md)**
-
-**[sbank Accounting System](../allocation-management/sbank-allocation-accounting-system.md)**

@@ -192,7 +192,6 @@ For an extensive list of formatting options please consult `sacct` man page.
 
 For an extensive list of formatting options please consult the `sprio` man page.
 
-
 ## Why Isn’t My Job Running Yet?
 
 If today is NOT LCRC Maintenance Day and you find that your job is in the pending (PD) state after running squeue, Slurm will provide a reason for this shown in the squeue command. Here are a few of the most common reasons your job may not be running.

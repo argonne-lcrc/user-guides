@@ -1,19 +1,29 @@
-# Disk Quota
+# Disk Quota Information
+
+## Overview
+
+Quotas are enforced on home and project directories to manage storage resources effectively.
 
 ## Home and Project Directory Quotas
+- **Home Directories**: Each user is allocated a standard quota of 100 GB.
+- **Project Directories**: Projects are allocated a default of 1 TB, with the option to request increases.
 
-- **Home Directories**: 100 GB quota.
-- **Project Directories**: Default 1 TB quota, with potential for increase upon approval.
+## Quota Enforcement
+- **Soft Limits**: Users can temporarily exceed their allocated quotas to avoid disrupting running jobs.
+- **Grace Period**: Users have a two-week period to manage and reduce their data usage back within quota limits after exceeding the soft limit.
+- **Hard Limits**: Persistent excess use beyond the grace period will result in write restrictions, preventing new data from being saved until the usage is reduced.
 
-## Quota Limits and Grace Period
+## Quota Table
 
-- **Soft Limits**: Exceeding your quota is initially allowed, preventing disruptions in ongoing tasks.
-- **Grace Period**: 2 weeks to reduce usage back within quota limits after exceeding them.
-- **Hard Limits**: Exceeding quotas beyond the grace period results in write.
+| Filesystem | Location                              | Soft Limit | Hard Limit |
+|------------|---------------------------------------|------------|------------|
+| Home       | `/home/<username>`                    | 100 GB     | 1 TB       |
+| Project    | `/lcrc/project/<project_name>`        | 1+ TB      | 2+ TB      |
+| Group      | `/lcrc/group/<group_name>`            | No quotas  | No quotas  |
 
 ## Checking Your Quota
 
-- To view your current quota usage, use the command `lcrc-quota`.
+To view your current quota usage, use the command `lcrc-quota`.
 
 ```bash
 $ lcrc-quota
@@ -21,7 +31,7 @@ $ lcrc-quota
 ----------------------------------------------------------------------------------------
 Home                          Current Usage   Space Avail    Quota Limit    Grace Time
 ----------------------------------------------------------------------------------------
-tlivolsi                          113 GB         -13 GB         100 GB         8 days
+UserX                         113 GB         -13 GB         100 GB         8 days
 ----------------------------------------------------------------------------------------
 Project                       Current Usage   Space Avail    Quota Limit    Grace Time
 ----------------------------------------------------------------------------------------
@@ -33,9 +43,9 @@ support                          6442 GB        3781 GB       10240 GB
 
 ## Requesting Additional Storage
 
-- **Eligibility**: Only available for project directories.
+**Eligibility**: Only available for project directories.
 
-## Process
+### Process
 
 1. Visit <https://accounts.lcrc.anl.gov>
 2. Under `Owned` projects, select the project requiring more storage.
@@ -45,4 +55,4 @@ support                          6442 GB        3781 GB       10240 GB
 
 ## Over-Quota Management
 
-- If your home directory is over quota, consider deleting unnecessary files or moving data to project or group directories.
+If your home directory is over quota, consider deleting unnecessary files or moving data to project or group directories.

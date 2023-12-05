@@ -1,6 +1,47 @@
 # Running Jobs on Bebop
 
-## Example Knights Landing (KNL) `sbatch` Job Submission (MPI)
+## Overview
+
+Bebop's job scheduling system is characterized by:
+
+- Uses [**Slurm**](../running-jobs-at-lcrc/slurm-clusters.md)
+- Uses the legacy [**`lcrc-sbank`**](../allocation-management/lcrc-sbank-allocation-accounting-system.md) accounting system
+- Allocations are calculated in [**core hours**](../allocation-management/allocations.md#core-hours-bebop-cluster)
+
+## Partition Limits
+
+Bebop currently enforces the following limits on publicly available partitions:
+
+- **32 Running Jobs** per user.
+- **100 Queued Jobs** per user.
+- **3 Days (72 Hours)** Maximum Walltime on Broadwell Nodes. (bdws is 1 hour)
+- **7 Days (168 Hours)** Maximum Walltime on KNL Nodes. (knls is 4 hours)
+- **1 Hour** Default Walltime if not specified.
+- **bdwall** (Broadwell Compute Nodes) is the default partition.
+
+## Available Partitions
+
+| Bebop Partition Name | Description                        | Number of Nodes | CPU Type                | Cores Per Node | Memory Per Node | Local Scratch Disk |
+|----------------------|------------------------------------|-----------------|-------------------------|----------------|-----------------|--------------------|
+| bdwall               | All Broadwell Nodes                | 664             | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB or 4 TB      |
+| bdw                  | Broadwell Nodes with 15 GB / scratch | 600           | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB              |
+| bdwd                 | Broadwell Nodes with 4 TB / scratch  | 64            | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 4 TB               |
+| bdws                 | Broadwell Shared Nodes (Oversubscription / Non-Exclusive) | 8                 | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB              |
+| knlall               | All Knights Landing Nodes            | 348           | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB or 4 TB  |
+| knl                  | Knights Landing Nodes with 15GB /scratch | 284         | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB          |
+| knld                 | Knights Landing Nodes with 4TB /scratch | 64          | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 4 TB           |
+| knls                 | Knights Landing Shared Nodes (Oversubscription / Non-Exclusive) | 4               | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB          |
+| knl-preemptable      | All Knights Landing Nodes with restrictions including preemption. [Click here for more details](#). | 348       | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB or 4 TB  |
+
+## Submission Examples
+
+### [Example `sbatch` Job Submission (Simple)](../running-jobs-at-lcrc/slurm-clusters.md#example-sbatch-job-submission-simple)
+
+### [Example `sbatch` Job Submission (MPI)](../running-jobs-at-lcrc/slurm-clusters.md#example-sbatch-job-submission-mpi)
+
+### [Example Interactive Job Submission](../running-jobs-at-lcrc/slurm-clusters.md#example-interactive-job-submission)
+
+### Example Knights Landing (KNL) `sbatch` Job Submission (MPI)
 
 >**Attention KNL Users:**
 >Please note that if you wish to use a different set of modes for KNL other than Quadrant & Cache, you'll need to request a reservation that will require approval. You can request your reservation via [this form](https://your-reservation-link.com).
