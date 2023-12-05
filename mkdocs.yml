@@ -22,10 +22,6 @@ nav:
         - Jupyter Notebooks: using-software/software-specific-guides/jupyter-notebooks.md
         - Paraview: using-software/software-specific-guides/paraview.md
         - Tensorflow: using-software/software-specific-guides/tensorflow.md
-  - Improv:
-    - Getting Started: improv/getting-started.md
-    - Hardware Overview: improv/hardware-overview.md
-    - Running Jobs: improv/running-jobs.md
   - Data Management:
     - Data Transfer:
       - SFTP and SCP: data-management/data-transfer/sftp-scp.md
@@ -34,7 +30,20 @@ nav:
       - File Systems: data-management/filesystem-and-storage/file-systems.md
       - Data Storage: data-management/filesystem-and-storage/data-storage.md
       - Disk Quota: data-management/filesystem-and-storage/disk-quota.md
+  - Improv:
+    - Getting Started: improv/getting-started-improv.md
+    - Hardware Overview: improv/hardware-overview-improv.md
+    - Running Jobs on Improv: improv/running-jobs-improv.md
+  - Swing:
+    - Getting Started: swing/getting-started-swing.md
+    - Hardware Overview: swing/hardware-overview-swing.md
+    - Running Jobs on Swing: swing/running-jobs-swing.md
+  - Bebop:
+    - Getting Started: bebop/getting-started-bebop.md
+    - Hardware Overview: bebop/hardware-overview-bebop.md
+    - Running Jobs on Bebop: bebop/running-jobs-bebop.md
   - Best Practices and Policies:
+    - Best Practices and Policies Overview: best-practices-and-policies/best-practices-and-policies-overview.md
     - Allocations Expiration Policy: best-practices-and-policies/allocation-expiration-policy.md
     - Cybersecurity Policy: best-practices-and-policies/cybersecurity-policy.md
     - Data Policy: best-practices-and-policies/data-policy.md

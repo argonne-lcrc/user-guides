@@ -1,14 +1,5 @@
 # Running Jobs on PBS Clusters
 
-## Software Modules
-
-Improv uses environment modules to manage and organize the software on the system (as with other LCRC clusters).
-
-Currently **no modules** are loaded by default on Improv. Modules are also unique to each LCRC cluster.
-Users can check and load modules as needed using the normal [Lmod commands](http://www.lcrc.anl.gov/for-users/software/cheat-sheet/)
-
-The compilers and versions available on Improv are different from those on other LCRC clusters. If you are planning on testing/running in a case directory with codes compiled on another cluster, please ensure that you remove all compiled files (.o files, .lib files, executables, etc.) to ensure you have a clean build with the new compilers loaded. Failing to do so will likely produce core-dumps.
-
 ## Obtaining and Managing Compute Resources
 
 ### Definitions and Notes
@@ -46,7 +37,6 @@ If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro c
     * PBS Documentation: Users Guide Sec. 9.3, page UG-170; Reference Guide Sec. 2.41, page RG-143
 
 **Note: The page numbers in the PBS guides are unique. If you search for the specified page number it will take you directly to the relevant page.**
-
 
 ### qsub: Submit a job to run
 
@@ -148,22 +138,31 @@ If you don’t want to use a script, you could submit via the command line as we
 
 ### qstat: Query the status of jobs/queues
 
-[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 10.2, page UG-175; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.55, page RG-200
+*[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 10.2, page UG-175; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.55, page RG-200*
 
-At it’s most basic, you just type qstat and it will list all the jobs currently running, queued, or held on the system. If you are interested in a specific job or jobs, you can provide a space separated list on the command line: qstat job1 job2....
+The `qstat` command lists jobs on the system, showing their status, user, and other details. You can specify job IDs for detailed information about specific jobs.
 
-```sh
-% qstat
-Job id            Name             User              Time Use S Queue
-----------------  ---------------- ----------------  -------- - -----
-349726.imgt1      PDE2             user1                    0 Q compute
-336987.imgt1      inf_clDB         user2                    0 H compute
-353205.imgt1      3d-2.sub         user3             2044:14* R compute
-```
+**Basic usage:**
 
-One of the annoying things about `qstat` is that the output fields are fixed with and it will truncate the output. This is indicated by an asterisk as the last character. You can add -w for wide. It doesn’t prevent truncation, but makes it less likely. A useful variant is `qstat -was1`. It shows the number of nodes, tasks, the requested walltime, and the comment, all on one line. `qstat -wan` will give you the node list you ran on, just remember that can be long. If you want an estimate of when the job will start, add the `-T` option. Note that start time is not available for all jobs, just the next N jobs that are expected to run. If you want to know everything there is to know about the job, add the `-f` flag.
+`qstat`: Lists all jobs with basic details.
 
-The comment field is your friend. Wondering why your job isn’t running? Check the comment. Wondering about the fate of a finished job? Add the -x option to see finished jobs (our history retention is currently set at one week) and check the comment. This cannot be stressed enough. Often, when a user ticket comes in about PBS, we answer it by looking at the comment.
+`qstat [jobID]`: Displays information for specific jobs.
+
+**Options for expanded information:**
+
+`-w`: Expands the width of the output to reduce truncation.
+
+`-was1`: Shows nodes, tasks, requested walltime, and comments in a single line.
+
+`-wan`: Provides the list of nodes used.
+
+`-T`: Estimates the start time for the job (only for the next expected jobs).
+
+`-f`: Provides comprehensive details about a job.
+
+`-x`: Shows finished jobs (history retained for one week) along with comments.
+
+The comment field is crucial for understanding job status or issues. It's often the first place to check when troubleshooting job-related queries in PBS.
 
 ### qalter: Alter a queued job
 
