@@ -15,7 +15,7 @@
     - You'll receive an email confirming LCRC access and a [startup allocation](https://www.lcrc.anl.gov/for-users/getting-started/projects-in-lcrc/#startupprojs).
 
 3. **Final Steps**:
-    - Add a public SSH key ([Instructions](../ssh/)).
+    - Add a public SSH key ([Instructions](../account-project-management/ssh.md)).
     - Once the key is added, you can log in to the LCRC clusters.
 
 ---
@@ -38,7 +38,7 @@
     - Upon approval, you'll be added to the LCRC project and receive a home directory on the LCRC clusters.
 
 3. **Final Steps**:
-    - Add a public SSH key ([Instructions](../ssh/)).
+    - Add a public SSH key ([Instructions](../account-project-management/ssh.md)).
     - Once the key is added, you can log in to the LCRC clusters.
 
 ---

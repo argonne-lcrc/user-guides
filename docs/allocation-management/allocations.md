@@ -4,9 +4,9 @@
 
 The LCRC operates three distinct clusters, each with its own scheduling and allocation systems:
 
-1. **Improv**: Operates with the [PBS Pro](running-jobs-at-lcrc/pbs-pro-clusters.md) job scheduler and measures allocations in **node hours**.
-2. **Bebop**: Utilizes the [Slurm](running-jobs-at-lcrc/slurm-clusters.md) job scheduler and measures allocations in **core hours**.
-3. **Swing**: Also uses Slurm but charges allocations in **GPU hours**.
+1. [**Improv**](../improv/getting-started-improv.md): Operates with the [PBS Pro](../running-jobs-at-lcrc/pbs-pro-clusters.md) job scheduler and measures allocations in **node hours**.
+2. [**Bebop**](../bebop/getting-started-bebop.md): Utilizes the [Slurm](../running-jobs-at-lcrc/slurm-clusters.md) job scheduler and measures allocations in **core hours**.
+3. [**Swing**](../swing/getting-started-swing.md): Also uses Slurm but charges allocations in **GPU hours**.
 
 ## Allocations Metrics for Each Cluster
 
