@@ -17,7 +17,7 @@ nav:
     - Running Jobs on Slurm Clusters: running-jobs-at-lcrc/slurm-clusters.md
     - Using Software:
       - Getting Started: using-software/getting-started.md 
-      - Software Specific Guides: 
+      - Software-Specific Guides: 
         - Conda: using-software/software-specific-guides/conda.md
         - Jupyter Notebooks: using-software/software-specific-guides/jupyter-notebooks.md
         - Paraview: using-software/software-specific-guides/paraview.md

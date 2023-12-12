@@ -45,8 +45,6 @@
 
 ## Managing Argonne Collaborator Accounts
 
----
-
 ### Extend or Reactivate Collaborator Accounts
 
 **If an account is set to expire soon**:

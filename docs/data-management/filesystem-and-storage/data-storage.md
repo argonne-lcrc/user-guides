@@ -9,14 +9,34 @@
 
 ## Disk Storage
 
-### GPFS
+### ZFS Backup Storage
 
-- FS1
-- FS2
-- FS3
-- FS4
+**JBODs (Just a Bunch Of Disks)**:
 
-- **Informative ZFS storage information**
+- Total Number of JBODs: 6
+- Each JBOD is equipped with 102 x 14TB WDC HC530 SAS Enterprise Disk Drives.
+- This configuration ensures that every disk in a zpool is from the same JBOD, maximizing performance.
+
+**Disk Drives**:
+
+- Total Number of Drives Across All JBODs: 612 (6 JBODs x 102 Drives each)
+- Drive Type: WDC HC530 SAS Enterprise Disk Drives
+- Drive Capacity: 14TB each
+
+**ZFS Pools (zpools)**:
+
+- Total Number of zpools: 18
+  - Distribution: 3 zpools per JBOD
+  - Configuration of Each zpool:
+    - Composed of 3 vdevs (Virtual Devices)
+    - Each vdev is a RAIDZ3 configuration with 11 disks
+    - One hot spare disk per zpool for redundancy and immediate replacement in case of a disk failure
+  - Usable Space per zpool: ~305 TB
+  - Total Usable Space: ~5.5 PB
+
+**Maintenance and Data Integrity**:
+
+- Automated monthly scrubs are scheduled for each zpool. These scrubs are essential for maintaining data integrity and for early identification of potential issues.
 
 ## Tape Storage
 
