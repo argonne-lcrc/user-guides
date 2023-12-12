@@ -3,9 +3,7 @@
 **The `lcrc-sbank` commands are specifically designed for clusters that use Slurm. Make sure you're using these commands on the following LCRC clusters:**
 
 - **Bebop**
-- **Crossover**
 - **Swing**
-- **Chrysalis**
 
 ## Project Allocation Queries and Management
 

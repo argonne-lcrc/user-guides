@@ -2,9 +2,9 @@
 
 If you are looking to get access to LCRC for the first time, see below for either [Argonne Employees](http://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/#argonne) or [Non-Employees/Outside Collaborators](http://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/#nonargonne). If you need to [extend or reactivate](http://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/#reactivate) your Argonne Collaborator account or if your [Argonne username has changed](http://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/#usernamechange), please find information below as well. To access LCRC resources, you need to complete 3 tasks at a minimum: 
 
-1. **Get an Argonne Domain or Collaborator Account**
-2. **Join an LCRC Project**
-3. **[Set Up an SSH Connection](https://www.lcrc.anl.gov/for-users/getting-started/ssh/)** 
+1. [**Get an Argonne Domain or Collaborator Account**](account-project-management/accounts-and-access.md)
+2. [**Join an LCRC Project**](account-project-management/project-management.md#join-an-existing-lcrc-project)
+3. **[Set Up an SSH Connection](account-project-management/ssh.md)** 
 
 All of these steps are outlined below or links to more information are provided. 
 
