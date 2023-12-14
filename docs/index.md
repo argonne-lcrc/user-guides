@@ -6,8 +6,6 @@ If you are looking to get access to LCRC for the first time, see below for eithe
 2. [**Join an LCRC Project**](account-project-management/project-management.md#join-an-existing-lcrc-project)
 3. **[Set Up an SSH Connection](account-project-management/ssh.md)** 
 
-All of these steps are outlined below or links to more information are provided. 
-
 Until **ALL** of these steps are completed, you will not be able to login to LCRC resources.
 
 If you have any questions related to your Argonne account or Argonne Collaborator account status or if you need a password reset, please send email to [help@anl.gov](mailto:help@anl.gov) or call the Argonne Service Desk at (630) 252-9999. LCRC support staff does not have access to this information directly.

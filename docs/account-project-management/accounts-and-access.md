@@ -12,7 +12,7 @@
     - Select **Join Project** on the left side.
     - Search for the **_lcrc_** project and request membership.
     - Instant membership for Argonne employees.
-    - You'll receive an email confirming LCRC access and a [startup allocation](https://www.lcrc.anl.gov/for-users/getting-started/projects-in-lcrc/#startupprojs).
+    - You'll receive an email confirming LCRC access.
 
 3. **Final Steps**:
     - Add a public SSH key ([Instructions](../account-project-management/ssh.md)).

@@ -80,7 +80,7 @@ Mid-Quarter Allocations by the LCRC are detailed here. Principal Investigators (
 
 ### Startup Projects Overview
 
-New Argonne employee accounts receive a "startup project" with 20,000 core-hours on the **Bebop** and **Swing** systems.
+New Argonne employee accounts receive a "startup project" with a small balance of hours on the **Bebop** and **Swing** systems.
 
 ### Purpose
 
@@ -92,14 +92,14 @@ The startup project serves multiple functions:
 
 ### Allocation Details
 
-- **Initial Allocation**: 20,000 core-hours.
-- **Expiration**: None. The 20,000 hours do not have a use-by date.
-- **Additional Time**: Startup projects are not eligible for additional allocations beyond the initial 20,000 hours.
+- **Initial Allocation**: 20,000 core-hours on Bebop, 100 GPU hours on Swing.
+- **Expiration**: None. The startup hours do not have a use-by date.
+- **Additional Time**: Startup projects are not eligible for additional allocations beyond the initial hours.
 
 ### Usage Guidelines
 
 - **Exclusive Usage**: The startup project should only be used by the account originally associated with it.
-- **Transition to Full Project**: If your needs exceed 20,000 hours, you should either apply for your own dedicated project or join an existing one.
+- **Transition to Full Project**: If your needs exceed the startup hours, you should either apply for your own dedicated project or join an existing one.
   
 ### Special Note for Non-Argonne Employees
 
@@ -107,7 +107,7 @@ Non-Argonne staff must be part of another active project led by an Argonne PI.
 
 ### Slurm Default Account
 
-Your startup project is set as your default project in the Slurm job scheduler. To submit jobs against your startup allocation, use the following account name format: `_startup-<username>_`.
+Your startup project is set as your default project in the Slurm job scheduler. To submit jobs against your startup allocation, use the following account name format: `startup-<username>`.
 
 ## Allocation Usage and Tracking
 
@@ -142,4 +142,4 @@ PIs should note that any extra time granted but not used within the quarter will
 
 - **Existing Projects**: Time requests for the upcoming fiscal year can be made from the first week of September until October 1st.
 - **New Projects**: New projects may request time throughout the year for the remaining quarters.
-- **Post-October 1st**: After October 1st, existing projects can only request time for the current quarter.
+- **Post-October 1st**: After October 1st, existing projects can request time for any quarter, but there may be restrictions on the maximum hours granted.
