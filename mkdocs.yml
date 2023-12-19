@@ -1,6 +1,6 @@
 site_name: LCRC User Guide
 nav:
-  - Home: index.md
+  - Getting Started: index.md
   - Account and Project Management:
     - Accounts and Access: account-project-management/accounts-and-access.md
     - Managing Projects: account-project-management/project-management.md
