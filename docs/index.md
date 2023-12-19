@@ -8,6 +8,8 @@ If you are looking to get access to LCRC for the first time, see below for eithe
 
 Until **ALL** of these steps are completed, you will not be able to login to LCRC resources.
 
+Once you have setup your account, you should be able to access the resource of your choice by following our system documentation.
+
 If you have any questions related to your Argonne account or Argonne Collaborator account status or if you need a password reset, please send email to [help@anl.gov](mailto:help@anl.gov) or call the Argonne Service Desk at (630) 252-9999. LCRC support staff does not have access to this information directly.
 
 * * *
