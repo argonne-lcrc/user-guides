@@ -107,9 +107,9 @@ Only Argonne employees are eligible to initiate a new project within the LCRC.
 
 * Locate and click on the **Request New LCRC Project** option in the left-hand sidebar.
 
-  ![Request New LCRC Project](https://www.lcrc.anl.gov/wp-content/uploads/sites/69/2022/08/Request-New-LCRC-Project-2022.png)
+  ![Request New LCRC Project](../images/request-new-lcrc-project.png)
 
-  **Note**: If the link isn't visible, join the **lcrc** project. [Follow this guide](https://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/#argonne) for assistance.
+  **Note**: If the link isn't visible, join the **lcrc** project. [Follow this guide](../accounts-and-access/#for-current-argonne-employees) for assistance.
 
 **3. Complete the Form:**
 
@@ -163,13 +163,13 @@ If you'd like to send a request to the project PI:
 
 * Click on the **Join Project** option on the left sidebar.
 
-  ![Join Project](https://www.lcrc.anl.gov/wp-content/uploads/sites/69/2022/08/Join-Project-2022.png)
+  ![Join Project](../images/join-project.png)
 
 **c. Search for the Project:**
 
 * Enter the name of the project you wish to join in the search box.
   
-![Join Project Search](https://www.lcrc.anl.gov/wp-content/uploads/sites/69/2022/08/Join-Project-Search-Other.png)
+![Join Project Search](../images/join-project-search-other.png)
   
 * The list will update to display projects matching your search term.
 
@@ -178,7 +178,7 @@ If you'd like to send a request to the project PI:
 * Click on the desired project name from the list.
 * Then click on the **Request Membership** button.
   
-![Request Membership](https://www.lcrc.anl.gov/wp-content/uploads/sites/69/2020/05/Request-Membership.png)
+![Request Membership](../images/request-membership.png)
 
 **3. Approval:**
 
