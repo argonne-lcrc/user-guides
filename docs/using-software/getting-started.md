@@ -47,7 +47,7 @@ LCRC uses Lmod (Lua Environment Modules) for software and environment variable m
 
 With over 500 active users in fields as diverse as climate modeling, engine simulation, and ab-initio molecular dynamics, LCRC provides a diverse software stack. 
 
-If you don’t see a software package installed in our environment that you would like to use, please let us know by contacting support@lcrc.anl.gov. We will consider adding software system wide if appropriate for general LCRC use.
+If you don’t see a software package installed in our environment that you would like to use, please let us know by contacting [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov). We will consider adding software system wide if appropriate for general LCRC use.
 
 We generally use a package manager called Spack for most of our software installs, but often need to install packages manually. Keep in mind that the software you want may have dozens of dependencies that also need to be installed, so it may take some time for us to complete the installation for you. Of course, you’re always welcome to install your own software in your home or project directory (if applicable) as well.
 
