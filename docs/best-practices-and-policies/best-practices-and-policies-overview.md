@@ -1,7 +1,5 @@
 # Best Practices and Policies Overview
 
-## Best Practices
-
 ## [Monthly Maintenance Day](../best-practices-and-policies/monthly-maintenance-day.md)
 
 ## [Allocation Expiration Policy](../best-practices-and-policies/allocation-expiration-policy.md)
