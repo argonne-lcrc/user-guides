@@ -16,8 +16,4 @@ Improv has 825 dual-socket compute nodes with AMD 7713 64-core processors (2.0 G
 
 ## Improv Login Nodes
 
-<<<<<<< Updated upstream
 There are four login nodes available to users for editing code, building code, submitting/monitoring jobs, checking usage (`sbank`), etc. Their full hostnames are `iloginN.lcrc.anl.gov` for `N` equal to `1` through `4`.  The login nodes hardware is identical to the compute nodes. The various compilers and libraries are present on the logins, so most users should be able to build their code. All users share the same login nodes so please be courteous and respectful of your fellow users. For example, please do not run computationally or IO intensive pre- or post-processing on the logins and keep the parallelism of your builds to a reasonable level.
-=======
-There are four login nodes available to users for editing code, building code, submitting/monitoring jobs, checking usage (`sbank`), etc. Their full hostnames are `iloginN.lcrc.anl.gov` for `N` equal to `01` through `04`.  The login nodes hardware is identical to the compute nodes. The various compilers and libraries are present on the logins, so most users should be able to build their code. All users share the same login nodes so please be courteous and respectful of your fellow users. For example, please do not run computationally or IO intensive pre- or post-processing on the logins and keep the parallelism of your builds to a reasonable level. 
->>>>>>> Stashed changes
