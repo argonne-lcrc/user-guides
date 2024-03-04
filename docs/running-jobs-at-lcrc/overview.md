@@ -5,7 +5,7 @@ LCRC has three generally accessible high-performance computing clusters: Bebop, 
 To effectively manage and schedule computational tasks, LCRC employs two advanced job scheduling systems:
 
 - **Slurm**: This is the scheduling system for the Bebop and Swing clusters.
-- **PBS Professional**: With an eye towards future alignment with the ALCF, LCRC has adopted PBS Pro for the Improv cluster.
+- **PBS Pro**: With an eye towards future alignment with the ALCF, LCRC has adopted PBS Pro for the Improv cluster.
 
 For detailed guidelines on utilizing these systems, please refer to the following resources:
 

@@ -5,10 +5,12 @@
 Quotas are enforced on home and project directories to manage storage resources effectively.
 
 ## Home and Project Directory Quotas
+
 - **Home Directories**: Each user is allocated a standard quota of 100 GB.
 - **Project Directories**: Projects are allocated a default of 1 TB, with the option to request increases.
 
 ## Quota Enforcement
+
 - **Soft Limits**: Users can temporarily exceed their allocated quotas to avoid disrupting running jobs.
 - **Grace Period**: Users have a two-week period to manage and reduce their data usage back within quota limits after exceeding the soft limit.
 - **Hard Limits**: Persistent excess use beyond the grace period will result in write restrictions, preventing new data from being saved until the usage is reduced.

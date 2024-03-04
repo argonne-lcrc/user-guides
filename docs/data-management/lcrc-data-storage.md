@@ -16,7 +16,7 @@ On all of our clusters, users have access to a global home, project, and group s
 
 We also offer the ability for groups to purchase their own storage resources to be hosted with us. In doing so you get access to the storage space across all of our clusters (unless otherwise specified), and we take care of supporting the system, replacing parts, and when possible tuning the storage resources to fit your data model.
 
-Interested in more storage? Contact us at support@lcrc.anl.gov.
+Interested in more storage? Contact us at <support@lcrc.anl.gov>.
 
 ### Scratch Space
 
