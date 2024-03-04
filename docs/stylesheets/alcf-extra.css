@@ -850,13 +850,27 @@ footer .grid{
 }
 
 .footer--address {
+	grid-column: 1 / span 3;
+	grid-row: 2;
+	margin-top: .55rem;
+}
+
+
+@media only screen and (max-width: 960px) {
+	.footer--address { 
+		grid-column: 1 / span 6; 
+		grid-row: 3;
+	}
+}
+
+.footer--follow {
 	grid-column: 3 / span 3;
 	grid-row: 1;
 	margin-top: .55rem;
 }
 
 @media only screen and (max-width: 960px) {
-	.footer--address { 
+	.footer--follow { 
 		grid-column: 1 / span 6; 
 		grid-row: 2;
 	}
@@ -864,37 +878,37 @@ footer .grid{
 
 .footer--admin {
 	grid-column: 1 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--admin { 
 		grid-column: 1 / span 6; 
-		grid-row: 3;
+		grid-row: 5;
 	}
 }
 
 .footer--copyright {
 	grid-column: 3 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--copyright { 
-		grid-column: 1 / span 6; 
+		grid-column: 1 / span 3; 
 		grid-row: 4;
 	}
 }
 
 .footer--logos {
 	grid-column: 4 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--logos { 
-		grid-column: 1 / span 6; 
-		grid-row: 5;
+		grid-column: 4 / span 3; 
+		grid-row: 4;
 	}
 }
 
