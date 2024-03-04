@@ -30,7 +30,6 @@ Use these sbank man pages to get information on how to use the commands.
 
 If you are coming to PBS from Slurm, we have added a basic conversion chart for your general commands and submit scripts that you can reference that provide similar functions.
 
-
 | Description | PBS Pro | Slurm |
 | -------------- | ----------- | --------- |
 | Submit Job | qsub [job_script] | sbatch [job_script] |
@@ -40,20 +39,19 @@ If you are coming to PBS from Slurm, we have added a basic conversion chart for 
 | Release User Job | qrls [job_id] | scontrol release [job_id] |
 | List Nodes | pbsnodes -a | scontrol show nodes |
 
-
 | Description | PBS Pro | Slurm |
 | -------------- | ----------- | --------- |
 | Submission Directive | #PBS | #SBATCH |
 | Queue/Partition Selection | -q [queue_name] | -p [queue_name] |
 | Number of Nodes | -l select=[count] | -N [count] |
-| Number of CPUS per Node |	-l ncpus=[count] | -ntasks-per-node=[count] |
-| Charge Account | -A [project_name] |	-account=[project_name] |
+| Number of CPUS per Node | -l ncpus=[count] | -ntasks-per-node=[count] |
+| Charge Account | -A [project_name] | -account=[project_name] |
 | Walltime | -l walltime=[hh:mm:ss] | -time=[hh:mm:ss] |
 | Job Name | -N [name] | -job-name=[name] |
 | Standard Out | -o [file_name] | -o [file_name] |
 | Standard Error | -e [file_name] | -e [file_name] |
-| Email Options	| -m abe | -mail-type=[flags] |
-| Email Address	| -M [email_address] | -mail-user=[email_address] |
+| Email Options | -m abe | -mail-type=[flags] |
+| Email Address | -M [email_address] | -mail-user=[email_address] |
 
 Useful variables to use in your scripts:
 

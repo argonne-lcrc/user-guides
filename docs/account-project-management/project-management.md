@@ -26,8 +26,6 @@ Projects normally go through the following life cycle. Detailed descriptions of 
 
 ## Example Project: "Popcorn"
 
-### Introduction
-
 Let's explore a sample project to illustrate how the LCRC allocation system functions. The project, named **popcorn**, aims to simulate Popcorn Kernel Dynamics. It involves a Principal Investigator (PI) and three collaborating scientists.
 
 ### Project Life Cycle & Initial Allocation
@@ -59,8 +57,6 @@ For a practical guide to project allocation requests, refer to the [Sample Proje
 ---
 
 ## Project PIs and User Accounts
-
-### Introduction
 
 Each project within the LCRC system is managed by at least one **Primary Investigator (PI)**. The PI serves as the main point of contact for matters like resource allocations. In addition, projects can have **Proxies** (also known as Co-PIs) who share managerial responsibilities with the PI.
 
@@ -94,6 +90,7 @@ In a nutshell, the PI and any Proxies are responsible for both user and resource
 ## Requesting a New LCRC Project
 
 ### Who Can Request?
+
 Only Argonne employees are eligible to initiate a new project within the LCRC.
 
 ### Step-by-Step Guide
@@ -140,6 +137,7 @@ For storage requests exceeding 1TB, provide a justification.
 ## Join an Existing LCRC Project
 
 ### Who Can Join?
+
 Anyone with a new or existing LCRC account can request to join an existing project.
 
 If you are an Argonne employee, you should first join the **lcrc** project. However, if you are a collaborator, you will need to join a sub-project of LCRC.

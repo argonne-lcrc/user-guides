@@ -113,7 +113,7 @@ Your startup project is set as your default project in the Slurm job scheduler. 
 
 ### General Policies
 
-- **System Error**: If a system error occurs that causes a program to crash while it is running, a project won’t be charged for that time. (This policy may be amended in the future in order to promote the use of user-based checkpointing.) The scheduler may or may not deduct the time used from the project’s allocation, depending on how the crash took place. If someone thinks their project should be credited time because of a system crash or other system problem, they should send email to support@lcrc.anl.gov to get that time back into the project.
+- **System Error**: If a system error occurs that causes a program to crash while it is running, a project won’t be charged for that time. (This policy may be amended in the future in order to promote the use of user-based checkpointing.) The scheduler may or may not deduct the time used from the project’s allocation, depending on how the crash took place. If someone thinks their project should be credited time because of a system crash or other system problem, they should send email to <support@lcrc.anl.gov> to get that time back into the project.
 - **Run Continuation**:If a project runs out of allocation time during a run, that run will be allowed to continue to completion.
 - **Project Suspension**: If a project runs out of allocation time, all users on the project will not be able to run any jobs until time is added again. At the present time, no steps will be taken to stop any jobs associated with that project from running and sitting idle in the job queue.
 - **Usage Tracking**

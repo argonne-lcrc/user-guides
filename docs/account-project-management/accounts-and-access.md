@@ -49,13 +49,13 @@
 
 **If an account is set to expire soon**:
 
-  - **Users**: Contact your Argonne sponsor to request an extension.
-  - **Argonne Sponsors**: Have your division HR representative update the end date in Workday and ensure the job profile is "Outside Collaborator."
+- **Users**: Contact your Argonne sponsor to request an extension.
+- **Argonne Sponsors**: Have your division HR representative update the end date in Workday and ensure the job profile is "Outside Collaborator."
 
 **If an account has already expired**:
 
-  - **Users**: Re-register at [Argonne Collaborator Registration page](https://apps.anl.gov/registration/collaborators) using your existing username to retain access to previous data.
-  - **Argonne Sponsors**: Invite the collaborator to re-register via [Cyber Gate Pass](https://apps.inside.anl.gov/cgp), and ensure they use their original username for continuity.
+- **Users**: Re-register at [Argonne Collaborator Registration page](https://apps.anl.gov/registration/collaborators) using your existing username to retain access to previous data.
+- **Argonne Sponsors**: Invite the collaborator to re-register via [Cyber Gate Pass](https://apps.inside.anl.gov/cgp), and ensure they use their original username for continuity.
 
 ---
 
@@ -63,9 +63,9 @@
 
 **Transitioning to an External Collaborator**:
 
-  - Apply for an [Argonne Collaborator account](https://apps.anl.gov/registration/collaborators) using your sponsor's Argonne email address after your appointment ends.
-  - Cannot apply while the current Argonne appointment is active.
-  - If approved within 90 days of appointment expiration, contact [LCRC support](mailto:support@lcrc.anl.gov) with old and new usernames for assistance in data access.
+- Apply for an [Argonne Collaborator account](https://apps.anl.gov/registration/collaborators) using your sponsor's Argonne email address after your appointment ends.
+- Cannot apply while the current Argonne appointment is active.
+- If approved within 90 days of appointment expiration, contact [LCRC support](mailto:support@lcrc.anl.gov) with old and new usernames for assistance in data access.
 
 ---
 
@@ -73,4 +73,4 @@
 
 **If your Argonne username changes**:
 
-  - Contact [LCRC support](mailto:support@lcrc.anl.gov) with both your old and new usernames to update your user information on LCRC's end.
+- Contact [LCRC support](mailto:support@lcrc.anl.gov) with both your old and new usernames to update your user information on LCRC's end.

@@ -5,7 +5,7 @@
 Improv's job scheduling system is characterized by:
 
 - Uses [**PBS Pro**](../running-jobs-at-lcrc/pbs-pro-clusters.md)
-- Uses the [**`sbank`**](../allocation-management/sbank-allocation-accounting-system.md) accounting system 
+- Uses the [**`sbank`**](../allocation-management/sbank-allocation-accounting-system.md) accounting system
 - Allocations are calculated in [**node hours**](../allocation-management/allocations.md#node-hours-improv-cluster)
 
 ## Queues
@@ -82,4 +82,4 @@ mpirun ./hello_mpi
 
 **Important things to note:**
 
-* PBS Pro on Improv is currently **not** configured to allow sharing nodes. When have a node allocated to you, you receive the ENTIRE node. Ensure that you use all of your allocated nodes' resources unless you have a reason not to.
+- PBS Pro on Improv is currently **not** configured to allow sharing nodes. When have a node allocated to you, you receive the ENTIRE node. Ensure that you use all of your allocated nodes' resources unless you have a reason not to.

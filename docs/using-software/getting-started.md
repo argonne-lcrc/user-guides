@@ -2,9 +2,9 @@
 
 ## Lmod
 
-LCRC uses Lmod (Lua Environment Modules) for software and environment variable management. Lmod has several advantages over other software environments. For example, it prevents you from loading multiple versions of the same package at the same time. It also prevents you from having multiple compilers and MPI libraries loaded at the same time. See the [Lmod User Guide](https://lmod.readthedocs.io/en/latest/010_user.html) for information on how to use Lmod. 
+LCRC uses Lmod (Lua Environment Modules) for software and environment variable management. Lmod has several advantages over other software environments. For example, it prevents you from loading multiple versions of the same package at the same time. It also prevents you from having multiple compilers and MPI libraries loaded at the same time. See the [Lmod User Guide](https://lmod.readthedocs.io/en/latest/010_user.html) for information on how to use Lmod.
 
-### Some basic commands.
+### Some basic commands
 
 #### Finding Available Modules
 
@@ -45,7 +45,7 @@ LCRC uses Lmod (Lua Environment Modules) for software and environment variable m
 
 ## Available Software
 
-With over 500 active users in fields as diverse as climate modeling, engine simulation, and ab-initio molecular dynamics, LCRC provides a diverse software stack. 
+With over 500 active users in fields as diverse as climate modeling, engine simulation, and ab-initio molecular dynamics, LCRC provides a diverse software stack.
 
 If you don’t see a software package installed in our environment that you would like to use, please let us know by contacting [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov). We will consider adding software system wide if appropriate for general LCRC use.
 

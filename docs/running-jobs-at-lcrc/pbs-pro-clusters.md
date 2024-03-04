@@ -170,7 +170,7 @@ The comment field is crucial for understanding job status or issues. It's often 
 
 Basically takes the same options as `qsub`; Say you typoed and set the walltime to 300 minutes instead of 30 minutes. You could fix it (if the job had not started running) by doing `qalter -l walltime=30:00 <jobid> [<jobid> <jobid>...]` The new value overwrites any previous value.
 
-### qdel: Delete a queued or running job:
+### qdel: Delete a queued or running job
 
 [Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.3, page UG-170; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.41, page RG-143
 
@@ -199,7 +199,8 @@ Basically takes the same options as `qsub`; Say you typoed and set the walltime 
 ### qsig: Send a signal to a job
 
 [Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.5, page UG-172; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.53, page RG-195
-```
+
+```console
 qsig -s <signal> <jobid> [<jobid> <jobid>...]
 ```
 
@@ -234,5 +235,5 @@ NOTE: For batch submissions, if the parameters within your submission script do 
 ## Documentation and Tools
 
 * The [PBS “BigBook”](https://help.altair.com/2022.1.0/PBS%20Professional/PBS2022.1.pdf): This is really excellent. We highly suggest you download it and search through it when you have questions. However, it is big at about 2000 pages / 40MB and contains a bunch of stuff you don’t really need, so you can also download the guides separately here:
-    * The [PBS Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf): This is the users guide.
-    * The [PBS Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf): This is the Reference Guide. It shows every option and gives you details on how to format various elements on the command line.
+* The [PBS User Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf): This is the user guide.
+* The [PBS Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf): This is the Reference Guide. It shows every option and gives you details on how to format various elements on the command line.
