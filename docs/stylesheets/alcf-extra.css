@@ -1,12 +1,13 @@
 [data-md-color-scheme="alcf"] {
 	/* Colors */
-  --md-primary-fg-color:        #edf1f5;
-  --md-primary-fg-color--light: #edf1f5;
-  --md-primary-fg-color--dark:  #080813;
+  --md-primary-fg-color:       				 #edf1f5;
+  --md-primary-fg-color--light:			   #edf1f5;
+  --md-primary-fg-color--dark:  			 #080813;
   --md-accent-fg-color:                #118ACB;
   --md-accent-fg-color--transparent:   hsla(#{hex2hsl($md-accent-fg-color)}, 0.1);
   --md-accent-bg-color:                hsla(0, 0%, 100%, 1);
   --md-accent-bg-color--light:         hsla(0, 0%, 100%, 0.7);
+  --md-typeset-a-color: 							 rgb(64, 81, 181);
 }
 
 
