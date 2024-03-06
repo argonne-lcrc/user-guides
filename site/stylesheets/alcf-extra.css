@@ -73,6 +73,12 @@ body {
     --md-scroll-margin: 9rem;
 }
 
+/* HELLO AARON, IS THIS HERE? */
+.md-nav--primary .md-nav__title {
+	background: none;
+	box-shadow: none;
+}
+
 
 
 
@@ -269,7 +275,7 @@ main {
 
 @media screen and (min-width: 60em) {
 		.header--primary .header__nav-secondary .md-search__inner {
-			width: 8rem;
+			width: 4rem;
 		} 	
 }
 
@@ -317,15 +323,20 @@ main {
 
 .md-search__form {
   background-color: #badef5;
-  color: #1d1651;
   border-radius: 0.1rem;
   height: 1.8rem;
+  &:hover {
+  	background-color: #d7e6f3;
+  }
 }
 
-.md-search__input+.md-search__icon,
-.md-search__input::placeholder {
+.md-search__input+.md-search__icon {
 	color: #1d1651;
 	opacity: 1;
+}
+
+.md-search__input::placeholder {
+	opacity: 0;
 }
 
 
@@ -840,12 +851,27 @@ footer .grid{
 }
 
 .footer--address {
-	grid-column: 3 / span 1;
-	grid-row: 1;
+	grid-column: 1 / span 3;
+	grid-row: 2;
+	margin-top: .55rem;
 }
+
 
 @media only screen and (max-width: 960px) {
 	.footer--address { 
+		grid-column: 1 / span 6; 
+		grid-row: 3;
+	}
+}
+
+.footer--follow {
+	grid-column: 3 / span 3;
+	grid-row: 1;
+	margin-top: .55rem;
+}
+
+@media only screen and (max-width: 960px) {
+	.footer--follow { 
 		grid-column: 1 / span 6; 
 		grid-row: 2;
 	}
@@ -853,37 +879,37 @@ footer .grid{
 
 .footer--admin {
 	grid-column: 1 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--admin { 
 		grid-column: 1 / span 6; 
-		grid-row: 3;
+		grid-row: 5;
 	}
 }
 
 .footer--copyright {
 	grid-column: 3 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--copyright { 
-		grid-column: 1 / span 6; 
+		grid-column: 1 / span 3; 
 		grid-row: 4;
 	}
 }
 
 .footer--logos {
 	grid-column: 4 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--logos { 
-		grid-column: 1 / span 6; 
-		grid-row: 5;
+		grid-column: 4 / span 3; 
+		grid-row: 4;
 	}
 }
 
@@ -913,6 +939,26 @@ footer a:hover {
 	color: #6e6e78;
 }
 
+.social {
+	display: inline-block;
+	margin-left: .25rem;
+	position: relative;
+	top: 3px;
+}
+
+.social:first-child {
+	margin-left: .75rem;
+}
+
+.social svg {
+	fill: #badef5;
+	height: .85rem;
+}
+
+.social:hover svg {
+	fill: #6e6e78;
+}
+
 .footer--logos img {
 	max-width: 104px;
 	display: inline;
@@ -934,3 +980,4 @@ footer a:hover {
 .js-dropdown-hidden {
 	display: none;
 }
+
