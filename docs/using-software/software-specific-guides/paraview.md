@@ -52,16 +52,16 @@ Back on your local machine, download and install the Linux/MacOS Paraview versio
 Once installed, launch Paraview locally and set up the connection to connect to our server instance.
 
 Click on the icon for *Connect* (marked in red circle on the figure below) and then click on the *Add Server* tab:
-![Using Paraview 1](https://apsacquia2stg.prod.acquia-sites.com/sites/default/files/2023-11/using-paraview-1.png)
+![Using Paraview 1](https://lcrc.anl.gov/sites/default/files/2023-11/using-paraview-1.png)
 
 Fill in the details as shown below. You should use the port number given to you from when you started the pvserver instance if different than below. Set the name as one of the login nodes, beboplogin2, beboplogin3, etc. and hit *Configure*:
-![Using Paraview 2](https://apsacquia2stg.prod.acquia-sites.com/sites/default/files/2023-11/using-paraview-2.png)
+![Using Paraview 2](https://lcrc.anl.gov/sites/default/files/2023-11/using-paraview-2.png)
 
 This will take you to the next tab where you can hit *Save* to save the configuration (Startup Type is *Manual* which is the default setting):
-![Using Paraview 3](https://apsacquia2stg.prod.acquia-sites.com/sites/default/files/2023-11/using-paraview-3.png)
+![Using Paraview 3](https://lcrc.anl.gov/sites/default/files/2023-11/using-paraview-3.png)
 
 After adding a server, you should see a panel as shown below. You could add multiple servers using the above procedure. Click on the server name where you have started pvserver (in this example it would be beboplogin3) and hit *Connect*:
-![Using Paraview 4](https://apsacquia2stg.prod.acquia-sites.com/sites/default/files/2023-11/using-paraview-4.png)
+![Using Paraview 4](https://lcrc.anl.gov/sites/default/files/2023-11/using-paraview-4.png)
 
 To verify your connection was successful (aside from no error messages locally), you should now see a connection message on the window running pvserver (note the last line below):
 
@@ -73,7 +73,7 @@ Client connected.
 ```
 
 Once connected, you should be able to open your solution files in your case directory on Bebop (since pvserver was launched from it). Open a case file clicking on the icon marked in the red circle below:
-![Using Paraview 5](https://apsacquia2stg.prod.acquia-sites.com/sites/default/files/2023-11/using-paraview-5.png)
+![Using Paraview 5](https://lcrc.anl.gov/sites/default/files/2023-11/using-paraview-5.png)
 
 Your solution files should now be running in client-server mode.
 
