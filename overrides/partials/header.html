@@ -208,7 +208,7 @@
 
 <header class="{{ class }} header--mobile" data-md-component="header">
   <nav
-    class="md-header__inner md-grid"
+    class="md-header__inner grid"
     aria-label="{{ lang.t('header') }}"
   >
 
@@ -216,11 +216,10 @@
     <a
       href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
       title="{{ config.site_name | e }}"
-      class="md-header__button md-logo"
       aria-label="{{ config.site_name }}"
-      data-md-component="logo"
+      class='header-title'
     >
-      {% include "partials/logo.html" %}
+      Laboratory Computing<br>Resource Center
     </a>
 
     <!-- Button to open drawer -->

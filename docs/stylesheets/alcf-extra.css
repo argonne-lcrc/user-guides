@@ -74,14 +74,25 @@ body {
     --md-scroll-margin: 9rem;
 }
 
-/* HELLO AARON, IS THIS HERE? */
 .md-nav--primary .md-nav__title {
 	background: none;
 	box-shadow: none;
 }
 
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title[for="__drawer"] {
+	  color: var(--md-accent-fg-color);
+	  font-weight: 700;
+	  padding-top: .2rem;
+	  height: auto;
+	}
+}
 
-
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title .md-logo {
+    display: none;
+  }
+}
 
 /* layout(ish) */
 
@@ -531,13 +542,26 @@ main {
 	display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
-  width: calc(100% - 28px * 2);
+  width: calc(100% - 14px * 2);
   margin: 0 auto;
   grid-column-gap: 24px;
   column-gap: 24px; /* repeated due to change in spec */
   grid-row-gap: 0;
   row-gap: 0; /* repeated due to change in spec */
   max-width: 59.8rem;
+}
+
+.header--mobile .header-title {
+	font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+  grid-column: span 5;
+  padding-top: 8px;
+}
+
+.header--mobile .header-title:hover {
+	color: var(--md-typeset-a-color);
 }
 
 .header--mobile .header__nav-primary a {
@@ -624,15 +648,21 @@ main {
 }
 
 .md-header__button {
-	margin-top: 0;
+	margin: 0;
 	float: right;
+	color: var(--md-typeset-a-color);
+	grid-column: ;
 }
 
 
-.header--mobile .header__mobIcons .md-header__button svg {
-	margin-top: 0px;
+.md-header__button svg {
+	margin-top: -6px;
+	float: right;
 	width: 36px;
+	height: 48px;
 }
+
+
 
 .header--mobile .header__mobIcons .md-search__icon svg {
 	margin-top: -12px;
