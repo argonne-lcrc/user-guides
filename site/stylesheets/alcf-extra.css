@@ -1,12 +1,13 @@
 [data-md-color-scheme="alcf"] {
 	/* Colors */
-  --md-primary-fg-color:        #edf1f5;
-  --md-primary-fg-color--light: #edf1f5;
-  --md-primary-fg-color--dark:  #080813;
+  --md-primary-fg-color:       				 #edf1f5;
+  --md-primary-fg-color--light:			   #edf1f5;
+  --md-primary-fg-color--dark:  			 #080813;
   --md-accent-fg-color:                #118ACB;
   --md-accent-fg-color--transparent:   hsla(#{hex2hsl($md-accent-fg-color)}, 0.1);
   --md-accent-bg-color:                hsla(0, 0%, 100%, 1);
   --md-accent-bg-color--light:         hsla(0, 0%, 100%, 0.7);
+  --md-typeset-a-color: 							 rgb(64, 81, 181);
 }
 
 
@@ -73,8 +74,25 @@ body {
     --md-scroll-margin: 9rem;
 }
 
+.md-nav--primary .md-nav__title {
+	background: none;
+	box-shadow: none;
+}
 
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title[for="__drawer"] {
+	  color: var(--md-accent-fg-color);
+	  font-weight: 700;
+	  padding-top: .2rem;
+	  height: auto;
+	}
+}
 
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title .md-logo {
+    display: none;
+  }
+}
 
 /* layout(ish) */
 
@@ -269,7 +287,7 @@ main {
 
 @media screen and (min-width: 60em) {
 		.header--primary .header__nav-secondary .md-search__inner {
-			width: 8rem;
+			width: 4rem;
 		} 	
 }
 
@@ -317,15 +335,20 @@ main {
 
 .md-search__form {
   background-color: #badef5;
-  color: #1d1651;
   border-radius: 0.1rem;
   height: 1.8rem;
+  &:hover {
+  	background-color: #d7e6f3;
+  }
 }
 
-.md-search__input+.md-search__icon,
-.md-search__input::placeholder {
+.md-search__input+.md-search__icon {
 	color: #1d1651;
 	opacity: 1;
+}
+
+.md-search__input::placeholder {
+	opacity: 0;
 }
 
 
@@ -519,13 +542,26 @@ main {
 	display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
-  width: calc(100% - 28px * 2);
+  width: calc(100% - 14px * 2);
   margin: 0 auto;
   grid-column-gap: 24px;
   column-gap: 24px; /* repeated due to change in spec */
   grid-row-gap: 0;
   row-gap: 0; /* repeated due to change in spec */
   max-width: 59.8rem;
+}
+
+.header--mobile .header-title {
+	font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+  grid-column: span 5;
+  padding-top: 8px;
+}
+
+.header--mobile .header-title:hover {
+	color: var(--md-typeset-a-color);
 }
 
 .header--mobile .header__nav-primary a {
@@ -612,15 +648,21 @@ main {
 }
 
 .md-header__button {
-	margin-top: 0;
+	margin: 0;
 	float: right;
+	color: var(--md-typeset-a-color);
+	grid-column: ;
 }
 
 
-.header--mobile .header__mobIcons .md-header__button svg {
-	margin-top: 0px;
+.md-header__button svg {
+	margin-top: -6px;
+	float: right;
 	width: 36px;
+	height: 48px;
 }
+
+
 
 .header--mobile .header__mobIcons .md-search__icon svg {
 	margin-top: -12px;
@@ -840,12 +882,27 @@ footer .grid{
 }
 
 .footer--address {
-	grid-column: 3 / span 1;
-	grid-row: 1;
+	grid-column: 1 / span 3;
+	grid-row: 2;
+	margin-top: .55rem;
 }
+
 
 @media only screen and (max-width: 960px) {
 	.footer--address { 
+		grid-column: 1 / span 6; 
+		grid-row: 3;
+	}
+}
+
+.footer--follow {
+	grid-column: 3 / span 3;
+	grid-row: 1;
+	margin-top: .55rem;
+}
+
+@media only screen and (max-width: 960px) {
+	.footer--follow { 
 		grid-column: 1 / span 6; 
 		grid-row: 2;
 	}
@@ -853,37 +910,37 @@ footer .grid{
 
 .footer--admin {
 	grid-column: 1 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--admin { 
 		grid-column: 1 / span 6; 
-		grid-row: 3;
+		grid-row: 5;
 	}
 }
 
 .footer--copyright {
 	grid-column: 3 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--copyright { 
-		grid-column: 1 / span 6; 
+		grid-column: 1 / span 3; 
 		grid-row: 4;
 	}
 }
 
 .footer--logos {
 	grid-column: 4 / span 1;
-	grid-row: 2;
+	grid-row: 3;
 }
 
 @media only screen and (max-width: 960px) {
 	.footer--logos { 
-		grid-column: 1 / span 6; 
-		grid-row: 5;
+		grid-column: 4 / span 3; 
+		grid-row: 4;
 	}
 }
 
@@ -913,6 +970,26 @@ footer a:hover {
 	color: #6e6e78;
 }
 
+.social {
+	display: inline-block;
+	margin-left: .25rem;
+	position: relative;
+	top: 3px;
+}
+
+.social:first-child {
+	margin-left: .75rem;
+}
+
+.social svg {
+	fill: #badef5;
+	height: .85rem;
+}
+
+.social:hover svg {
+	fill: #6e6e78;
+}
+
 .footer--logos img {
 	max-width: 104px;
 	display: inline;
@@ -934,3 +1011,4 @@ footer a:hover {
 .js-dropdown-hidden {
 	display: none;
 }
+

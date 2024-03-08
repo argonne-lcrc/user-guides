@@ -138,8 +138,3 @@ if (dropdowns.length > 0) {
 // });
 
 // add listener to each of the links that toggles menus
-
-
-
-
-
