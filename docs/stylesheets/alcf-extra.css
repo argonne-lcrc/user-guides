@@ -290,7 +290,7 @@ main {
 
 .header--primary .header__nav-secondary .md-search-result__list ul,
 .header--primary .header__nav-secondary .md-search-result__list ol{
- top: 0: important!;
+ top: 0 important!;
 }
 
 .header--primary .header__nav-secondary li ol,
