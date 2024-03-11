@@ -288,6 +288,10 @@ main {
 	display: block !important;
 }
 
+.header--primary .header__nav-secondary .md-search-result__list {
+ top: 0: important!;
+}
+
 .header--primary .header__nav-secondary li ol,
 .header--primary .header__nav-secondary li ul, {
 	top: 0;
