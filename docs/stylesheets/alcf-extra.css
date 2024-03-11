@@ -402,7 +402,6 @@ main {
   /*grid-row: span $rows;*/
 	background-color: #080812;
 	color: #fff;
-	@include inset($top: m);
 	margin-left: -28px; 
 	padding-left: 28px;
 	padding-right: 24px;
@@ -742,7 +741,6 @@ main {
   /*grid-row: span $rows;*/
 	background-color: #080812;
 	color: #fff;
-	@include inset($top: m);
 	margin-left: -28px; 
 	padding-left: 28px;
 	padding-right: 24px;
@@ -1037,4 +1035,3 @@ footer a:hover {
 .js-dropdown-hidden {
 	display: none;
 }
-

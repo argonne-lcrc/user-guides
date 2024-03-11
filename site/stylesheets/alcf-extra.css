@@ -74,15 +74,16 @@ body {
     --md-scroll-margin: 9rem;
 }
 
-/* HELLO AARON, IS THIS HERE? */
+
 .md-nav--primary .md-nav__title {
 	background: none;
 	box-shadow: none;
+	color: var(--md-primary-fg-color--dark);
 }
 
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title[for="__drawer"] {
-	  color: var(--md-accent-fg-color);
+	  color: var(--md-primary-fg-color--dark);
 	  font-weight: 700;
 	  padding-top: .2rem;
 	  height: auto;
@@ -101,7 +102,7 @@ body {
 	margin-bottom: 5rem;
 }
 
-.md-header[data-md-state=shadow] {
+.md-header[data-md-state=shadow], .md-header--shadow {
 	box-shadow: none;
 }
 
@@ -165,6 +166,13 @@ main {
 
 .header--primary .header__nav-secondary a:hover {
 	color: #d8dce1;
+}
+
+@media screen and (min-width: 60em) {
+  .md-nav--secondary .md-nav__title {
+    background: none;
+    box-shadow: none;
+  }
 }
 
 .header--primary a:hover {
@@ -261,6 +269,7 @@ main {
 	top: -24px; /* hacky, to line up with search box, better way? */
 }
 
+
 .header--primary .header__nav-secondary li {
 	font-size: 14px;
 	line-height: 16px;
@@ -268,6 +277,22 @@ main {
 	padding-right: 16px;
 	letter-spacing: 1.4px;
 	text-transform: uppercase;
+}
+
+
+.header--primary .header__nav-secondary li ol li,
+.header--primary .header__nav-secondary li ul li, {
+	text-transform: none;
+	font-weight: 400;
+	letter-spacing: 0;
+	margin-left: -.1em;
+	display: block;
+}
+
+.header--primary .header__nav-secondary li ol,
+.header--primary .header__nav-secondary li ul, {
+	top: 0;
+	margin-left: 0;
 }
 
 .header--primary .header__nav-secondary li:last-child {
@@ -377,7 +402,6 @@ main {
   /*grid-row: span $rows;*/
 	background-color: #080812;
 	color: #fff;
-	@include inset($top: m);
 	margin-left: -28px; 
 	padding-left: 28px;
 	padding-right: 24px;
@@ -717,7 +741,6 @@ main {
   /*grid-row: span $rows;*/
 	background-color: #080812;
 	color: #fff;
-	@include inset($top: m);
 	margin-left: -28px; 
 	padding-left: 28px;
 	padding-right: 24px;
@@ -1012,4 +1035,3 @@ footer a:hover {
 .js-dropdown-hidden {
 	display: none;
 }
-
