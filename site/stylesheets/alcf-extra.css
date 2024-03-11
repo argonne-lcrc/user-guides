@@ -280,13 +280,12 @@ main {
 }
 
 
-.md-search-result .md-search-result__list .md-search-result__item a article ol li,
-.md-search-result .md-search-result__list .md-search-result__item a article ul li, {
-	text-transform: none;
-	font-weight: 400;
-	letter-spacing: 0;
-	margin-left: -.1em;
-	display: block;
+.header--primary .header__nav-secondary .md-search-result__list li {
+	text-transform: none !important;
+	font-weight: 400 !important;
+	letter-spacing: 0 !important;
+	margin-left: -.1em !important;
+	display: block !important;
 }
 
 .header--primary .header__nav-secondary li ol,
