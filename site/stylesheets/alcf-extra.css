@@ -280,8 +280,8 @@ main {
 }
 
 
-.md-search-result__item a ol li,
-.md-search-result__item a ul li, {
+.md-search-result .md-search-result__list .md-search-result__item a article ol li,
+.md-search-result .md-search-result__list .md-search-result__item a article ul li, {
 	text-transform: none;
 	font-weight: 400;
 	letter-spacing: 0;
