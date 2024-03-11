@@ -280,8 +280,8 @@ main {
 }
 
 
-.header--primary .header__nav-secondary li ol li,
-.header--primary .header__nav-secondary li ul li, {
+.md-search-result ol li,
+.md-search-result li ul li, {
 	text-transform: none;
 	font-weight: 400;
 	letter-spacing: 0;
