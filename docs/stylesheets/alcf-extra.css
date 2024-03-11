@@ -288,7 +288,8 @@ main {
 	display: block !important;
 }
 
-.header--primary .header__nav-secondary .md-search-result__list {
+.header--primary .header__nav-secondary .md-search-result__list ul,
+.header--primary .header__nav-secondary .md-search-result__list ol{
  top: 0: important!;
 }
 
