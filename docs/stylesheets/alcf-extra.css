@@ -179,6 +179,10 @@ main {
 	color: #d8dce1;
 }
 
+.header--primary h1 a:hover {
+	color: var(--md-typeset-a-color);
+}
+
 
 .header--primary .grid {
 	min-height: 152px;
