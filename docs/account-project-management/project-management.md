@@ -34,15 +34,15 @@ After its creation, **popcorn** would be granted an initial allocation, for inst
 
 ### Usage Scenario
 
-Imagine one of the collaborating scientists runs a job that takes **10 hours** and utilizes **100 8-core nodes**. This would consume:
+Imagine one of the collaborating scientists runs a job that takes **10 hours** and utilizes **25, 36-core nodes**. This would consume:
 
-* `10 hours (job duration) x 100 nodes x 8 cores (per node) = 8,000 core-hours`
+* `10 hours (job duration) x 25 nodes x 36 cores (per node) = 9,000 core-hours`
 
-As a result, **12,000 core-hours** would remain from the original allocation.
+As a result, **11,000 core-hours** would remain from the original allocation.
 
 ### Running Out of Core-Hours
 
-Once all **12,000 remaining core-hours** are exhausted, the project will be unable to execute additional jobs. At this point, the team would need to consider requesting more computational time.
+Once all **11,000 remaining core-hours** are exhausted, the project will be unable to execute additional jobs. At this point, the team would need to consider requesting more computational time.
 
 ### Requesting Additional Allocation
 
@@ -235,7 +235,7 @@ Mid-Quarter Allocations can be granted for LCRC projects after not previously re
 
 ### Allocation Limits and Calculation Examples
 
-- Maximum request: allocation one can request is either **250K core-hours** or **half of the initial allocation**, whichever is less.
+- Maximum request: **250K core-hours** (2,000 node-hours on Improv) or **half of the initial allocation**, whichever is less.
 - This amount is pro-rated based on the remaining time in the quarter.
 
 **Examples**
