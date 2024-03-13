@@ -1,5 +1,7 @@
 # Running Jobs on PBS Clusters
 
+This document complements the information provided on the [Improv Cluster](../../improv/getting-started-improv) page, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.
+
 ## Obtaining and Managing Compute Resources
 
 ### Definitions and Notes

@@ -1,5 +1,7 @@
 # Running Jobs on Slurm Clusters
 
+This document complements the information provided on the [Bebop](../../bebop/getting-started-bebop) and [Swing](../../swing/getting-started-swing) Cluster pages, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.
+
 ## Job Submission Commands
 
 The 3 most common tools you will use to submit jobs are `sbatch`, `srun` and `salloc`.

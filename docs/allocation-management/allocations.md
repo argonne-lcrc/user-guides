@@ -39,43 +39,6 @@ Allocations on Improv are provided (and should be requested) in Node Hours. 1 no
 - **Number of Nodes Used**: The quantity of compute nodes utilized for the job.
 - **Time in Hours**: The duration for which these nodes are used.
 
-## Mid-Quarter Allocations
-
-### Overview
-
-Mid-Quarter Allocations by the LCRC are detailed here. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources.
-
-### Allocation Planning and Timing
-
-- PIs should ensure their allocated hours last the entire quarter.
-- LCRC reviews mid-quarter allocation requests once a week.
-
-### How to Request Additional Allocations
-
-1. **Check Current Usage**: Verify usage of allocated resources using `lcrc-usage <project_name>`.
-2. **Prepare Documentation**: Justify core-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
-3. **Special Criteria for Large Requests**: Provide scaling results for requests exceeding 100K core-hours (781 node hours).
-
-> **Note**: Requests with incomplete or unclear information may result in a delay of up to two weeks in the decision-making process.
-
-### Allocation Limits and Calculation Examples
-
-- Maximum request: allocation one can request is either **250K core-hours** or **half of the initial allocation**, whichever is less.
-- This amount is pro-rated based on the remaining time in the quarter.
-
-**Examples**
-
-1. **Initial Allocation of 600K Core-Hours**: If you request an additional 500K core-hours 6 weeks into a 12-week quarter, you may be granted up to **125K additional core-hours**. This is calculated as half of the maximum requestable amount, since half the quarter has passed (`250K * 6/12`).
-
-2. **Initial Allocation of 200K Core-Hours**: If you request an additional 300K core-hours after 7 weeks into the quarter, the maximum you may receive is approximately **58K additional core-hours**. This is calculated by taking half of the initial allocation, prorated for the remaining 5 weeks of the quarter (`200K * 0.5 * 5/12`).
-
-### Other Important Notes
-
-- **No allocations** are made within **two weeks before the quarter's end**
-- Project renewals are at the **start of the fiscal year**.
-- Failing to renew before the allocation deadline results in postponement to the **following quarter (Q2 onwards)**.
-- For large core-hour needs or high usage rates, consider applying through the [Director's Discretionary Allocation Program](https://www.alcf.anl.gov/science/directors-discretionary-allocation-program).
-
 ## Startup Projects and Allocations
 
 ### Startup Projects Overview
@@ -143,3 +106,7 @@ PIs should note that any extra time granted but not used within the quarter will
 - **Existing Projects**: Time requests for the upcoming fiscal year can be made from the first week of September until October 1st.
 - **New Projects**: New projects may request time throughout the year for the remaining quarters.
 - **Post-October 1st**: After October 1st, existing projects can request time for any quarter, but there may be restrictions on the maximum hours granted.
+
+## Mid-Quarter Allocations
+
+Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources. We have described, in detail, this process on the [Managing Projects](../../account-project-management/project-management/#mid-quarter-allocations) documentation. 
