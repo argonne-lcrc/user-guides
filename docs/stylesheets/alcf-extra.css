@@ -557,6 +557,27 @@ main {
 	color: #6e6e78;
 }
 
+.small-text p {
+	font-size: 15px;
+  line-height: 20px;
+  margin-top: 0rem;
+  padding-top: 0.0834375rem;
+  padding-bottom: 0.1665625rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  font-family: proxima-nova,sans-serif;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+}
+
+ .header--primary .header__nav-primary .small-text p a {
+	color: white;
+}
+
+.header--primary .header__nav-primary .small-text p a:hover {
+	color: #d8dce1;
+}
 
 
 
