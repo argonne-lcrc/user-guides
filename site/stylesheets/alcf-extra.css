@@ -90,6 +90,11 @@ body {
 	}
 }
 
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary .md-nav__title {
+  	position: relative; 
+  }
+
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title .md-logo {
     display: none;
@@ -153,7 +158,7 @@ main {
   column-gap: 24px; /* repeated due to change in spec */
   grid-row-gap: 0;
   row-gap: 0; /* repeated due to change in spec */
-  max-width: 59.8rem;
+/*  max-width: 59.8rem;*/
 }
 
 .header--primary .header__nav-primary a {
@@ -177,6 +182,10 @@ main {
 
 .header--primary a:hover {
 	color: #d8dce1;
+}
+
+.header--primary h1 a:hover {
+	color: var(--md-typeset-a-color);
 }
 
 
@@ -548,6 +557,27 @@ main {
 	color: #6e6e78;
 }
 
+.small-text p {
+	font-size: 15px;
+  line-height: 20px;
+  margin-top: 0rem;
+  padding-top: 0.0834375rem;
+  padding-bottom: 0.1665625rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  font-family: proxima-nova,sans-serif;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+}
+
+ .header--primary .header__nav-primary .small-text p a {
+	color: white;
+}
+
+.header--primary .header__nav-primary .small-text p a:hover {
+	color: #d8dce1;
+}
 
 
 

@@ -128,6 +128,7 @@
 										<li><a href="https://lcrc.anl.gov/about/about-us/mission-and-history">Mission and History</a></li>
 										<li><a href="https://lcrc.anl.gov/projects">Projects</a></li>
 										<li><a href="https://lcrc.anl.gov/directory">Staff Directory</a></li>
+										<li><a href="https://lcrc.anl.gov/news">News</a></li>
 										<li><a href="https://lcrc.anl.gov/about/about-us/acknowledgements">Acknowledgements</a></li>
 										
 									</ul>
@@ -161,22 +162,15 @@
 									<h3>Computing and Data Resources</h3>
 									<ul>
 										<li><a href="https://lcrc.anl.gov/improv">Improv</a></li>
-										<li><a href="/bebop">Bebop</a></li>
-										<li><a href="/systems/computing-and-data-resources/swing">Swing</a></li>
-										<li><a href="/systems/computing-and-data-resources/storage">Storage</a></li>
-										<li><a href="/systems/purchasing-resources">Purchasing Resources</a></li>
+										<li><a href="https://lcrc.anl.gov/systems/bebop">Bebop</a></li>
+										<li><a href="https://lcrc.anl.gov/systems/swing">Swing</a></li>
+										<li><a href="https://lcrc.anl.gov/systems/storage">Storage</a></li>
+										<li><a href="https://lcrc.anl.gov/systems/purchasing-resources">Purchasing Resources</a></li>
 									</ul>
 								</div>
 							</div>
 						</nav>
 					</div>
-				</li>
-
-
-
-
-				<li id="nav-news">
-					<a href="https://lcrc.anl.gov/news">News</a>
 				</li>
 
 
@@ -198,10 +192,14 @@
 								</div>
 								<div class="small-text">
 									<p>
-										<strong>Argonne Service Desk</strong><br>
-										Email: &nbsp;<a href="mailto:help@anl.gov">help@anl.gov</a><br>
+										<strong>LCRC Support</strong><br>
+										Email: &nbsp;<a href="mailto:support@lcrc.anl.gov">support@lcrc.anl.gov</a><br>
+									</p>
+
+									<p>
+										<strong>Argonne Service Desk (Password Reset)</strong><br>
 										Phone: (630) 252-9999<br>
-										Ticket:&nbsp;<a href="mailto:support@lcrc.anl.gov">support@lcrc.anl.gov</a>.
+										Email: &nbsp;<a href="mailto:help@anl.gov">help@anl.gov</a><br>
 									</p>
 								</div>
 							</div>
@@ -1078,6 +1076,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#job-scheduling-system" class="md-nav__link">
     Job Scheduling System
   </a>
@@ -1453,6 +1458,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#job-scheduling-system" class="md-nav__link">
     Job Scheduling System
   </a>
@@ -1491,6 +1503,23 @@
                 
                 
                 <h1 id="running-jobs-on-improv">Running Jobs on Improv</h1>
+<h2 id="quickstart">Quickstart</h2>
+<p>Presented below are fundamental commands essential for day-to-day use by most LCRC users on Improv. Comprehensive guides are available in other sections linked within our documentation.</p>
+<p>Check your Current Allocation Balance(s):
+<div class="highlight"><pre><span></span><code>sbank-list-allocations -p &lt;project_name&gt;
+</code></pre></div></p>
+<p>Check your Filesystem Quota(s):
+<div class="highlight"><pre><span></span><code>lcrc-quota
+</code></pre></div></p>
+<p>Submit a Batch Job: 
+<div class="highlight"><pre><span></span><code>qsub -A &lt;project&gt; &lt;your job script&gt;
+</code></pre></div></p>
+<p>List All Jobs:
+<div class="highlight"><pre><span></span><code>qstat
+</code></pre></div></p>
+<p>Delete a Job:
+<div class="highlight"><pre><span></span><code>qdel &lt;jobid&gt;
+</code></pre></div></p>
 <h2 id="job-scheduling-system">Job Scheduling System</h2>
 <p>Improv's job scheduling system is characterized by:</p>
 <ul>
