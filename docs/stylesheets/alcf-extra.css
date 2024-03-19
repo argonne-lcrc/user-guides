@@ -90,6 +90,11 @@ body {
 	}
 }
 
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary .md-nav__title {
+  	position: relative; 
+  }
+
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title .md-logo {
     display: none;
