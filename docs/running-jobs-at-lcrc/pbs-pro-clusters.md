@@ -26,23 +26,18 @@ If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro c
     * We automatically add `-l place=scatter` for you so that each of your chunks (`<# of nodes>`) gets its own vnode.
     * `-q <queue_name>` will place your job on the correct queue depending on the node type you want. The compute queue is the default on Improv.
     * If you want to run an executable rather than a script replace `<your jobs script>` in the example above with `-- <your executable>` (that is dash dash)
-    * PBS Documentation: Users Guide, Chapter 2, page UG-11 and Reference Guide Chapter 2, section 2.57, page RG-216
-2. `qstat`: check on the status of your jobs or queues
+2. `pbsq`: a user-friendly filter for `qstat` to view the status of jobs and queues on the cluster.
+3. `qstat`: view the status of jobs and queues on the cluster.
     * Try these variations and see which you like best: `qstat, qstat -was, qstat -was1, qstat -wan, qstat -wan1`. Add `-x` to see jobs that have completed. We keep one week of history.
-        PBS Documentation: Users Guide Sec. 10.2, page UG-175; Reference Guide Sec. 2.55, page RG-200
-3. `qalter`: update your request for resources
+4. `qalter`: update your request for resources
     * Just like `qsub`, just add a jobid at the end. Only works before the job starts;
     * If you want to change the walltime to 30 minutes: `qalter -l walltime=30:00:00 <jobid>`
-    * PBS Documentation: Users Guide Sec. 9.2, page UG-168; Reference Guide Sec. 2.40, page RG-130
-4. `qdel`: cancel a job that you don’t need. This will also kill a running job
+5. `qdel`: cancel a job that you don’t need. This will also kill a running job.
     * `qdel <jobid>`
-    * PBS Documentation: Users Guide Sec. 9.3, page UG-170; Reference Guide Sec. 2.41, page RG-143
 
 **Note: The page numbers in the PBS guides are unique. If you search for the specified page number it will take you directly to the relevant page.**
 
 ### qsub: Submit a job to run
-
-[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf), Chapter 2, page UG-11 and [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Chapter 2, section 2.57, page RG-216
 
 At the LCRC, your qsub will likely use the following parameters:
 
@@ -63,8 +58,6 @@ Also note that if you want to run an executable directly rather than a script yo
 
 ### Resource Selection and Job Placement
 
-Section 2.57.2.6 RG-219 Requesting Resources and Placing jobs in the [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf).
-
 Resources come in two flavors:
 
 * Job Wide: Walltime is the most common example of a job wide resource. You use the `-l` option to specify job wide resources, i.e. `-l walltime=06:00:00`. All the resources in the job have the same walltime.
@@ -79,13 +72,12 @@ You can also tell PBS how you want the chunks distributed across the physical ha
 * unless you have a specific reason to do otherwise, you probably want to set this to scatter, otherwise you may not get what you expect. For instance on a host with ncpus=128, if you requested -l select=8:ncpus=8:mpiprocs=8 you could end up with all of our chunks on one node.
 * `free` means PBS can distribute them as it sees fit
 * `pack` means all chunks from one host. Note that this is not the minimum number of hosts, it is one host. If the chunks can’t fit on one host, the qsub will fail.
-  * `scatter` means take only one chunk from any given host.
+* `scatter` means take only one chunk from any given host.
 
 Here is a heavily commented sample PBS submission script that shows some more of the options, but remember that the PBS manuals referenced at the bottom of this page are the ultimate resource. If you create a file named hello.pbs for example, you can add:
 
 ```bash
 #!/bin/bash -l
-# UG Section 2.5, page UG-24 Job Submission Options
 # Add another # at the beginning of the line to comment out a line
 # NOTE: adding a switch to the command line will override values in this file.
 
@@ -103,7 +95,6 @@ Here is a heavily commented sample PBS submission script that shows some more of
 #PBS -j n
 
 # Controlling email notifications
-# UG Sec 2.5.1, page UG-25 Specifying Email Notification
 # When to send email b=job begin, e=job end, a=job abort, j=subjobs (job arrays), n=no mail
 #PBS -m be
 #PBS -M <your_email_address>
@@ -126,7 +117,7 @@ You would be able to submit the above script with:
 
 `qsub hello.pbs`
 
-### qsub example
+#### qsub example
 
 If you don’t want to use a script, you could submit via the command line as well. For example:
 
@@ -138,13 +129,31 @@ If you don’t want to use a script, you could submit via the command line as we
 * Since we allocate full nodes on Improv, 4 chunks will be 4 nodes. If we shared nodes, that would be 4 threads.
 * use the `--` (dash dash) syntax when directly running an executable.
 
-### qstat: Query the status of jobs/queues
+### pbsq: A user-friendly filter for qstat
 
-*[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 10.2, page UG-175; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.55, page RG-200*
+`pbsq` is a user-friendly filter for `qstat` to view the status of jobs and queues on the cluster. It provides a more user-friendly interface for `qstat` by providing a more intuitive way to view job and queue status.
+
+#### pbsq basic usage
+
+Query all jobs that are running and queued:
+
+`pbsq`
+
+Query all jobs that belong to a project:
+
+`pbsq -f <project_name>`
+
+Query all jobs that belong to a user:
+
+`pbsq -f <user_name>`
+
+Use `pbsq -h` to see the help menu and other options.
+
+### qstat: Query the status of jobs/queues
 
 The `qstat` command lists jobs on the system, showing their status, user, and other details. You can specify job IDs for detailed information about specific jobs.
 
-**Basic usage:**
+#### qstat basic usage
 
 `qstat`: Lists all jobs with basic details.
 
@@ -168,39 +177,27 @@ The comment field is crucial for understanding job status or issues. It's often 
 
 ### qalter: Alter a queued job
 
-[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.2, page UG-168; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.40, page RG-130
-
 Basically takes the same options as `qsub`; Say you typoed and set the walltime to 300 minutes instead of 30 minutes. You could fix it (if the job had not started running) by doing `qalter -l walltime=30:00 <jobid> [<jobid> <jobid>...]` The new value overwrites any previous value.
 
 ### qdel: Delete a queued or running job
-
-[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.3, page UG-170; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.41, page RG-143
 
 `qdel <jobid> [<jobid> <jobid>...]`
 
 ### qhold,qrls: Place / release a user hold on a job
 
-[Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec 2.44, page RG-150 and Sec 2.50, page RG-183
-
 `[qhold | qrls] <jobid> [<jobid> <jobid>...]`
 
 ### qselect: Query jobids for use in commands
 
-[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 10.1, page UG-175; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.52, page RG-189
-
 `qdel $(qselect -N test1)` will delete all the jobs that had the job name set to test1.
 
 ### qmsg: Write a message into a jobs output file
-
-[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.4, page UG-171; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.47, page RG-177
 
 `qmsg -E -O "This is the message" <jobid> [<jobid> <jobid>...]`
 
 `-E` writes it to standard error, `-O` writes it to standard out
 
 ### qsig: Send a signal to a job
-
-[Users Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf) Sec. 9.5, page UG-172; [Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec. 2.53, page RG-195
 
 ```console
 qsig -s <signal> <jobid> [<jobid> <jobid>...]
@@ -209,8 +206,6 @@ qsig -s <signal> <jobid> [<jobid> <jobid>...]
 If you don’t specify a signal, `SIGTERM` is sent.
 
 ### pbsnodes: Get information about the current state of nodes
-
-[Reference Guide](https://help.altair.com/2022.1.0/PBS%20Professional/PBSReferenceGuide2022.1.pdf) Sec 2.7 page RG-36
 
 This is more for admins, but it can tell you more about the nodes themselves.
 
@@ -230,9 +225,9 @@ In PBS it is not easy to see a priority order for which jobs will run next. The 
 
 ## Troubleshooting / Common Errors
 
-If you receive a qsub: Job rejected by all possible destinations error, then check your submission parameters. The issue is most likely that your walltime or node count do not fall within the ranges listed above for the production execution queues. Please see the table above for limits on production queue job sizes.
+If you receive a `qsub: Job rejected by all possible destinations error`, then check your submission parameters. The issue is most likely that your walltime or node count do not fall within the ranges listed above for the production execution queues. Please see the table above for limits on production queue job sizes.
 
-NOTE: For batch submissions, if the parameters within your submission script do not meet the parameters of any of the above queues you might not receive the “Job submission” error on the command line at all. This can happen because your job is in waiting in a routing queue and has not yet reached the execution queues. In this case you will receive a jobid back and qsub will exit, however when the proposed job is routed, it will be rejected from the execution queues. In that case, the job will be deleted from the system and will not show up in the job history for that system. If you run a qstat on the jobid, it will return qstat: Unknown Job Id <jobid>
+NOTE: For batch submissions, if the parameters within your submission script do not meet the parameters of any of the above queues you might not receive the “Job submission” error on the command line at all. This can happen because your job is in waiting in a routing queue and has not yet reached the execution queues. In this case you will receive a jobid back and qsub will exit, however when the proposed job is routed, it will be rejected from the execution queues. In that case, the job will be deleted from the system and will not show up in the job history for that system. If you run a `qstat` on the jobid, it will return `qstat: Unknown Job Id <jobid>`.
 
 ## Documentation and Tools
 
