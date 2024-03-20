@@ -177,10 +177,9 @@ main {
   .md-nav--secondary .md-nav__title {
     background: none;
     box-shadow: none;
-    position: relative;
+    position: relative !important;
   }
 }
-
 
 .header--primary a:hover {
 	color: #d8dce1;
