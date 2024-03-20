@@ -7,40 +7,23 @@
 - All storage systems use GPFS as the file system.
 - Certain filesystems are backed up nightly.
 
-## Disk Storage
+## Backup Storage
 
-### ZFS Backup Storage
-
-**JBODs (Just a Bunch Of Disks)**:
-
-- Total Number of JBODs: 6
-- Each JBOD is equipped with 102 x 14TB WDC HC530 SAS Enterprise Disk Drives.
-- This configuration ensures that every disk in a zpool is from the same JBOD, maximizing performance.
-
-**Disk Drives**:
+### Disk Drives
 
 - Total Number of Drives Across All JBODs: 612 (6 JBODs x 102 Drives each)
 - Drive Type: WDC HC530 SAS Enterprise Disk Drives
 - Drive Capacity: 14TB each
-
-**ZFS Pools (zpools)**:
-
-- Total Number of zpools: 18
-  - Distribution: 3 zpools per JBOD
-  - Configuration of Each zpool:
-    - Composed of 3 vdevs (Virtual Devices)
-    - Each vdev is a RAIDZ3 configuration with 11 disks
-    - One hot spare disk per zpool for redundancy and immediate replacement in case of a disk failure
-  - Usable Space per zpool: ~305 TB
-  - Total Usable Space: ~5.5 PB
+- Uses ZFS for its the filesystem
 
 **Maintenance and Data Integrity**:
 
 - Automated monthly scrubs are scheduled for each zpool. These scrubs are essential for maintaining data integrity and for early identification of potential issues.
 
-## Tape Storage
+### Tape Storage
 
-LCRC operates a 700. We are currently running a combination of LTO6 and LTO8 tape technology. The LTO tape drives have built-in hardware compression which typically achieve compression ratios between 1.25:1 and 2:1 depending on the data yielding an effective capacity of approximately 65PB.
+- LCRC has roughly 760 tapes to which we backup and replicate data from the disk storage.
+- We are currently running LTO9 tape technology.
 
 ## Purchasing Resources
 
