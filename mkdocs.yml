@@ -20,6 +20,7 @@ nav:
       - Software-Specific Guides: 
         - Conda: using-software/software-specific-guides/conda.md
         - Jupyter Notebooks: using-software/software-specific-guides/jupyter-notebooks.md
+        - OpenMC: using-software/software-specific-guides/openmc.md
         - Paraview: using-software/software-specific-guides/paraview.md
         - Tensorflow: using-software/software-specific-guides/tensorflow.md
   - Data Management:
