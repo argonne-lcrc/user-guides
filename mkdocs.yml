@@ -19,6 +19,7 @@ nav:
       - Getting Started: using-software/getting-started.md 
       - Software-Specific Guides: 
         - Conda: using-software/software-specific-guides/conda.md
+        - Gaussian: using-software/software-specific-guides/gaussian.md
         - Jupyter Notebooks: using-software/software-specific-guides/jupyter-notebooks.md
         - OpenMC: using-software/software-specific-guides/openmc.md
         - Paraview: using-software/software-specific-guides/paraview.md
