@@ -24,6 +24,7 @@ nav:
         - OpenMC: using-software/software-specific-guides/openmc.md
         - Paraview: using-software/software-specific-guides/paraview.md
         - Tensorflow: using-software/software-specific-guides/tensorflow.md
+        - VASP: using-software/software-specific-guides/vasp.md
   - Data Management:
     - Data Transfer:
       - SFTP and SCP: data-management/data-transfer/sftp-scp.md
