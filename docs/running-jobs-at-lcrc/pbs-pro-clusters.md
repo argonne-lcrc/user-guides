@@ -223,6 +223,56 @@ In PBS it is not easy to see a priority order for which jobs will run next. The 
 2. size (in nodes) of the job, larger jobs receive higher priority
 3. job duration: shorter duration jobs will accumulate priority more quickly, so it is best to specify the job run time as accurately as possible
 
+## General PBS Example Scripts
+
+### Submitting a PBS Array Job
+
+```bash
+#!/bin/bash
+
+###### Tells PBS the job name
+#PBS -N array_example
+###### Tells PBS to run on 1 node with 128 cpus
+#PBS -l select=1:ncpus=128
+###### Tells PBS the walltime
+#PBS -l walltime=00:05:00
+###### Tells PBS the project to charge
+#PBS -A support
+###### Tells PBS to run 5 subjobs (Required to run in an array)
+#PBS -J 1-5
+###### Tells PBS to rerun the job (Rquired to run in an array)
+#PBS -r y
+
+cd $PBS_O_WORKDIR
+echo "Running subjob $PBS_ARRAY_INDEX"
+
+# Create a subjob-specific directory
+mkdir -p subjob_${PBS_ARRAY_INDEX}
+cd subjob_${PBS_ARRAY_INDEX}
+
+# Run a command unique to each subjob
+echo "This is subjob ${PBS_ARRAY_INDEX}" > output_${PBS_ARRAY_INDEX}.txt
+
+# Sleep for a different amount of time based on the subjob index
+sleep ${PBS_ARRAY_INDEX}
+
+echo "Subjob $PBS_ARRAY_INDEX completed"
+```
+
+The `pbsq` command subsequently shows the status of the job array.
+
+```console
+$ pbsq
+138617[].imgt1    user1             support               00:05:00    00:00:04  n/a       00:00:06       00:04:54      1  B      compute  array_example     Job Array Began at Thu Mar 21 at 12:02
+138617[1].imgt1   user1             support               00:05:00    00:00:04  n/a       00:00:06       00:04:54      1  E      compute  array_example     i475
+138617[2].imgt1   user1             support               00:05:00    00:00:04  n/a       00:00:06       00:04:54      1  E      compute  array_example     i730
+138617[3].imgt1   user1             support               00:05:00    00:00:04  n/a       00:00:06       00:04:54      1  E      compute  array_example     i799
+138617[4].imgt1   user1             support               00:05:00    00:00:04  n/a       00:00:06       00:04:54      1  E      compute  array_example     i285
+138617[5].imgt1   user1             support               00:05:00    00:00:04  n/a       00:00:06       00:04:54      1  E      compute  array_example     i286
+```
+
+If you want to increase the number of nodes per subjob, you can increase the `select` value in `#PBS -l select=1:ncpus=128` to be equal to the number of nodes you want per subjob.
+
 ## Troubleshooting / Common Errors
 
 If you receive a `qsub: Job rejected by all possible destinations error`, then check your submission parameters. The issue is most likely that your walltime or node count do not fall within the ranges listed above for the production execution queues. Please see the table above for limits on production queue job sizes.
