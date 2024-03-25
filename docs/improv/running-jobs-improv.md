@@ -116,3 +116,4 @@ mpirun ./hello_mpi
 **Important things to note:**
 
 - PBS Pro on Improv is currently **not** configured to allow sharing nodes. When have a node allocated to you, you receive the ENTIRE node. Ensure that you use all of your allocated nodes' resources unless you have a reason not to.
+- More information about running jobs on PBS can be found on our [Running Jobs on PBS Clusters](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro-clusters/) page.
