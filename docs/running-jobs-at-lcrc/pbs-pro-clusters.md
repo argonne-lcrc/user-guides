@@ -223,7 +223,17 @@ In PBS it is not easy to see a priority order for which jobs will run next. The 
 2. size (in nodes) of the job, larger jobs receive higher priority
 3. job duration: shorter duration jobs will accumulate priority more quickly, so it is best to specify the job run time as accurately as possible
 
-## General PBS Example Scripts
+## General PBS Example Scripts/Commands
+
+### Submitting an Interactive Job
+
+Here is how to submit an interactive job to, for example, edit/build/test an application:
+
+```
+qsub -I -A <PROJECT_NAME> -l select=1:ncpus=128:mpiprocs=128,walltime=01:00:00 -q compute
+```
+
+This command requests 1 node for a period of 1 hour in the compute queue. After waiting in the queue for a node to become available, a shell prompt on a compute node will appear. Remember to replace `<PROJECT_NAME>` with a valid LCRC project.
 
 ### Submitting a PBS Array Job
 
@@ -236,8 +246,8 @@ In PBS it is not easy to see a priority order for which jobs will run next. The 
 #PBS -l select=1:ncpus=128
 ###### Tells PBS the walltime
 #PBS -l walltime=00:05:00
-###### Tells PBS the project to charge
-#PBS -A support
+###### Tells PBS the project to charge (Replace with a valid project)
+#PBS -A <PROJECT_NAME>
 ###### Tells PBS to run 5 subjobs (Required to run in an array)
 #PBS -J 1-5
 ###### Tells PBS to rerun the job (Rquired to run in an array)
@@ -272,6 +282,41 @@ $ pbsq
 ```
 
 If you want to increase the number of nodes per subjob, you can increase the `select` value in `#PBS -l select=1:ncpus=128` to be equal to the number of nodes you want per subjob.
+
+### Running Multiple MPI Applications on a Node
+
+Multiple applications can be run simultaneously on a node by launching several mpirun commands and backgrounding them. For performance, it will likely be necessary to ensure that each application runs on a distinct set of CPU resources.
+
+```bash
+#!/bin/bash
+
+###### Tells PBS the job name
+#PBS -N packing_example
+###### Tells PBS to run on 1 node with 128 cpus
+#PBS -l select=1:ncpus=128
+###### Tells PBS the walltime
+#PBS -l walltime=00:05:00
+###### Tells PBS the project to charge (Replace with a valid project)
+#PBS -A <PROJECT_NAME>
+
+cd $PBS_O_WORKDIR
+
+export range=$(eval echo {0..31} | xargs | sed -e 's/ /,/g’)
+mpirun –map-by pe-list:${range}:ordered –np 32 a.out &
+
+export range=$(eval echo {32..95} | xargs | sed -e 's/ /,/g’)
+mpirun –map-by pe-list:${range}:ordered –np 64 b.out &
+
+export range=$(eval echo {96..111} | xargs | sed -e 's/ /,/g’)
+mpirun –map-by pe-list:${range}:ordered –np 16 c.out &
+
+wait
+```
+
+- Put each MPI tasks in the background with "&".
+- Use mpirun placement options to specifically place them on certain cores, to avoid oversubscription on some cores. A good practice would be to run each command in its own directory.
+- Add –report-bindings to see what is happening.
+- You **must** use "wait" command.
 
 ## Troubleshooting / Common Errors
 

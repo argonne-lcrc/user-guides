@@ -1,6 +1,6 @@
 # Improv Hardware Overview
 
-Improv has 825 dual-socket compute nodes with AMD 7713 64-core processors (2.0 GHz) (or 128 cores per node) and 256 GB DDR4 memory. 68 nodes have 4TB NVMe SSD, and 12 of those have 1024 GB DDR4, instead of 256 GB. The high-performance interconnect is Nvidia/Mellanox HDR200 (14 core, 35 edge switches). There are 12 HDR200 connections to LCRC’s existing data storage system so you will have access to all of the same files between LCRC clusters.
+Improv has 825 dual-socket compute nodes with AMD 7713 64-core processors (2.0 GHz) (or 128 cores per node) and 256 GB DDR4 memory. 68 nodes have 6TB NVMe SSD, and 12 of those have 1024 GB DDR4, instead of 256 GB. The high-performance interconnect is Nvidia/Mellanox HDR200 (14 core, 35 edge switches). There are 12 HDR200 connections to LCRC’s existing data storage system so you will have access to all of the same files between LCRC clusters.
 
 ## Improv Compute Nodes
 
