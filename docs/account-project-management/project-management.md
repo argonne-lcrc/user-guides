@@ -230,7 +230,7 @@ Mid-Quarter Allocations can be granted for LCRC projects after not previously re
 1. **Check Current Usage**: Verify usage of allocated resources using `lcrc-usage <project_name>`.
 2. **Prepare Documentation**: Justify core-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
 3. **Special Criteria for Large Requests**: Provide scaling results for requests exceeding 100K core-hours (781 node hours).
-
+4. **Request Time**: Request the additional hours following our [Managing Your LCRC Project](https://docs.lcrc.anl.gov/account-project-management/project-management/#managing-your-lcrc-project) documentation above.
 > **Note**: Requests with incomplete or unclear information may result in a delay of up to two weeks in the decision-making process.
 
 ### Allocation Limits and Calculation Examples
