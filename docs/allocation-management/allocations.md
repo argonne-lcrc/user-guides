@@ -39,6 +39,12 @@ Allocations on Improv are provided (and should be requested) in Node Hours. 1 no
 - **Number of Nodes Used**: The quantity of compute nodes utilized for the job.
 - **Time in Hours**: The duration for which these nodes are used.
 
+Improv currently allows for an *Overburn* of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:
+
+`qsub: Job violates queue and/or server resource limits`
+
+Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations/#requesting-additional-project-time) when allocations are exhausted.
+
 ## Startup Projects and Allocations
 
 ### Startup Projects Overview
