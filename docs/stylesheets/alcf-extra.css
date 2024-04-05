@@ -159,7 +159,7 @@ main {
   column-gap: 24px; /* repeated due to change in spec */
   grid-row-gap: 0;
   row-gap: 0; /* repeated due to change in spec */
-/*  max-width: 59.8rem;*/
+  max-width: 59.25rem;
 }
 
 .header--primary .header__nav-primary a {
