@@ -11,7 +11,18 @@
 }
 
 
+.md-grid {
+	max-width: 1500px;
+	width: calc(100% - 28px * 2);
+}
 
+.md-sidebar__scrollwrap {
+	margin: 0;
+}
+
+.md-nav--primary label, .md-nav--primary li {
+	padding: 0;
+}
 
 /* typography */
 body {
@@ -159,7 +170,8 @@ main {
   column-gap: 24px; /* repeated due to change in spec */
   grid-row-gap: 0;
   row-gap: 0; /* repeated due to change in spec */
-  max-width: 59.25rem;
+/*  max-width: 59.25rem;*/
+max-width: 1500px;
 }
 
 .header--primary .header__nav-primary a {
@@ -420,6 +432,7 @@ main {
 	margin-left: -28px; 
 	padding-left: 28px;
 	padding-right: 24px;
+	padding-top: 16px;
 }
 
 .dropdown .dropdown__intro {
@@ -645,7 +658,8 @@ main {
   column-gap: 24px; /* repeated due to change in spec */
   grid-row-gap: 0;
   row-gap: 0; /* repeated due to change in spec */
-  max-width: 59.8rem;
+/*  max-width: 59.8rem;*/
+max-width: 1500px;
 }
 
 .header--mobile .header__nav-secondary .dropdown__links-1,
@@ -925,7 +939,8 @@ footer .grid{
   column-gap: 24px; /* repeated due to change in spec */
   grid-row-gap: 0;
   row-gap: 0; /* repeated due to change in spec */
-  max-width: 59.8rem;
+/*  max-width: 59.8rem;*/
+max-width: 1500px;
 }
 
 .footer--attr {
