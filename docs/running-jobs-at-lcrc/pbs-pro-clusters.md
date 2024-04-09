@@ -229,7 +229,7 @@ In PBS it is not easy to see a priority order for which jobs will run next. The 
 
 Here is how to submit an interactive job to, for example, edit/build/test an application:
 
-```
+```console
 qsub -I -A <PROJECT_NAME> -l select=1:ncpus=128:mpiprocs=128,walltime=01:00:00 -q compute
 ```
 
@@ -243,8 +243,8 @@ This command requests 1 node for a period of 1 hour in the compute queue. After 
 ###### Tells PBS the job name
 #PBS -N array_example
 ###### Tells PBS to run on 1 node with 128 cpus
-#PBS -l select=1:ncpus=128
-###### Tells PBS the walltime
+#PBS -l select=1:ncpus=128:mpiprocs=128
+###### Tells PBS the walltime (Max 72 hours)
 #PBS -l walltime=00:05:00
 ###### Tells PBS the project to charge (Replace with a valid project)
 #PBS -A <PROJECT_NAME>
@@ -293,8 +293,8 @@ Multiple applications can be run simultaneously on a node by launching several m
 ###### Tells PBS the job name
 #PBS -N packing_example
 ###### Tells PBS to run on 1 node with 128 cpus
-#PBS -l select=1:ncpus=128
-###### Tells PBS the walltime
+#PBS -l select=1:ncpus=128:mpiprocs=128
+###### Tells PBS the walltime (Max 72 hours)
 #PBS -l walltime=00:05:00
 ###### Tells PBS the project to charge (Replace with a valid project)
 #PBS -A <PROJECT_NAME>
@@ -313,10 +313,10 @@ mpirun –map-by pe-list:${range}:ordered –np 16 c.out &
 wait
 ```
 
-- Put each MPI tasks in the background with "&".
-- Use mpirun placement options to specifically place them on certain cores, to avoid oversubscription on some cores. A good practice would be to run each command in its own directory.
-- Add –report-bindings to see what is happening.
-- You **must** use "wait" command.
+* Put each MPI tasks in the background with "&".
+* Use mpirun placement options to specifically place them on certain cores, to avoid oversubscription on some cores. A good practice would be to run each command in its own directory.
+* Add `–report-bindings` to see what is happening.
+* You **must** use `wait` command.
 
 ## Troubleshooting / Common Errors
 
