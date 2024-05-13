@@ -222,12 +222,13 @@ Mid-Quarter Allocations can be granted for LCRC projects after not previously re
 
 ### Allocation Planning and Timing
 
+- Mid-quarter allocations are made only once per project per quarter.
 - PIs should ensure their allocated hours last the entire quarter.
 - LCRC reviews mid-quarter allocation requests once a week.
 
 ### How to Request Additional Allocations
 
-1. **Check Current Usage**: Verify usage of allocated resources using `lcrc-usage <project_name>`.
+1. **Check Current Usage**: Verify usage of allocated resources using `lcrc-usage <project_name>` on Bebop/Swing and `sbank-list-allocations -p <project_name>` on Improv.
 2. **Prepare Documentation**: Justify core-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
 3. **Special Criteria for Large Requests**: Provide scaling results for requests exceeding 100K core-hours (781 node hours).
 4. **Request Time**: Request the additional hours following our [Managing Your LCRC Project](https://docs.lcrc.anl.gov/account-project-management/project-management/#managing-your-lcrc-project) documentation above.
