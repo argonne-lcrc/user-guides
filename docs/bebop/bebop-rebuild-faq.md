@@ -41,8 +41,8 @@ You will need to do this for any Bebop login node in this file. You can search t
 
 ## Submitting and Running Jobs
 
-Bebop is now using the PBS Professional job scheduler which replaces Slurm. With this change, we have removed the following partitions:
-`bdw`, `bdws`, and `bdwd`. As a reminder, all KNL partitions were previously retired in early 2024.
+Bebop is now using the PBS Professional job scheduler which replaces Slurm. With this change, we have removed the following queues:
+`bdw`, `bdws`, and `bdwd`. As a reminder, all KNL queues were previously retired in early 2024.
 
 All jobs should now be submitted to the queue: `bdwall`. This is also the default queue. If you still need to submit to Broadwell nodes with a large local scratch disk, we have outlined how to do that here: 
 
@@ -78,7 +78,7 @@ Bebop is now calculating allocations in Node Hours instead of Core Hours. This i
 
 ### I have a condo queue on the Bebop cluster. What account should I use to submit my jobs?
 
-Previously, condo queue users would submit jobs to their partitions on Bebop with the `condo` account in Slurm. This has changed with PBS. Going forward, you should submit your jobs with the same account that is used to access your condo nodes. The following is a list of condo queues and the account that should be used:
+Previously, condo queue users would submit jobs to their queues on Bebop with the `condo` account in Slurm. This has changed with PBS. Going forward, you should submit your jobs with the same account that is used to access your condo nodes. The following is a list of condo queues and the account that should be used:
 
 | Condo Queue | New Account Name |
 |------------|------------|
