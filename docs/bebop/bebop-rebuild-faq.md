@@ -66,13 +66,15 @@ Prior to the Bebop rebuild, LCRC staff sent several e-mails to LCRC users. Users
 
 LCRC staff have already installed several compilers and MPI variants as well as some standard packages. We've asked users to let us know if they need any software re-installed. If we have not been notified about a software request, the expectation will be that it won't be installed. We will gladly try to assist in installing software globally if it useful to several LCRC users, otherwise we encourage building and compiling in your project directories.
 
-If you have software built in your home and/or project directories prior to the rebuild, you are more than welcome to try and use it. However, if it does not work correctly or at all, you should recompile your software. Anything that links to the old software tree is subject to stop working once we permanently delete the old tree.
+If you have software built in your home and/or project directories prior to the rebuild, you are more than welcome to try and use it. However, if it does not work correctly or at all, you should recompile your software. Anything that links to the old software tree is subject to stop working once we permanently delete the old tree in the near future.
 
 Please e-mail [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov) with any software requests.
 
 ### Do I still request allocations on Bebop in Core Hours?
 
-Bebop is now calculating allocations in Node Hours instead of Core Hours. This is also how we set allocations on the Improv cluster. You should request time on Bebop for future quarters in Node Hours. For FY24 Q4, we have already converted previously submitted Core Hours to Node Hours on your behalf. For quick reference, 1 Bebop Node Hours = 36 Core Hours.
+Bebop is now calculating allocations in Node Hours instead of Core Hours. This is also how we set allocations on the Improv cluster. You should request time on Bebop for future quarters in Node Hours. For FY24 Q4, we have already converted previously submitted Core Hours to Node Hours on your behalf. For quick reference:
+
+`1 Bebop Node Hour = 36 Core Hours`
 
 [https://docs.lcrc.anl.gov/allocation-management/allocations](https://docs.lcrc.anl.gov/allocation-management/allocations)
 
