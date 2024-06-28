@@ -326,7 +326,7 @@
       aria-label="LCRC User Guide"
       class='header-title'
     >
-      Laboratory Computing<br>Resource Center
+      Argonne Laboratory<br>Computing Resource Center
     </a>
 
     <!-- Button to open drawer -->
@@ -751,8 +751,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../using-software/software-specific-guides/gaussian/" class="md-nav__link">
+        Gaussian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../using-software/software-specific-guides/jupyter-notebooks/" class="md-nav__link">
         Jupyter Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-software/software-specific-guides/openmc/" class="md-nav__link">
+        OpenMC
       </a>
     </li>
   
@@ -781,6 +809,20 @@
     <li class="md-nav__item">
       <a href="../../using-software/software-specific-guides/tensorflow/" class="md-nav__link">
         Tensorflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-software/software-specific-guides/vasp/" class="md-nav__link">
+        VASP
       </a>
     </li>
   
@@ -1550,7 +1592,7 @@
 <td>2x AMD EPYC 7713 64-Core Processor</td>
 <td>128</td>
 <td>256GB DDR4</td>
-<td>960GB</td>
+<td>960GB (6TB bigdata Nodes)</td>
 <td>72 Hours (3 Days)</td>
 </tr>
 <tr>
@@ -1575,6 +1617,9 @@
 </tr>
 </tbody>
 </table>
+<p>The compute queue also has 68 nodes with a 6TB local NVMe scratch disk. You can request these directly by adding <code>bigdata=true</code> to your PBS select statement. For example:
+<div class="highlight"><pre><span></span><code>#PBS -l select=8:ncpus=128:mpiprocs=128:bigdata=true
+</code></pre></div></p>
 <h2 id="running-mpi-applications">Running MPI Applications</h2>
 <p>OpenMPI is the recommended MPI for use on Improv.</p>
 <p>Here are some parameters that might be useful:</p>
@@ -1631,6 +1676,7 @@ mpirun<span class="w"> </span>./hello_mpi
 <p><strong>Important things to note:</strong></p>
 <ul>
 <li>PBS Pro on Improv is currently <strong>not</strong> configured to allow sharing nodes. When have a node allocated to you, you receive the ENTIRE node. Ensure that you use all of your allocated nodes' resources unless you have a reason not to.</li>
+<li>More information about running jobs on PBS can be found on our <a href="https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro-clusters/">Running Jobs on PBS Clusters</a> page.</li>
 </ul>
                 
               

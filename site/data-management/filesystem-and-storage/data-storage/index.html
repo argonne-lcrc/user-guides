@@ -326,7 +326,7 @@
       aria-label="LCRC User Guide"
       class='header-title'
     >
-      Laboratory Computing<br>Resource Center
+      Argonne Laboratory<br>Computing Resource Center
     </a>
 
     <!-- Button to open drawer -->
@@ -751,8 +751,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../using-software/software-specific-guides/gaussian/" class="md-nav__link">
+        Gaussian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../using-software/software-specific-guides/jupyter-notebooks/" class="md-nav__link">
         Jupyter Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using-software/software-specific-guides/openmc/" class="md-nav__link">
+        OpenMC
       </a>
     </li>
   
@@ -781,6 +809,20 @@
     <li class="md-nav__item">
       <a href="../../../using-software/software-specific-guides/tensorflow/" class="md-nav__link">
         Tensorflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using-software/software-specific-guides/vasp/" class="md-nav__link">
+        VASP
       </a>
     </li>
   
@@ -988,29 +1030,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disk-storage" class="md-nav__link">
-    Disk Storage
+  <a href="#backup-storage" class="md-nav__link">
+    Backup Storage
   </a>
   
-    <nav class="md-nav" aria-label="Disk Storage">
+    <nav class="md-nav" aria-label="Backup Storage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zfs-backup-storage" class="md-nav__link">
-    ZFS Backup Storage
+  <a href="#disk-drives" class="md-nav__link">
+    Disk Drives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tape-storage" class="md-nav__link">
+    Tape Storage
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tape-storage" class="md-nav__link">
-    Tape Storage
-  </a>
   
 </li>
       
@@ -1480,29 +1522,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disk-storage" class="md-nav__link">
-    Disk Storage
+  <a href="#backup-storage" class="md-nav__link">
+    Backup Storage
   </a>
   
-    <nav class="md-nav" aria-label="Disk Storage">
+    <nav class="md-nav" aria-label="Backup Storage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zfs-backup-storage" class="md-nav__link">
-    ZFS Backup Storage
+  <a href="#disk-drives" class="md-nav__link">
+    Disk Drives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tape-storage" class="md-nav__link">
+    Tape Storage
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tape-storage" class="md-nav__link">
-    Tape Storage
-  </a>
   
 </li>
       
@@ -1538,39 +1580,23 @@
 <li>All storage systems use GPFS as the file system.</li>
 <li>Certain filesystems are backed up nightly.</li>
 </ul>
-<h2 id="disk-storage">Disk Storage</h2>
-<h3 id="zfs-backup-storage">ZFS Backup Storage</h3>
-<p><strong>JBODs (Just a Bunch Of Disks)</strong>:</p>
-<ul>
-<li>Total Number of JBODs: 6</li>
-<li>Each JBOD is equipped with 102 x 14TB WDC HC530 SAS Enterprise Disk Drives.</li>
-<li>This configuration ensures that every disk in a zpool is from the same JBOD, maximizing performance.</li>
-</ul>
-<p><strong>Disk Drives</strong>:</p>
+<h2 id="backup-storage">Backup Storage</h2>
+<h3 id="disk-drives">Disk Drives</h3>
 <ul>
 <li>Total Number of Drives Across All JBODs: 612 (6 JBODs x 102 Drives each)</li>
 <li>Drive Type: WDC HC530 SAS Enterprise Disk Drives</li>
 <li>Drive Capacity: 14TB each</li>
-</ul>
-<p><strong>ZFS Pools (zpools)</strong>:</p>
-<ul>
-<li>Total Number of zpools: 18</li>
-<li>Distribution: 3 zpools per JBOD</li>
-<li>Configuration of Each zpool:<ul>
-<li>Composed of 3 vdevs (Virtual Devices)</li>
-<li>Each vdev is a RAIDZ3 configuration with 11 disks</li>
-<li>One hot spare disk per zpool for redundancy and immediate replacement in case of a disk failure</li>
-</ul>
-</li>
-<li>Usable Space per zpool: ~305 TB</li>
-<li>Total Usable Space: ~5.5 PB</li>
+<li>Uses ZFS for its the filesystem</li>
 </ul>
 <p><strong>Maintenance and Data Integrity</strong>:</p>
 <ul>
 <li>Automated monthly scrubs are scheduled for each zpool. These scrubs are essential for maintaining data integrity and for early identification of potential issues.</li>
 </ul>
-<h2 id="tape-storage">Tape Storage</h2>
-<p>LCRC operates a 700. We are currently running a combination of LTO6 and LTO8 tape technology. The LTO tape drives have built-in hardware compression which typically achieve compression ratios between 1.25:1 and 2:1 depending on the data yielding an effective capacity of approximately 65PB.</p>
+<h3 id="tape-storage">Tape Storage</h3>
+<ul>
+<li>LCRC has roughly 760 tapes to which we backup and replicate data from the disk storage.</li>
+<li>We are currently running LTO9 tape technology.</li>
+</ul>
 <h2 id="purchasing-resources">Purchasing Resources</h2>
 <p>We offer the ability for groups to purchase their own storage resources to be hosted with us. In doing so you get access to the storage space across all of our clusters (unless otherwise specified), and we take care of supporting the system, replacing parts, and when possible tuning the storage resources to fit your data model.</p>
 <p>If you are interested in learning more about purchasing additional storage resources please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#99;&#114;&#99;&#46;&#97;&#110;&#108;&#46;&#103;&#111;&#118;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#99;&#114;&#99;&#46;&#97;&#110;&#108;&#46;&#103;&#111;&#118;</a></p>
