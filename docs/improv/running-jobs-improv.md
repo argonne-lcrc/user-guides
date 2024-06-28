@@ -35,7 +35,7 @@ Improv's job scheduling system is characterized by:
 
 - Uses [**PBS Pro**](../running-jobs-at-lcrc/pbs-pro-clusters.md)
 - Uses the [**`sbank`**](../allocation-management/sbank-allocation-accounting-system.md) accounting system
-- Allocations are calculated in [**node hours**](../allocation-management/allocations.md#node-hours-improv-cluster)
+- Allocations are calculated in [**node hours**](../allocation-management/allocations.md#node-hours-improv-and-bebop-clusters)
 
 ## Queues
 

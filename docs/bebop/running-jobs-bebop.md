@@ -6,7 +6,7 @@ Bebop's job scheduling system is characterized by:
 
 - Uses [**PBS Pro**](../running-jobs-at-lcrc/slurm-clusters.md)
 - Uses the [**`sbank`**](../allocation-management/sbank-allocation-accounting-system.md) accounting system
-- Allocations are calculated in [**node hours**](../allocation-management/allocations.md#core-hours-bebop-cluster)
+- Allocations are calculated in [**node hours**](../allocation-management/allocations.md#node-hours-improv-and-bebop-clusters)
 
 ## Partition Limits
 

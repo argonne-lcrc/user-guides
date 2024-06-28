@@ -35,7 +35,7 @@ Improv and Bebop currently allow for an *Overburn* of a project allocation. Each
 
 `qsub: Job violates queue and/or server resource limits`
 
-Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations/#requesting-additional-project-time) when allocations are exhausted.
+Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations.md#requesting-additional-project-time) when allocations are exhausted.
 
 ## Startup Projects and Allocations
 
@@ -107,4 +107,4 @@ PIs should note that any extra time granted but not used within the quarter will
 
 ## Mid-Quarter Allocations
 
-Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources. We have described, in detail, this process on the [Managing Projects](../../account-project-management/project-management/#mid-quarter-allocations) documentation. 
+Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources. We have described, in detail, this process on the [Managing Projects](../account-project-management/project-management.md#mid-quarter-allocations) documentation.
