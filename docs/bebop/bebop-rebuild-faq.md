@@ -70,6 +70,11 @@ If you have software built in your home and/or project directories prior to the 
 
 Please e-mail [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov) with any software requests.
 
+### What software modules are now loaded by default?
+
+We have decided against loading any software modules by default going forward. We hope to phase out older modules after a certain amount of time to reduce software installation bloat on
+ the system and to encourage the use of newer software. Compilers and MPI versions will need to be loaded and/or saved to load on login by the user. When we do decide to retire old software, we will send an announcement with a generous lead time.
+
 ### Do I still request allocations on Bebop in Core Hours?
 
 Bebop is now calculating allocations in Node Hours instead of Core Hours. This is also how we set allocations on the Improv cluster. You should request time on Bebop for future quarters in Node Hours. For FY24 Q4, we have already converted previously submitted Core Hours to Node Hours on your behalf. For quick reference:
