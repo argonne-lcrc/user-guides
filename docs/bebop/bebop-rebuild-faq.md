@@ -2,7 +2,7 @@
 
 ## Overview
 
-On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler. 
+On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler.
 
 ## Logging In
 
@@ -104,7 +104,7 @@ As before, condo queues do not restrict usage based on node hour availability, h
 
 With the transition to PBS, we are not currently using startup accounts. If you need to run on Bebop, you should either join an LCRC project or request a new one via the accounts page. Please see our documentation about LCRC projects here:
 
-[https://docs.lcrc.anl.gov/account-project-management/project-management](https://docs.lcrc.anl.gov/account-project-management/project-management)
+[https://docs.lcrc.anl.gov/account-project-management/project-management](https://docs.lcrc.anl.gov/account-project-management/project-management.md)
 
 ### My jobs are failing with SSH or Host Key Verification failures. What can I do?
 
