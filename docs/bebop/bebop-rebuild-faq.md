@@ -1,4 +1,4 @@
-# Bebop Rebuild 
+# Bebop Rebuild FAQ
 
 ## Overview
 
