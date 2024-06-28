@@ -2,9 +2,12 @@
 
 ## Overview
 
+> [!IMPORTANT]
+> On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler. Please see our [Bebop Rebuild FAQ](../bebop-rebuild-faq.md) for more details.
+
 Bebop's job scheduling system is characterized by:
 
-- Uses [**PBS Pro**](../running-jobs-at-lcrc/slurm-clusters.md)
+- Uses [**PBS Pro**](../running-jobs-at-lcrc/pbs-pro-clusters.md)
 - Uses the [**`sbank`**](../allocation-management/sbank-allocation-accounting-system.md) accounting system
 - Allocations are calculated in [**node hours**](../allocation-management/allocations.md#node-hours-improv-and-bebop-clusters)
 
@@ -15,7 +18,6 @@ Bebop currently enforces the following limits on publicly available partitions:
 - **32 Running Jobs** per user.
 - **100 Queued Jobs** per user.
 - **3 Days (72 Hours)** Maximum Walltime on Broadwell Nodes. (bdws is 1 hour)
-- **7 Days (168 Hours)** Maximum Walltime on KNL Nodes. (knls is 4 hours)
 - **1 Hour** Default Walltime if not specified.
 - **bdwall** (Broadwell Compute Nodes) is the default partition.
 
@@ -23,10 +25,7 @@ Bebop currently enforces the following limits on publicly available partitions:
 
 | Bebop Partition Name | Description                        | Number of Nodes | CPU Type                | Cores Per Node | Memory Per Node | Local Scratch Disk |
 |----------------------|------------------------------------|-----------------|-------------------------|----------------|-----------------|--------------------|
-| bdwall               | All Broadwell Nodes                | 664             | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB or 4 TB      |
-| bdw                  | Broadwell Nodes with 15 GB / scratch | 600           | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB              |
-| bdwd                 | Broadwell Nodes with 4 TB / scratch  | 64            | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 4 TB               |
-| bdws                 | Broadwell Shared Nodes (Oversubscription / Non-Exclusive) | 8                 | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB              |
+| bdwall               | All Broadwell Nodes                | 672             | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB or 4 TB      |
 
 ## Special Request for Large Local Scratch Disk
 

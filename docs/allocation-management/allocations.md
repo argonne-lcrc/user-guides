@@ -6,7 +6,7 @@ The LCRC operates three distinct clusters, each with its own scheduling and allo
 
 1. [**Improv**](../improv/getting-started-improv.md): Operates with the [PBS Pro](../running-jobs-at-lcrc/pbs-pro-clusters.md) job scheduler and measures allocations in **node hours**.
 2. [**Bebop**](../bebop/getting-started-bebop.md): Utilizes the [PBS Pro](../running-jobs-at-lcrc/pbs-pro-clusters.md) job scheduler and measures allocations in **node hours**.
-3. [**Swing**](../swing/getting-started-swing.md): Also uses Slurm but charges allocations in **GPU hours**.
+3. [**Swing**](../swing/getting-started-swing.md): Uses Slurm but charges allocations in **GPU hours**.
 
 ## Allocations Metrics for Each Cluster
 
@@ -24,7 +24,7 @@ On Swing, the compute nodes charge as follows for each job:
 
 ### Node Hours (Improv and Bebop Clusters)
 
-Allocations on Improv and Bebop are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores, and 1 node on Bebop has 32 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
+Allocations on Improv and Bebop are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores, and 1 node on Bebop has 36 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
 
 `Node Hours = Number of Nodes Used × Time in Hours`
 
@@ -41,7 +41,7 @@ Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.go
 
 ### Startup Projects Overview
 
-New Argonne employee accounts receive a "startup project" with a small balance of hours on the **Bebop** and **Swing** systems.
+New Argonne employee accounts receive a "startup project" with a small balance of hours currently only on the **Swing** system.
 
 ### Purpose
 
@@ -53,7 +53,7 @@ The startup project serves multiple functions:
 
 ### Allocation Details
 
-- **Initial Allocation**: 20,000 core-hours on Bebop, 100 GPU hours on Swing.
+- **Initial Allocation**: 100 GPU hours on Swing.
 - **Expiration**: None. The startup hours do not have a use-by date.
 - **Additional Time**: Startup projects are not eligible for additional allocations beyond the initial hours.
 
