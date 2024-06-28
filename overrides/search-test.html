@@ -1,0 +1,337 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="https://use.typekit.net/pxo0nvo.css">
+{% endblock %}
+
+
+
+
+<!-- HEADER -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+
+{% block header %}
+{% set class = "md-header" %}
+  <header class="{{ class }}" data-md-component="header">
+
+
+  <div class="header--primary">
+
+
+  <div class="grid">
+
+    <div class="header__site-title">
+      <h1><a href='https://lcrc.anl.gov'>Argonne Laboratory Computing Resource Center</a></h1>
+    </div>
+
+
+
+
+
+    <nav class="header__nav-primary">
+      <ul>
+
+
+
+
+        <li id="nav-about" class="js-drop" data-menu="menu-about">
+          <a href="https://lcrc.anl.gov/about">About</a>
+
+          <div id="menu-about" class="dropdown js-dropdown-hidden">
+            <nav>
+              <div class="dropdown__intro">
+                <div class="dropdown__intro-subhead">
+                  <h2>About the LCRC</h2>
+                </div>
+                <div class="dropdown__intro-description">
+                  <p>
+                    We enable and promote the use of high-performance computing across the Laboratory to support research.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dropdown__links-1">
+                <div class="dropdown__links-group">
+                  <h3>About Us</h3>
+                  <ul>
+                    <li><a href="https://lcrc.anl.gov/about/about-us/mission-and-history">Mission and History</a></li>
+                    <li><a href="https://lcrc.anl.gov/projects">Projects</a></li>
+                    <li><a href="https://lcrc.anl.gov/directory">Staff Directory</a></li>
+                    <li><a href="https://lcrc.anl.gov/news">News</a></li>
+                    <li><a href="https://lcrc.anl.gov/about/about-us/acknowledgements">Acknowledgements</a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </li>
+
+
+
+
+        <li id="nav-sys" class="js-drop" data-menu="menu-sys">
+          <a href="https://lcrc.anl.gov/systems">Systems</a>
+
+          <div id="menu-sys" class="dropdown js-dropdown-hidden">
+            <nav>
+              <div class="dropdown__intro">
+                <div class="dropdown__intro-subhead">
+                  <h2>LCRC Systems</h2>
+                </div>
+                <div class="dropdown__intro-description">
+                  <p>
+                    LCRC has the ability to host dedicated nodes and storage for users/groups that require large amounts of resources to advance their research.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dropdown__links-1">
+                <div class="dropdown__links-group">
+                  <h3>Computing and Data Resources</h3>
+                  <ul>
+                    <li><a href="https://lcrc.anl.gov/improv">Improv</a></li>
+                    <li><a href="https://lcrc.anl.gov/systems/bebop">Bebop</a></li>
+                    <li><a href="https://lcrc.anl.gov/systems/swing">Swing</a></li>
+                    <li><a href="https://lcrc.anl.gov/systems/storage">Storage</a></li>
+                    <li><a href="https://lcrc.anl.gov/systems/purchasing-resources">Purchasing Resources</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </li>
+
+
+
+
+        <li id="nav-users" class="js-drop" data-menu="menu-users">
+          <a href="https://lcrc.anl.gov/users">For Users</a>
+
+          <div id="menu-users" class="dropdown js-dropdown-hidden">
+            <nav>
+              <div class="dropdown__intro">
+                <div class="dropdown__intro-subhead">
+                  <h2>For Users</h2>
+                </div>
+                <div class="dropdown__intro-description">
+                  <p>
+                    Get set up and run jobs on the on the LCRC computing resources.
+                  </p>
+                </div>
+                <div class="small-text">
+                  <p>
+                    <strong>LCRC Support</strong><br>
+                    Email: &nbsp;<a href="mailto:support@lcrc.anl.gov">support@lcrc.anl.gov</a><br>
+                  </p>
+
+                  <p>
+                    <strong>Argonne Service Desk (Password Reset)</strong><br>
+                    Phone: (630) 252-9999<br>
+                    Email: &nbsp;<a href="mailto:help@anl.gov">help@anl.gov</a><br>
+                  </p>
+                </div>
+              </div>
+
+              <div class="dropdown__links-1">
+                <div class="dropdown__links-group">
+                  <h3>LCRC User Guide</h3>
+                  <ul>
+                    <li><a href="https://docs.lcrc.anl.gov/">Getting Started</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/running-jobs-at-lcrc/overview/">Running Jobs at LCRC</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/data-management/filesystem-and-storage/file-systems/">Data Management</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/account-project-management/accounts-and-access/">Account and Project Management</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/allocation-management/allocations/">Allocations</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/improv/getting-started-improv/">Improv</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/swing/getting-started-swing/">Swing</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/bebop/getting-started-bebop/">Bebop</a></li>
+                    <li><a href="https://docs.lcrc.anl.gov/best-practices-and-policies/best-practices-and-policies-overview/">Best Practices and Policies</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              
+
+            </nav>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="header__nav-secondary">
+      <!-- wrapper needed to hang right -->
+      <div class="header__nav-secondary--right"> 
+        <ul>
+          <li><a href="https://lcrc.anl.gov/updates"> Facility Updates </a></li>
+          <li><a href="https://lcrc.anl.gov/directory"> Directory </a></li>
+          <li><a href="https://lcrc.anl.gov/support"> Support </a></li>
+        </ul>
+         
+      
+
+      </div>
+    </nav>
+
+  </div>
+  </div> <!-- end header--primary -->
+  </header>
+
+
+
+
+<!-- Mobile Header -->
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->
+
+
+<header class="{{ class }} header--mobile" data-md-component="header">
+  <nav
+    class="md-header__inner grid"
+    aria-label="{{ lang.t('header') }}"
+  >
+
+    <!-- Link to home -->
+    <a
+      href="https://lcrc.anl.gov"
+      title="{{ config.site_name | e }}"
+      aria-label="{{ config.site_name }}"
+      class='header-title'
+    >
+      Argonne Laboratory<br>Computing Resource Center
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      {% include ".icons/material/menu" ~ ".svg" %}
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            {{ config.site_name }}
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            {% if page.meta and page.meta.title %}
+              {{ page.meta.title }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette -->
+    {% if not config.theme.palette is mapping %}
+      <form class="md-header__option" data-md-component="palette">
+        {% for option in config.theme.palette %}
+          {% set scheme = option.scheme | d("default", true) %}
+          <input
+            class="md-option"
+            data-md-color-media="{{ option.media }}"
+            data-md-color-scheme="{{ scheme | replace(' ', '-') }}"
+            data-md-color-primary="{{ option.primary | replace(' ', '-') }}"
+            data-md-color-accent="{{ option.accent | replace(' ', '-') }}"
+            {% if option.toggle %}
+              aria-label="{{ option.toggle.name }}"
+            {% else  %}
+              aria-hidden="true"
+            {% endif %}
+            type="radio"
+            name="__palette"
+            id="__palette_{{ loop.index }}"
+          />
+          {% if option.toggle %}
+            <label
+              class="md-header__button md-icon"
+              title="{{ option.toggle.name }}"
+              for="__palette_{{ loop.index0 or loop.length }}"
+              hidden
+            >
+              {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
+            </label>
+          {% endif %}
+        {% endfor %}
+      </form>
+    {% endif %}
+
+    <!-- Site language selector -->
+    {% if config.extra.alternate %}
+      <div class="md-header__option">
+        <div class="md-select">
+          {% set icon = config.theme.icon.alternate or "material/translate" %}
+          <button
+            class="md-header__button md-icon"
+            aria-label="{{ lang.t('select.language') }}"
+          >
+            {% include ".icons/" ~ icon ~ ".svg" %}
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              {% for alt in config.extra.alternate %}
+                <li class="md-select__item">
+                  <a
+                    href="{{ alt.link | url }}"
+                    hreflang="{{ alt.lang }}"
+                    class="md-select__link"
+                  >
+                    {{ alt.name }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+
+    <!-- Repository information -->
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
+</header>
+{% endblock %}
+
+
+
+<!-- CONTENT - SEARCH -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+
+{% block content %}
+
+<h1>Search the LCRC User Guides</h1>
+
+
+<div class='search-page--search'>
+  <div class='md-header'><!-- here as workaround to mkdocs search targeting -->
+  <label class="md-header__button md-icon" for="__search">
+      {% include ".icons/material/magnify.svg" %}
+  </label>
+
+  <!-- Search interface  -->
+  {% include "partials/search.html" %}
+  </div>
+</div>
+
+
+{% endblock %}

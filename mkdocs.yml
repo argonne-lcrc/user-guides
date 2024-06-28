@@ -93,7 +93,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path:
+        - !relative $config_dir
   - pymdownx.superfences
   - def_list
   - pymdownx.tasklist:

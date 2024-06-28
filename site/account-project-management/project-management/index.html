@@ -326,7 +326,7 @@
       aria-label="LCRC User Guide"
       class='header-title'
     >
-      Laboratory Computing<br>Resource Center
+      Argonne Laboratory<br>Computing Resource Center
     </a>
 
     <!-- Button to open drawer -->
@@ -1006,8 +1006,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../using-software/software-specific-guides/gaussian/" class="md-nav__link">
+        Gaussian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../using-software/software-specific-guides/jupyter-notebooks/" class="md-nav__link">
         Jupyter Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-software/software-specific-guides/openmc/" class="md-nav__link">
+        OpenMC
       </a>
     </li>
   
@@ -1036,6 +1064,20 @@
     <li class="md-nav__item">
       <a href="../../using-software/software-specific-guides/tensorflow/" class="md-nav__link">
         Tensorflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-software/software-specific-guides/vasp/" class="md-nav__link">
+        VASP
       </a>
     </li>
   
@@ -2050,18 +2092,20 @@
 <p>Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources.</p>
 <h3 id="allocation-planning-and-timing">Allocation Planning and Timing</h3>
 <ul>
+<li>Mid-quarter allocations are made only once per project per quarter.</li>
 <li>PIs should ensure their allocated hours last the entire quarter.</li>
 <li>LCRC reviews mid-quarter allocation requests once a week.</li>
 </ul>
 <h3 id="how-to-request-additional-allocations">How to Request Additional Allocations</h3>
 <ol>
-<li><strong>Check Current Usage</strong>: Verify usage of allocated resources using <code>lcrc-usage &lt;project_name&gt;</code>.</li>
+<li><strong>Check Current Usage</strong>: Verify usage of allocated resources using <code>lcrc-usage &lt;project_name&gt;</code> on Bebop/Swing and <code>sbank-list-allocations -p &lt;project_name&gt;</code> on Improv.</li>
 <li><strong>Prepare Documentation</strong>: Justify core-hour requirements, guided by the <a href="https://accounts.lcrc.anl.gov/sample_project_request.pdf">Sample Project Request PDF</a>.</li>
 <li><strong>Special Criteria for Large Requests</strong>: Provide scaling results for requests exceeding 100K core-hours (781 node hours).</li>
-</ol>
-<blockquote>
+<li><strong>Request Time</strong>: Request the additional hours following our <a href="https://docs.lcrc.anl.gov/account-project-management/project-management/#managing-your-lcrc-project">Managing Your LCRC Project</a> documentation above.<blockquote>
 <p><strong>Note</strong>: Requests with incomplete or unclear information may result in a delay of up to two weeks in the decision-making process.</p>
 </blockquote>
+</li>
+</ol>
 <h3 id="allocation-limits-and-calculation-examples">Allocation Limits and Calculation Examples</h3>
 <ul>
 <li>Maximum request: <strong>250K core-hours</strong> (2,000 node-hours on Improv) or <strong>half of the initial allocation</strong>, whichever is less.</li>
