@@ -28,6 +28,7 @@ Delete a Job:
 ```
 qdel <jobid>
 ```
+
 ## Job Scheduling System
 
 Improv's job scheduling system is characterized by:

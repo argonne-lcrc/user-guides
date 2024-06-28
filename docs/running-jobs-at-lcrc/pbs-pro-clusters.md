@@ -1,6 +1,6 @@
 # Running Jobs on PBS Clusters
 
-This document complements the information provided on the [Improv](../../improv/getting-started-improv) and [Bebop](../../bebop/getting-started-bebop) pages, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.
+This document complements the information provided on the [Improv](../improv/getting-started-improv.md) and [Bebop](../bebop/getting-started-bebop.md) pages, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.
 
 ## Obtaining and Managing Compute Resources
 

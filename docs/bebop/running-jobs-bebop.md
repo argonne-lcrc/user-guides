@@ -27,11 +27,6 @@ Bebop currently enforces the following limits on publicly available partitions:
 | bdw                  | Broadwell Nodes with 15 GB / scratch | 600           | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB              |
 | bdwd                 | Broadwell Nodes with 4 TB / scratch  | 64            | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 4 TB               |
 | bdws                 | Broadwell Shared Nodes (Oversubscription / Non-Exclusive) | 8                 | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB              |
-| knlall               | All Knights Landing Nodes            | 348           | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB or 4 TB  |
-| knl                  | Knights Landing Nodes with 15GB /scratch | 284         | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB          |
-| knld                 | Knights Landing Nodes with 4TB /scratch | 64          | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 4 TB           |
-| knls                 | Knights Landing Shared Nodes (Oversubscription / Non-Exclusive) | 4               | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB          |
-| knl-preemptable      | All Knights Landing Nodes with restrictions including preemption. [Click here for more details](#). | 348       | Intel Xeon Phi 7230     | 64             | 96GB DDR4/16GB MCDRAM | 15 GB or 4 TB  |
 
 ## Special Request for Large Local Scratch Disk
 
