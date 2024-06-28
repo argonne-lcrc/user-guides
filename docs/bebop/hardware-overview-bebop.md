@@ -1,6 +1,6 @@
 # Bebop Hardware Overview
 
-Bebop has 1,024 compute nodes with Intel Broadwell. The Broadwell nodes have DDR4 memory, and 128 nodes have a 4TB HDD for scratch disk. The high-performance interconnect is Intel Omni-Path (OPA) 100G. There are 12 OPA connections to LCRC’s existing data storage system so you will have access to all of the same files between LCRC clusters.
+Bebop has 672 compute nodes with Intel Broadwell CPUs (352 KNL nodes were previously retired). The Broadwell nodes have DDR4 memory, and 64 nodes have a 4TB HDD for scratch disk. The high-performance interconnect is Intel Omni-Path (OPA) 100G. There are 12 OPA connections to LCRC’s existing data storage system so you will have access to all of the same files between LCRC clusters.
 
 ## Bebop Compute Nodes
 
