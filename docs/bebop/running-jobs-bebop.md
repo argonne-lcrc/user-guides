@@ -2,8 +2,8 @@
 
 ## Overview
 
-> [!IMPORTANT]
-> On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler. Please see our [Bebop Rebuild FAQ](../bebop-rebuild-faq.md) for more details.
+> **NOTE:** 
+> On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler. Please see our [Bebop Rebuild FAQ](../bebop-rebuild-faq) for more details.
 
 Bebop's job scheduling system is characterized by:
 
@@ -17,7 +17,7 @@ Bebop currently enforces the following limits on publicly available partitions:
 
 - **32 Running Jobs** per user.
 - **100 Queued Jobs** per user.
-- **3 Days (72 Hours)** Maximum Walltime on Broadwell Nodes. (bdws is 1 hour)
+- **3 Days (72 Hours)** Maximum Walltime.
 - **1 Hour** Default Walltime if not specified.
 - **bdwall** (Broadwell Compute Nodes) is the default partition.
 
