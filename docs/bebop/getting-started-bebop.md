@@ -8,7 +8,7 @@ To access Bebop, use the following command:
 
 ## System Architecture
 
-For a detailed overview of the Improv system, including the compute node architecture, refer to the [Hardware Overview](../bebop/hardware-overview-bebop.md) page.
+For a detailed overview of Bebop, including the compute node architecture, refer to the [Hardware Overview](../bebop/hardware-overview-bebop.md) page.
 
 ## Job Execution
 
