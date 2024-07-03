@@ -52,11 +52,11 @@ For tips on how to use PBS, please see:
 
 [https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro-clusters](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro-clusters)
 
-Like our login nodes, all SSH Known Host keys have changed on the Bebop compute nodes. Because of this, you may get an error when trying to submit multi-node or interactive jobs to the queues. We highly recommend **ALL** users run the following after logging into a Bebop login node:
+Like our login nodes, all SSH Known Host keys have changed on the Bebop compute nodes. Because of this, you may get an error when trying to submit single node, multi-node or interactive jobs to any of the queues/compute nodes. We highly recommend **ALL** users run the following after logging into a Bebop login node:
 
 `mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak`
 
-This will move your current LCRC SSH Known Hosts file to a backup file, and you should no longer have an issue with running a job.
+If you see any code errors, MPI errors or SSH/Host Key errors when running a job, we recommend trying this first before contacting support. The above command will move your current LCRC SSH Known Hosts file to a backup file which should prevent any host connection errors.
  
 ## FAQ
 
@@ -106,13 +106,13 @@ With the transition to PBS, we are not currently using startup accounts. If you 
 
 [https://docs.lcrc.anl.gov/account-project-management/project-management](https://docs.lcrc.anl.gov/account-project-management/project-management.md)
 
-### My jobs are failing with SSH or Host Key Verification failures. What can I do?
+### My jobs are failing with strange MPI, code, SSH or Host Key Verification failures. What can I do?
 
 As mentioned above, run the following after logging into a Bebop login node: 
 
 `mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak`
 
-This will move your current LCRC SSH Known Hosts file to a backup file, and you should no longer have an issue with running a job.
+The above command will move your current LCRC SSH Known Hosts file to a backup file which should prevent any host connection errors. Please make sure to try this before contacting LCRC support with any MPI, code or SSH errors from your jobs.
 
 ### I cannot find "X" documentation on the LCRC website. What should I do?
 
