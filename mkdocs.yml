@@ -77,8 +77,8 @@ theme:
 extra_css:
   - stylesheets/alcf-extra.css
 
-# extra_javascript:
-#   - javascripts/alcf-extra.js
+extra_javascript:
+  - javascripts/alcf-extra.js
 
 markdown_extensions:
   - admonition
