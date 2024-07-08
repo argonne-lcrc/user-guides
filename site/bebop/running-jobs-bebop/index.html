@@ -1207,6 +1207,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../bebop-rebuild-faq/" class="md-nav__link">
+        Bebop Rebuild FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../getting-started-bebop/" class="md-nav__link">
         Getting Started
       </a>
@@ -1270,44 +1284,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#partition-limits" class="md-nav__link">
-    Partition Limits
+  <a href="#job-scheduling-system" class="md-nav__link">
+    Job Scheduling System
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-partitions" class="md-nav__link">
-    Available Partitions
+  <a href="#queues" class="md-nav__link">
+    Queues
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submission-examples" class="md-nav__link">
-    Submission Examples
-  </a>
-  
-    <nav class="md-nav" aria-label="Submission Examples">
+    <nav class="md-nav" aria-label="Queues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-sbatch-job-submission-simple" class="md-nav__link">
-    Example sbatch Job Submission (Simple)
+  <a href="#special-request-for-large-local-scratch-disk" class="md-nav__link">
+    Special Request for Large Local Scratch Disk
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-submission-examples" class="md-nav__link">
+    Job Submission Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Job Submission Examples">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
-  <a href="#example-sbatch-job-submission-mpi" class="md-nav__link">
-    Example sbatch Job Submission (MPI)
+  <a href="#example-qsub-job-submission" class="md-nav__link">
+    Example qsub Job Submission
   </a>
   
 </li>
@@ -1319,22 +1339,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#example-knights-landing-knl-sbatch-job-submission-mpi" class="md-nav__link">
-    Example Knights Landing (KNL) sbatch Job Submission (MPI)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#knl-preemptable-queue" class="md-nav__link">
-    KNL Preemptable Queue
-  </a>
   
 </li>
       
@@ -1541,44 +1547,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#partition-limits" class="md-nav__link">
-    Partition Limits
+  <a href="#job-scheduling-system" class="md-nav__link">
+    Job Scheduling System
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-partitions" class="md-nav__link">
-    Available Partitions
+  <a href="#queues" class="md-nav__link">
+    Queues
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submission-examples" class="md-nav__link">
-    Submission Examples
-  </a>
-  
-    <nav class="md-nav" aria-label="Submission Examples">
+    <nav class="md-nav" aria-label="Queues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-sbatch-job-submission-simple" class="md-nav__link">
-    Example sbatch Job Submission (Simple)
+  <a href="#special-request-for-large-local-scratch-disk" class="md-nav__link">
+    Special Request for Large Local Scratch Disk
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-submission-examples" class="md-nav__link">
+    Job Submission Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Job Submission Examples">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
-  <a href="#example-sbatch-job-submission-mpi" class="md-nav__link">
-    Example sbatch Job Submission (MPI)
+  <a href="#example-qsub-job-submission" class="md-nav__link">
+    Example qsub Job Submission
   </a>
   
 </li>
@@ -1590,22 +1602,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#example-knights-landing-knl-sbatch-job-submission-mpi" class="md-nav__link">
-    Example Knights Landing (KNL) sbatch Job Submission (MPI)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#knl-preemptable-queue" class="md-nav__link">
-    KNL Preemptable Queue
-  </a>
   
 </li>
       
@@ -1627,28 +1625,48 @@
                 
                 
                 <h1 id="running-jobs-on-bebop">Running Jobs on Bebop</h1>
-<h2 id="overview">Overview</h2>
+<blockquote>
+<p><strong>NOTE:</strong> 
+On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler. Please see our <a href="../bebop-rebuild-faq">Bebop Rebuild FAQ</a> for more details.</p>
+</blockquote>
+<h2 id="quickstart">Quickstart</h2>
+<p>Presented below are fundamental commands essential for day-to-day use by most LCRC users on Bebop. Comprehensive guides are available in other sections linked within our documentation.</p>
+<p>Check your Current Allocation Balance(s):
+<div class="highlight"><pre><span></span><code>sbank-list-allocations -p &lt;project_name&gt;
+</code></pre></div></p>
+<p>Check your Filesystem Quota(s):
+<div class="highlight"><pre><span></span><code>lcrc-quota
+</code></pre></div></p>
+<p>Submit a Batch Job:
+<div class="highlight"><pre><span></span><code>qsub -A &lt;project&gt; &lt;your job script&gt;
+</code></pre></div></p>
+<p>List All Jobs:
+<div class="highlight"><pre><span></span><code>qstat
+</code></pre></div></p>
+<p>Delete a Job:
+<div class="highlight"><pre><span></span><code>qdel &lt;jobid&gt;
+</code></pre></div></p>
+<h2 id="job-scheduling-system">Job Scheduling System</h2>
 <p>Bebop's job scheduling system is characterized by:</p>
 <ul>
-<li>Uses <a href="../../running-jobs-at-lcrc/slurm-clusters/"><strong>Slurm</strong></a></li>
-<li>Uses the legacy <a href="../../allocation-management/lcrc-sbank-allocation-accounting-system/"><strong><code>lcrc-sbank</code></strong></a> accounting system</li>
-<li>Allocations are calculated in <a href="../../allocation-management/allocations/#core-hours-bebop-cluster"><strong>core hours</strong></a></li>
+<li>Uses <a href="../../running-jobs-at-lcrc/pbs-pro-clusters/"><strong>PBS Pro</strong></a></li>
+<li>Uses the <a href="../../allocation-management/sbank-allocation-accounting-system/"><strong><code>sbank</code></strong></a> accounting system</li>
+<li>Allocations are calculated in <a href="../../allocation-management/allocations/#node-hours-improv-and-bebop-clusters"><strong>node hours</strong></a></li>
 </ul>
-<h2 id="partition-limits">Partition Limits</h2>
-<p>Bebop currently enforces the following limits on publicly available partitions:</p>
+<h2 id="queues">Queues</h2>
+<p>Bebop currently enforces the following limits on publicly available queues:</p>
 <ul>
 <li><strong>32 Running Jobs</strong> per user.</li>
 <li><strong>100 Queued Jobs</strong> per user.</li>
-<li><strong>3 Days (72 Hours)</strong> Maximum Walltime on Broadwell Nodes. (bdws is 1 hour)</li>
-<li><strong>7 Days (168 Hours)</strong> Maximum Walltime on KNL Nodes. (knls is 4 hours)</li>
+<li><strong>3 Days (72 Hours)</strong> Maximum Walltime.</li>
 <li><strong>1 Hour</strong> Default Walltime if not specified.</li>
-<li><strong>bdwall</strong> (Broadwell Compute Nodes) is the default partition.</li>
+<li><strong>bdwall</strong> (Broadwell Compute Nodes) is the default queue.</li>
 </ul>
-<h2 id="available-partitions">Available Partitions</h2>
+<p>Use the -q option with qsub to select a queue. The default queue is bdwall.</p>
 <table>
 <thead>
 <tr>
-<th>Bebop Partition Name</th>
+<th>Bebop Queue Name</th>
 <th>Description</th>
 <th>Number of Nodes</th>
 <th>CPU Type</th>
@@ -1661,143 +1679,21 @@
 <tr>
 <td>bdwall</td>
 <td>All Broadwell Nodes</td>
-<td>664</td>
+<td>672</td>
 <td>Intel Xeon E5-2695v4</td>
 <td>36</td>
 <td>128GB DDR4</td>
-<td>15 GB or 4 TB</td>
-</tr>
-<tr>
-<td>bdw</td>
-<td>Broadwell Nodes with 15 GB / scratch</td>
-<td>600</td>
-<td>Intel Xeon E5-2695v4</td>
-<td>36</td>
-<td>128GB DDR4</td>
-<td>15 GB</td>
-</tr>
-<tr>
-<td>bdwd</td>
-<td>Broadwell Nodes with 4 TB / scratch</td>
-<td>64</td>
-<td>Intel Xeon E5-2695v4</td>
-<td>36</td>
-<td>128GB DDR4</td>
-<td>4 TB</td>
-</tr>
-<tr>
-<td>bdws</td>
-<td>Broadwell Shared Nodes (Oversubscription / Non-Exclusive)</td>
-<td>8</td>
-<td>Intel Xeon E5-2695v4</td>
-<td>36</td>
-<td>128GB DDR4</td>
-<td>15 GB</td>
-</tr>
-<tr>
-<td>knlall</td>
-<td>All Knights Landing Nodes</td>
-<td>348</td>
-<td>Intel Xeon Phi 7230</td>
-<td>64</td>
-<td>96GB DDR4/16GB MCDRAM</td>
-<td>15 GB or 4 TB</td>
-</tr>
-<tr>
-<td>knl</td>
-<td>Knights Landing Nodes with 15GB /scratch</td>
-<td>284</td>
-<td>Intel Xeon Phi 7230</td>
-<td>64</td>
-<td>96GB DDR4/16GB MCDRAM</td>
-<td>15 GB</td>
-</tr>
-<tr>
-<td>knld</td>
-<td>Knights Landing Nodes with 4TB /scratch</td>
-<td>64</td>
-<td>Intel Xeon Phi 7230</td>
-<td>64</td>
-<td>96GB DDR4/16GB MCDRAM</td>
-<td>4 TB</td>
-</tr>
-<tr>
-<td>knls</td>
-<td>Knights Landing Shared Nodes (Oversubscription / Non-Exclusive)</td>
-<td>4</td>
-<td>Intel Xeon Phi 7230</td>
-<td>64</td>
-<td>96GB DDR4/16GB MCDRAM</td>
-<td>15 GB</td>
-</tr>
-<tr>
-<td>knl-preemptable</td>
-<td>All Knights Landing Nodes with restrictions including preemption. <a href="#">Click here for more details</a>.</td>
-<td>348</td>
-<td>Intel Xeon Phi 7230</td>
-<td>64</td>
-<td>96GB DDR4/16GB MCDRAM</td>
 <td>15 GB or 4 TB</td>
 </tr>
 </tbody>
 </table>
-<h2 id="submission-examples">Submission Examples</h2>
-<h3 id="example-sbatch-job-submission-simple"><a href="../../running-jobs-at-lcrc/slurm-clusters/#example-sbatch-job-submission-simple">Example <code>sbatch</code> Job Submission (Simple)</a></h3>
-<h3 id="example-sbatch-job-submission-mpi"><a href="../../running-jobs-at-lcrc/slurm-clusters/#example-sbatch-job-submission-mpi">Example <code>sbatch</code> Job Submission (MPI)</a></h3>
-<h3 id="example-interactive-job-submission"><a href="../../running-jobs-at-lcrc/slurm-clusters/#example-interactive-job-submission">Example Interactive Job Submission</a></h3>
-<h3 id="example-knights-landing-knl-sbatch-job-submission-mpi">Example Knights Landing (KNL) <code>sbatch</code> Job Submission (MPI)</h3>
-<blockquote>
-<p><strong>Attention KNL Users:</strong>
-Please note that if you wish to use a different set of modes for KNL other than Quadrant &amp; Cache, you'll need to request a reservation that will require approval. You can request your reservation via <a href="https://your-reservation-link.com">this form</a>.</p>
-</blockquote>
-<p>Depending on the amount of KNL nodes and the changes to be made, this could take a decent amount of time. Because this is using the resources, this time will also be charged against your core hour usage including the time it takes to complete the job.</p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-
-<span class="c1"># SBATCH --job-name=&lt;my_job_name&gt;</span>
-<span class="c1"># SBATCH --account=&lt;my_lcrc_project_name&gt;</span>
-<span class="c1"># SBATCH --partition=knlall</span>
-<span class="c1"># SBATCH --constraint knl,quad,cache # Other modes require a reservation.</span>
-<span class="c1"># SBATCH --nodes=2</span>
-<span class="c1"># SBATCH --ntasks-per-node=64</span>
-<span class="c1"># SBATCH --output=&lt;my_job_name&gt;.out</span>
-<span class="c1"># SBATCH --error=&lt;my_job_name&gt;.error</span>
-<span class="c1"># SBATCH --mail-user=&lt;your email address&gt; # Optional if you require email</span>
-<span class="c1"># SBATCH --mail-type=ALL # Optional if you require email</span>
-<span class="c1"># SBATCH --time=01:00:00</span>
-
-<span class="c1"># Setup My Environment</span>
-module<span class="w"> </span>load<span class="w"> </span>intel-parallel-studio/cluster.2018.4-xtm134f
-<span class="nb">export</span><span class="w"> </span><span class="nv">I_MPI_FABRICS</span><span class="o">=</span>shm:tmi
-
-<span class="c1"># Run My Program</span>
-srun<span class="w"> </span>-n<span class="w"> </span><span class="m">128</span><span class="w"> </span>./helloworld
+<h3 id="special-request-for-large-local-scratch-disk">Special Request for Large Local Scratch Disk</h3>
+<p>The bdwall queue also has 64 nodes with a 4TB local scratch disk. You can request these directly by adding bigdata=true to your PBS select statement. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#PBS -l select=1:ncpus=36:mpiprocs=36:bigdata=true</span>
 </code></pre></div>
-<p>This will run across two KNL nodes, using the Quadrant mode, and Cache MCDRAM mode.
-The default setting is quad,cache.</p>
-<p>A table of available settings, along with more detailed information about Slurm’s KNL support is available <a href="https://slurm.schedmd.com/intel_knl.html">here</a>.</p>
-<p>You can then submit this job from a Bebop login nodes using:</p>
-<p><code>sbatch myjob.sh</code></p>
-<p>Please refer to the <a href="https://slurm.schedmd.com/sbatch.html">sbatch</a> webpage for a list of full options including environment variables.</p>
-<h2 id="knl-preemptable-queue">KNL Preemptable Queue</h2>
-<p>LCRC has set up a preemptable queue on the KNL partition (named as knl-preemptable). This covers all of the same nodes in the knlall partition. The preemptable queue is largely targeted towards users who need to run jobs but do not have sufficient time available in their projects or wish to stretch their allocations further. As the name implies, these jobs are preemptable immediately by other normal jobs if the partition (knlall) is full. The main advantage to users is that preemptable jobs are charged at 0.2 (20%) the normal core-hours.</p>
-<p>The user has to have an active project with some remaining time to be able to submit jobs to the preemptable queue.</p>
-<p>The rules for submitting jobs to the preemptable queue are as follows:</p>
-<p>Maximum job size: 6 nodes
-Maximum time: 24 hours
-Maximum number of running jobs per project: 1</p>
-<p>A single user can submit multiple jobs to the preemptable queue if they have more than one project. If a user submits two preemptable jobs in any given project, only one of the jobs will run while the other is queued.</p>
-<p>As an example of the core-hour savings, a job run for 24 hours on 6 KNL nodes would be charged:
-6x64x24x0.585 = 5391 core-hours (0.585 is the scaling factor for jobs run on the knl partition) whereas in the preemptable queue, the core-hours charged would be:
-6x64x24x0.2 = 1843 core-hours (0.2 is the additional scaling factor for preemptable jobs).</p>
-<p>It is important that the user have checkpointing available and enabled so intermediate solutions are being saved at regular intervals as the job is running. If a job is preempted, the job can be automatically requeued so it can start again as new resources become available if the requeue flag is included during job submission. It is also important that users make appropriate changes to their scripts and input files to have the requeued job start from the latest saved solution. It is recommended that users periodically clean up their project spaces to delete intermediate solution files they might not require after the preemptable job is completed.</p>
-<p>Users wishing to submit jobs to the preemptable queue should include the line
-<code>#SBATCH –partition=knl-preemptable</code>
-in their batch script.</p>
-<p>It is recommended that users include the following lines in their batch-scripts if they desire the job to be requeued and to be notified if their jobs have been preempted and requeued. This will enable them to make necessary changes to the input file to restart the jobs from the last saved solution (if need be).</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#SBATCH –requeue</span>
-<span class="c1">#SBATCH –mail-user=&lt;your email address&gt;</span>
-<span class="c1">#SBATCH –mail-type=REQUEUE</span>
-</code></pre></div>
+<h2 id="job-submission-examples">Job Submission Examples</h2>
+<h3 id="example-qsub-job-submission"><a href="../../running-jobs-at-lcrc/pbs-pro-clusters/#resource-selection-and-job-placement">Example <code>qsub</code> Job Submission</a></h3>
+<h3 id="example-interactive-job-submission"><a href="../../running-jobs-at-lcrc/pbs-pro-clusters/#submitting-an-interactive-job">Example Interactive Job Submission</a></h3>
                 
               
               

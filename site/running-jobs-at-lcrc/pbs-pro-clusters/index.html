@@ -1440,6 +1440,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../bebop/bebop-rebuild-faq/" class="md-nav__link">
+        Bebop Rebuild FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../bebop/getting-started-bebop/" class="md-nav__link">
         Getting Started
       </a>
@@ -1885,12 +1899,12 @@
                 
                 
                 <h1 id="running-jobs-on-pbs-clusters">Running Jobs on PBS Clusters</h1>
-<p>This document complements the information provided on the <a href="../../improv/getting-started-improv">Improv Cluster</a> page, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.</p>
+<p>This document complements the information provided on the <a href="../../improv/getting-started-improv/">Improv</a> and <a href="../../bebop/getting-started-bebop/">Bebop</a> pages, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.</p>
 <h2 id="obtaining-and-managing-compute-resources">Obtaining and Managing Compute Resources</h2>
 <h3 id="definitions-and-notes">Definitions and Notes</h3>
 <p><code>chunk</code>: A set of resources allocated as a unit to a job. Specified inside a selection directive. All parts of a chunk come from the same host. In a typical MPI (Message-Passing Interface) job, there is one chunk per MPI process.</p>
-<p><code>vnode</code>: A virtual node, or vnode, is an abstract object representing a host or a set of resources which form a usable part of an execution host. This could be an entire host, or a nodeboard or a blade. A single host can be made up of multiple vnodes. Each vnode can be managed and scheduled independently. Each vnode in a complex must have a unique name. Vnodes on a host can share resources, such as node-locked licenses. PBS operates on vnodes. <strong>A vnode on LCRC Improv will represent an entire host</strong>.</p>
-<p><code>ncpus</code>: Number of resources available to execute a program. Each Improv node has 128 cores. Users are encouraged to use all of the cores on the node and pack nodes with multiple jobs when possible.</p>
+<p><code>vnode</code>: A virtual node, or vnode, is an abstract object representing a host or a set of resources which form a usable part of an execution host. This could be an entire host, or a nodeboard or a blade. A single host can be made up of multiple vnodes. Each vnode can be managed and scheduled independently. Each vnode in a complex must have a unique name. Vnodes on a host can share resources, such as node-locked licenses. PBS operates on vnodes. <strong>A vnode on Improv and Bebop represents an entire host</strong>.</p>
+<p><code>ncpus</code>: Number of resources available to execute a program. Users are encouraged to use all of the cores on the node and pack nodes with multiple jobs when possible.</p>
 <p><code>job</code>: A job equates to a qsub. A set of resources allocated to you for a period of time. Your will execute one or more tasks on those resources during your job.</p>
 <p><code>task</code>: A single execution on the resources of your job, often an mpirun invocation. You may run one task or many tasks during your job. You may run tasks sequentially or divide your resources up and run several tasks concurrently. Also sometimes referred to as job steps.</p>
 <h3 id="quick-start">Quick Start</h3>

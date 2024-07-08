@@ -612,15 +612,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#core-hours-bebop-cluster" class="md-nav__link">
-    Core Hours (Bebop Cluster)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#node-hours-improv-cluster" class="md-nav__link">
-    Node Hours (Improv Cluster)
+  <a href="#node-hours-improv-and-bebop-clusters" class="md-nav__link">
+    Node Hours (Improv and Bebop Clusters)
   </a>
   
 </li>
@@ -1413,6 +1406,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../bebop/bebop-rebuild-faq/" class="md-nav__link">
+        Bebop Rebuild FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../bebop/getting-started-bebop/" class="md-nav__link">
         Getting Started
       </a>
@@ -1665,15 +1672,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#core-hours-bebop-cluster" class="md-nav__link">
-    Core Hours (Bebop Cluster)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#node-hours-improv-cluster" class="md-nav__link">
-    Node Hours (Improv Cluster)
+  <a href="#node-hours-improv-and-bebop-clusters" class="md-nav__link">
+    Node Hours (Improv and Bebop Clusters)
   </a>
   
 </li>
@@ -1835,8 +1835,8 @@
 <p>The LCRC operates three distinct clusters, each with its own scheduling and allocation systems:</p>
 <ol>
 <li><a href="../../improv/getting-started-improv/"><strong>Improv</strong></a>: Operates with the <a href="../../running-jobs-at-lcrc/pbs-pro-clusters/">PBS Pro</a> job scheduler and measures allocations in <strong>node hours</strong>.</li>
-<li><a href="../../bebop/getting-started-bebop/"><strong>Bebop</strong></a>: Utilizes the <a href="../../running-jobs-at-lcrc/slurm-clusters/">Slurm</a> job scheduler and measures allocations in <strong>core hours</strong>.</li>
-<li><a href="../../swing/getting-started-swing/"><strong>Swing</strong></a>: Also uses Slurm but charges allocations in <strong>GPU hours</strong>.</li>
+<li><a href="../../bebop/getting-started-bebop/"><strong>Bebop</strong></a>: Utilizes the <a href="../../running-jobs-at-lcrc/pbs-pro-clusters/">PBS Pro</a> job scheduler and measures allocations in <strong>node hours</strong>.</li>
+<li><a href="../../swing/getting-started-swing/"><strong>Swing</strong></a>: Uses Slurm but charges allocations in <strong>GPU hours</strong>.</li>
 </ol>
 <h2 id="allocations-metrics-for-each-cluster">Allocations Metrics for Each Cluster</h2>
 <h3 id="gpu-hours-swing-cluster">GPU Hours (Swing Cluster)</h3>
@@ -1848,26 +1848,19 @@
 <li><strong>GPUs per Node</strong>: How many GPUs used in each node.</li>
 <li><strong>Time in Hours</strong>: The duration for which these nodes and GPUs are used.</li>
 </ul>
-<h3 id="core-hours-bebop-cluster">Core Hours (Bebop Cluster)</h3>
-<p><code>Core Hours = Number of Nodes Used x Cores per Node x Time in Hours</code></p>
-<ul>
-<li><strong>Number of Nodes Used</strong>: How many separate computing nodes are being used.</li>
-<li><strong>Cores per Node</strong>: Number of CPU cores in each node.</li>
-<li><strong>Time in Hours</strong>: Duration for which these nodes (and therefore the cores within them) are used.</li>
-</ul>
-<h3 id="node-hours-improv-cluster">Node Hours (Improv Cluster)</h3>
-<p>Allocations on Improv are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.</p>
+<h3 id="node-hours-improv-and-bebop-clusters">Node Hours (Improv and Bebop Clusters)</h3>
+<p>Allocations on Improv and Bebop are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores, and 1 node on Bebop has 36 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.</p>
 <p><code>Node Hours = Number of Nodes Used × Time in Hours</code></p>
 <ul>
 <li><strong>Number of Nodes Used</strong>: The quantity of compute nodes utilized for the job.</li>
 <li><strong>Time in Hours</strong>: The duration for which these nodes are used.</li>
 </ul>
-<p>Improv currently allows for an <em>Overburn</em> of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:</p>
+<p>Improv and Bebop currently allow for an <em>Overburn</em> of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:</p>
 <p><code>qsub: Job violates queue and/or server resource limits</code></p>
-<p>Projects will need to <a href="https://docs.lcrc.anl.gov/allocation-management/allocations/#requesting-additional-project-time">Request Additional Project Time</a> when allocations are exhausted.</p>
+<p>Projects will need to <a href="https://docs.lcrc.anl.gov/allocation-management/allocations.md#requesting-additional-project-time">Request Additional Project Time</a> when allocations are exhausted.</p>
 <h2 id="startup-projects-and-allocations">Startup Projects and Allocations</h2>
 <h3 id="startup-projects-overview">Startup Projects Overview</h3>
-<p>New Argonne employee accounts receive a "startup project" with a small balance of hours on the <strong>Bebop</strong> and <strong>Swing</strong> systems.</p>
+<p>New Argonne employee accounts receive a "startup project" with a small balance of hours currently only on the <strong>Swing</strong> system.</p>
 <h3 id="purpose">Purpose</h3>
 <p>The startup project serves multiple functions:</p>
 <ul>
@@ -1877,7 +1870,7 @@
 </ul>
 <h3 id="allocation-details">Allocation Details</h3>
 <ul>
-<li><strong>Initial Allocation</strong>: 20,000 core-hours on Bebop, 100 GPU hours on Swing.</li>
+<li><strong>Initial Allocation</strong>: 100 GPU hours on Swing.</li>
 <li><strong>Expiration</strong>: None. The startup hours do not have a use-by date.</li>
 <li><strong>Additional Time</strong>: Startup projects are not eligible for additional allocations beyond the initial hours.</li>
 </ul>
@@ -1918,7 +1911,7 @@
 <li><strong>Post-October 1st</strong>: After October 1st, existing projects can request time for any quarter, but there may be restrictions on the maximum hours granted.</li>
 </ul>
 <h2 id="mid-quarter-allocations">Mid-Quarter Allocations</h2>
-<p>Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources. We have described, in detail, this process on the <a href="../../account-project-management/project-management/#mid-quarter-allocations">Managing Projects</a> documentation. </p>
+<p>Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources. We have described, in detail, this process on the <a href="../../account-project-management/project-management/#mid-quarter-allocations">Managing Projects</a> documentation.</p>
                 
               
               

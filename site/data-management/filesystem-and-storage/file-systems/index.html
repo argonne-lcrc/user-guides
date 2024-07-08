@@ -1338,6 +1338,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../bebop/bebop-rebuild-faq/" class="md-nav__link">
+        Bebop Rebuild FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../bebop/getting-started-bebop/" class="md-nav__link">
         Getting Started
       </a>
@@ -1697,7 +1711,7 @@
 </ul>
 <h2 id="local-and-global-scratch-disks">Local and Global Scratch Disks</h2>
 <h3 id="local">Local</h3>
-<p>If you need a place to put temporary files that don’t need to be accessed by other nodes, we recommend that you put them into the local scratch disk on the nodes during job runs. All jobs create a job specific directory with local storage which can be referenced from your job submission script using the variable <code>$TMPDIR</code>. The normal publicly available nodes offer 15 GB of temporary scratch space while the ‘biggpu’ queue offers 1 TB. Diskfull Bebop nodes also house a 4TB disk on each node. Note that these spaces aren’t backed up and the space will be cleared out on job end!</p>
+<p>If you need a place to put temporary files that don’t need to be accessed by other nodes, we recommend that you put them into the local scratch disk on the nodes during job runs. All jobs create a job specific directory with local storage which can be referenced from your job submission script using the /scratch directory. The normal publicly available nodes offer 15 GB of temporary scratch space. Diskfull Bebop nodes also house a 4TB disk on each node. Note that these spaces aren’t backed up and the space will be cleared out on job end!</p>
 <h4 id="local-scratch-disk-pros">Local Scratch Disk Pros</h4>
 <ul>
 <li>Fast access times</li>
