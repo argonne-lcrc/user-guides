@@ -106,7 +106,7 @@ Only Argonne employees are eligible to initiate a new project within the LCRC.
 
   ![Request New LCRC Project](../images/request-new-lcrc-project.png)
 
-  **Note**: If the link isn't visible, join the **lcrc** project. [Follow this guide](../accounts-and-access/#for-current-argonne-employees) for assistance.
+  **Note**: If the link isn't visible, join the **lcrc** project. [Follow this guide](accounts-and-access.md#for-current-argonne-employees) for assistance.
 
 **3. Complete the Form:**
 
@@ -228,10 +228,10 @@ Mid-Quarter Allocations can be granted for LCRC projects after not previously re
 
 ### How to Request Additional Allocations
 
-1. **Check Current Usage**: Verify usage of allocated resources using `lcrc-usage <project_name>` on Bebop/Swing and `sbank-list-allocations -p <project_name>` on Improv.
+1. **Check Current Usage**: Verify usage of allocated resources using `sbank-list-allocations -p <project_name>` on Improv/Bebop; `lcrc-usage <project_name>` Swing.
 2. **Prepare Documentation**: Justify core-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
 3. **Special Criteria for Large Requests**: Provide scaling results for requests exceeding 100K core-hours (781 node hours).
-4. **Request Time**: Request the additional hours following our [Managing Your LCRC Project](https://docs.lcrc.anl.gov/account-project-management/project-management/#managing-your-lcrc-project) documentation above.
+4. **Request Time**: Request the additional hours following our [Managing Your LCRC Project](../account-project-management/project-management.md#managing-your-lcrc-project) documentation above.
 > **Note**: Requests with incomplete or unclear information may result in a delay of up to two weeks in the decision-making process.
 
 ### Allocation Limits and Calculation Examples

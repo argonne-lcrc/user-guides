@@ -5,8 +5,8 @@
 The LCRC operates three distinct clusters, each with its own scheduling and allocation systems:
 
 1. [**Improv**](../improv/getting-started-improv.md): Operates with the [PBS Pro](../running-jobs-at-lcrc/pbs-pro-clusters.md) job scheduler and measures allocations in **node hours**.
-2. [**Bebop**](../bebop/getting-started-bebop.md): Utilizes the [Slurm](../running-jobs-at-lcrc/slurm-clusters.md) job scheduler and measures allocations in **core hours**.
-3. [**Swing**](../swing/getting-started-swing.md): Also uses Slurm but charges allocations in **GPU hours**.
+2. [**Bebop**](../bebop/getting-started-bebop.md): Utilizes the [PBS Pro](../running-jobs-at-lcrc/pbs-pro-clusters.md) job scheduler and measures allocations in **node hours**.
+3. [**Swing**](../swing/getting-started-swing.md): Uses Slurm but charges allocations in **GPU hours**.
 
 ## Allocations Metrics for Each Cluster
 
@@ -22,34 +22,26 @@ On Swing, the compute nodes charge as follows for each job:
 - **GPUs per Node**: How many GPUs used in each node.
 - **Time in Hours**: The duration for which these nodes and GPUs are used.
 
-### Core Hours (Bebop Cluster)
+### Node Hours (Improv and Bebop Clusters)
 
-`Core Hours = Number of Nodes Used x Cores per Node x Time in Hours`
-
-- **Number of Nodes Used**: How many separate computing nodes are being used.
-- **Cores per Node**: Number of CPU cores in each node.
-- **Time in Hours**: Duration for which these nodes (and therefore the cores within them) are used.
-
-### Node Hours (Improv Cluster)
-
-Allocations on Improv are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
+Allocations on Improv and Bebop are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores, and 1 node on Bebop has 36 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
 
 `Node Hours = Number of Nodes Used × Time in Hours`
 
 - **Number of Nodes Used**: The quantity of compute nodes utilized for the job.
 - **Time in Hours**: The duration for which these nodes are used.
 
-Improv currently allows for an *Overburn* of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:
+Improv and Bebop currently allow for an *Overburn* of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:
 
 `qsub: Job violates queue and/or server resource limits`
 
-Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations/#requesting-additional-project-time) when allocations are exhausted.
+Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations.md#requesting-additional-project-time) when allocations are exhausted.
 
 ## Startup Projects and Allocations
 
 ### Startup Projects Overview
 
-New Argonne employee accounts receive a "startup project" with a small balance of hours on the **Bebop** and **Swing** systems.
+New Argonne employee accounts receive a "startup project" with a small balance of hours currently only on the **Swing** system.
 
 ### Purpose
 
@@ -61,7 +53,7 @@ The startup project serves multiple functions:
 
 ### Allocation Details
 
-- **Initial Allocation**: 20,000 core-hours on Bebop, 100 GPU hours on Swing.
+- **Initial Allocation**: 100 GPU hours on Swing.
 - **Expiration**: None. The startup hours do not have a use-by date.
 - **Additional Time**: Startup projects are not eligible for additional allocations beyond the initial hours.
 
@@ -115,4 +107,4 @@ PIs should note that any extra time granted but not used within the quarter will
 
 ## Mid-Quarter Allocations
 
-Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources. We have described, in detail, this process on the [Managing Projects](../../account-project-management/project-management/#mid-quarter-allocations) documentation. 
+Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources. We have described, in detail, this process on the [Managing Projects](../account-project-management/project-management.md#mid-quarter-allocations) documentation.

@@ -22,7 +22,7 @@ Your home, project, and group directories are located on separate GPFS filesyste
 
 ### Local
 
-If you need a place to put temporary files that don’t need to be accessed by other nodes, we recommend that you put them into the local scratch disk on the nodes during job runs. All jobs create a job specific directory with local storage which can be referenced from your job submission script using the variable `$TMPDIR`. The normal publicly available nodes offer 15 GB of temporary scratch space while the ‘biggpu’ queue offers 1 TB. Diskfull Bebop nodes also house a 4TB disk on each node. Note that these spaces aren’t backed up and the space will be cleared out on job end!
+If you need a place to put temporary files that don’t need to be accessed by other nodes, we recommend that you put them into the local scratch disk on the nodes during job runs. All jobs create a job specific directory with local storage which can be referenced from your job submission script using the /scratch directory. The normal publicly available nodes offer 15 GB of temporary scratch space. Diskfull Bebop nodes also house a 4TB disk on each node. Note that these spaces aren’t backed up and the space will be cleared out on job end!
 
 #### Local Scratch Disk Pros
 

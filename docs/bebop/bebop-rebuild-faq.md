@@ -1,8 +1,8 @@
-# Bebop Rebuild 
+# Bebop Rebuild FAQ
 
 ## Overview
 
-On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler. 
+On July 1, 2024, Bebop was rebuilt from CentOS 7 to Rocky Linux 8 as CentOS has reached End of Life. This rebuild includes a full Operating System change, a new software tree and a transition from Slurm to PBS Professional as the system job scheduler.
 
 ## Logging In
 
@@ -52,11 +52,11 @@ For tips on how to use PBS, please see:
 
 [https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro-clusters](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro-clusters)
 
-Like our login nodes, all SSH Known Host keys have changed on the Bebop compute nodes. Because of this, you may get an error when trying to submit multi-node or interactive jobs to the queues. We highly recommend **ALL** users run the following after logging into a Bebop login node:
+Like our login nodes, all SSH Known Host keys have changed on the Bebop compute nodes. Because of this, you may get an error when trying to submit single node, multi-node or interactive jobs to any of the queues/compute nodes. We highly recommend **ALL** users run the following after logging into a Bebop login node:
 
 `mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak`
 
-This will move your current LCRC SSH Known Hosts file to a backup file, and you should no longer have an issue with running a job.
+If you see any code errors, MPI errors or SSH/Host Key errors when running a job, we recommend trying this first before contacting support. The above command will move your current LCRC SSH Known Hosts file to a backup file which should prevent any host connection errors.
  
 ## FAQ
 
@@ -69,6 +69,11 @@ LCRC staff have already installed several compilers and MPI variants as well as 
 If you have software built in your home and/or project directories prior to the rebuild, you are more than welcome to try and use it. However, if it does not work correctly or at all, you should recompile your software. Anything that links to the old software tree is subject to stop working once we permanently delete the old tree in the near future.
 
 Please e-mail [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov) with any software requests.
+
+### What software modules are now loaded by default?
+
+We have decided against loading any software modules by default going forward. We hope to phase out older modules after a certain amount of time to reduce software installation bloat on
+ the system and to encourage the use of newer software. Compilers and MPI versions will need to be loaded and/or saved to load on login by the user. When we do decide to retire old software, we will send an announcement with a generous lead time.
 
 ### Do I still request allocations on Bebop in Core Hours?
 
@@ -99,15 +104,15 @@ As before, condo queues do not restrict usage based on node hour availability, h
 
 With the transition to PBS, we are not currently using startup accounts. If you need to run on Bebop, you should either join an LCRC project or request a new one via the accounts page. Please see our documentation about LCRC projects here:
 
-[https://docs.lcrc.anl.gov/account-project-management/project-management](https://docs.lcrc.anl.gov/account-project-management/project-management)
+[https://docs.lcrc.anl.gov/account-project-management/project-management](https://docs.lcrc.anl.gov/account-project-management/project-management.md)
 
-### My jobs are failing with SSH or Host Key Verification failures. What can I do?
+### My jobs are failing with strange MPI, code, SSH or Host Key Verification failures. What can I do?
 
 As mentioned above, run the following after logging into a Bebop login node: 
 
 `mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak`
 
-This will move your current LCRC SSH Known Hosts file to a backup file, and you should no longer have an issue with running a job.
+The above command will move your current LCRC SSH Known Hosts file to a backup file which should prevent any host connection errors. Please make sure to try this before contacting LCRC support with any MPI, code or SSH errors from your jobs.
 
 ### I cannot find "X" documentation on the LCRC website. What should I do?
 
