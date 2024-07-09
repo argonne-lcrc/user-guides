@@ -96,6 +96,31 @@ if (dropdowns.length > 0) {
 
 
 
+
+
+
+
+// Search focus
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+
+const searchParams = new URLSearchParams(window.location.search);
+ 
+for (const key of searchParams.keys()) {
+  if(key == 'search'){
+    const searchInput = document.getElementsByClassName("md-search__input")[0];
+    searchInput.focus();
+  }
+}
+
+
+
+
+
+
+
+
 // Include the mobile dropdowns (unlike above, just writing it all here)
 // ----------------------------------------------------------------------------
 
