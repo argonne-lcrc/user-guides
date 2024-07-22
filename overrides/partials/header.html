@@ -220,16 +220,17 @@
       Argonne LCRC
     </a>
 
-    <!-- Button to open drawer -->
-    <label class="md-header__button md-icon" for="__drawer">
-      {% include ".icons/material/menu" ~ ".svg" %}
-    </label>
+    <div class='button-wrapper'>
+	    <!-- Button to open drawer -->
+	    <label class="md-header__button md-icon" for="__drawer">
+	      {% include ".icons/material/menu" ~ ".svg" %}
+	    </label>
 
-    <!-- Search interface -->
-    <label class="md-header__button md-icon" for="__search">
-      {% include ".icons/material/magnify.svg" %}
-    </label>
-
+	    <!-- Search interface -->
+	    <label class="md-header__button md-icon" for="__search">
+	      {% include ".icons/material/magnify.svg" %}
+	    </label>
+  	</div>
     <!-- Search interface -->
     {% include "partials/search.html" %}
 

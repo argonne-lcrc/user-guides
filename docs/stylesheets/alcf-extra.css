@@ -727,11 +727,15 @@ max-width: 1500px;
 	fill: #118acb;
 }
 
+.button-wrapper {
+	grid-column: span 2;
+}
+
 .md-header__button {
 	margin: 0;
 	float: right;
 	color: var(--md-typeset-a-color);
-	grid-column: span 1;
+/*	grid-column: span 1;*/
 }
 
 
