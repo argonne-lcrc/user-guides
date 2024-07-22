@@ -392,6 +392,10 @@ max-width: 1500px;
   height: 1.8rem;
 }
 
+.header--mobile .md-search__form {
+	height: 50px;
+}
+
 .md-search__form:hover {
 	background-color: #d7e6f3;
 }
@@ -631,7 +635,7 @@ max-width: 1500px;
   line-height: 24px;
   font-weight: 700;
   color: var(--md-accent-fg-color);
-  grid-column: span 5;
+  grid-column: span 4;
   padding-top: 8px;
 }
 
@@ -727,7 +731,7 @@ max-width: 1500px;
 	margin: 0;
 	float: right;
 	color: var(--md-typeset-a-color);
-	grid-column: ;
+	grid-column: span 1;
 }
 
 
@@ -738,6 +742,10 @@ max-width: 1500px;
 	height: 48px;
 }
 
+
+.header--mobile .md-header__button svg {
+	margin-top: 0;
+}
 
 
 .header--mobile .header__mobIcons .md-search__icon svg {

@@ -217,13 +217,21 @@
       aria-label="{{ config.site_name }}"
       class='header-title'
     >
-      Argonne Laboratory<br>Computing Resource Center
+      Argonne LCRC
     </a>
 
     <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
       {% include ".icons/material/menu" ~ ".svg" %}
     </label>
+
+    <!-- Search interface -->
+    <label class="md-header__button md-icon" for="__search">
+      {% include ".icons/material/magnify.svg" %}
+    </label>
+
+    <!-- Search interface -->
+    {% include "partials/search.html" %}
 
     <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
