@@ -16,3 +16,5 @@ Bebop has 672 compute nodes with Intel Broadwell CPUs (352 KNL nodes were previo
 ## Bebop Login Nodes
 
 There are four login nodes available to users for editing code, building code, submitting/monitoring jobs, checking usage (`sbank`), etc. Their full hostnames are `beboploginN.lcrc.anl.gov` for `N` equal to `1` through `6`. The login nodes hardware is identical to the compute nodes. The various compilers and libraries are present on the logins, so most users should be able to build their code. All users share the same login nodes so please be courteous and respectful of your fellow users. For example, please do not run computationally or IO intensive pre- or post-processing on the logins and keep the parallelism of your builds to a reasonable level.
+
+Individual user processes on the login nodes will be throttled temporarily for those that exceed 8 CPUs and 8GB of RAM.

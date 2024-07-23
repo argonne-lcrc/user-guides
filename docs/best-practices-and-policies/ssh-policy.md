@@ -70,8 +70,8 @@ remote system. This allows you get access to the remote system while keeping you
 
 When you use a passphrased SSHv2 key the ssh client will prompt you for your passphrase. This passphrase is used on your local machine to decrypt your private key so it can be used to connect to the remote machine. The private key never leaves the client machine (in encrypted or decrypted form).
 
-For the remote machine to accept your ssh connection it must have your public key. Your SSHv2 public keys should be stored in the `~/.ssh/authorized_keys` file. Instructions for setting up your LCRC keys are available here.
+For the remote machine to accept your ssh connection it must have your public key. Instructions for setting up your LCRC keys are available [here](../../account-project-management/ssh).
 
-If you ssh many times and you wish to avoid typing in the passphrase every time, you can use an ssh-agent. An ssh-agent allows your client machine to keep a decrypted form of your ssh private key in memory for use when ssh’ing to multiple machines. For information on using ssh-agent, read the ssh-agent man page.
+If you ssh many times and you wish to avoid typing in the passphrase every time, you can use an ssh-agent. An ssh-agent allows your client machine to keep a decrypted form of your ssh private key in memory for use when ssh'ing to multiple machines. For information on using ssh-agent, read the ssh-agent man page.
 
 You may use ssh-agent forwarding when connecting through one machine to another machine. But, because of security issues, you should only enable agent forwarding for connections where you will need it and shutdown the connection as soon as you are finished using it.
