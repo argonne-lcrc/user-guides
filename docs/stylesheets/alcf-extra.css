@@ -610,6 +610,7 @@ max-width: 1500px;
 	height: 66px;
 	font-size: 19px;
 	line-height: 24px;
+	padding-top: 6px;
 }
 
 @media only screen and (min-width: 961px) {
@@ -701,7 +702,7 @@ max-width: 1500px;
 	.header--mobile .header__site-title h1 {
 		font-size: 16px;
 		line-height: 18px;
-		margin-top: 14px;
+		margin-top: 16px;
 	}
 }
 
@@ -740,10 +741,12 @@ max-width: 1500px;
 
 
 .md-header__button svg {
-	margin-top: -6px;
+	margin-top: 0px;
 	float: right;
-	width: 36px;
-	height: 48px;
+	/*width: 36px;
+	height: 48px;*/
+	width: 22px;
+	height: 30px;
 }
 
 
