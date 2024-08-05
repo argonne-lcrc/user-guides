@@ -138,7 +138,7 @@ For storage requests exceeding 1TB, provide a justification.
 
 ### Who Can Join?
 
-Anyone with a new or existing LCRC account can request to join an existing project.
+Anyone with a new or existing Argonne account can request to join an existing project.
 
 If you are an Argonne employee, you should first join the **lcrc** project. However, if you are a collaborator, you will need to join a sub-project of LCRC.
 
