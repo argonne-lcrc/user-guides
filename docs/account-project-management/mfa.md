@@ -1,6 +1,6 @@
 # Enrolling in Duo MFA
 
-After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project), you will be required to enroll in the CELS Duo MFA system on your next login to the [accounts](https://accounts.lcrc.anl.gov) system. You can also logout and log back in to complete the setup right away. You will need to install the Duo Mobile App. If you cannot install the Duo Mobile App, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
+After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project), you will be required to enroll in the CELS Duo MFA system on your next login to the [accounts](https://accounts.lcrc.anl.gov) system. You can also logout and log back in to complete the setup right away. You will need to install the Duo Mobile App. If you cannot install the Duo Mobile App, please first verify that your device OS is up to date. You can reference the official [Duo documentation](https://help.duo.com) for compatibility lists. If you still have trouble, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
 
 1. Login to [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) with your Argonne Domain or Argonne Collaborator account username and password.
 
