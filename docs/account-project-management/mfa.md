@@ -1,6 +1,8 @@
 # Enrolling in Duo MFA
 
-After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project), you will be required to enroll in the CELS Duo MFA system on your next login to the [accounts](https://accounts.lcrc.anl.gov) system. You can also logout and log back in to complete the setup right away. You will need to install the Duo Mobile App. If you cannot install the Duo Mobile App, please first verify that your device OS is up to date. You can reference the official [Duo documentation](https://help.duo.com) for compatibility lists. If you still have trouble, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
+After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project), you will be required to enroll in the CELS Duo MFA system on your next login to the [LCRC Accounts System](https://accounts.lcrc.anl.gov). If you are already logged in, you can logout and log back in to complete the setup right away.
+
+*Note*: If you cannot install the Duo Mobile App, please first verify that your device OS is up to date. You can also reference the [Duo help documentation](https://help.duo.com) for a list of compatibile devices and versions. If you still cannot install the Duo Mobile App because your device cannot be updated, is not compatible, or you do not have a Smartphone/Tablet, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
 
 1. Login to [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) with your Argonne Domain or Argonne Collaborator account username and password.
 
@@ -13,7 +15,7 @@ After you have [joined the **lcrc** project or a sub-project of LCRC](../project
 4. Select your device OS.
 ![LCRC Duo Config 3](../images/lcrc_duo_3.png)
 
-5. Install the Duo Mobile App.
+5. Install the Duo Mobile App. The official Duo documentation has instructions for both [iOS](https://guide.duo.com/iphone) and [Android](https://guide.duo.com/android) devices.
 ![LCRC Duo Config 4](../images/lcrc_duo_4.png)
 
 6. Open the Duo Mobile App, tap the + button, and scan the barcode.
@@ -24,5 +26,7 @@ After you have [joined the **lcrc** project or a sub-project of LCRC](../project
 
 8. Continue to login and test your newly added device.
 ![LCRC Duo Config 7](../images/lcrc_duo_7.png)
+
+As a reminder, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov) with any issues.
 
 Once Duo MFA is configured, you can now [configure your SSH key](ssh.md) to complete our login requirements.
