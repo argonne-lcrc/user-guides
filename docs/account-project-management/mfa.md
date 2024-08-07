@@ -1,3 +1,5 @@
+*NOTE*: LCRC Duo Enrollment will begin on **August 19, 2024**. Please revisit this page on or after that time.
+
 # Enrolling in Duo MFA
 
 After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project), you will be required to enroll in the CELS Duo MFA system on your next login to the [LCRC Accounts System](https://accounts.lcrc.anl.gov). If you are already logged in, you can logout and log back in to complete the setup right away.
