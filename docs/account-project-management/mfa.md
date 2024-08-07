@@ -1,4 +1,5 @@
 *NOTE*: LCRC Duo Enrollment will begin on **August 19, 2024**. Please revisit this page on or after that time.
+To ensure your device is compatible, you can try installing the Duo Mobile App in advance.
 
 # Enrolling in Duo MFA
 
