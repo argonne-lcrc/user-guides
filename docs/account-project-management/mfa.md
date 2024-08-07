@@ -14,7 +14,7 @@ After you have [joined the **lcrc** project or a sub-project of LCRC](../project
 3. Add your mobile phone number.
 ![LCRC Duo Config 2](../images/lcrc_duo_2.png)
 
-4. Select your device OS.
+4. Select your device OS. We will choose Android in this example.
 ![LCRC Duo Config 3](../images/lcrc_duo_3.png)
 
 5. Install the Duo Mobile App. The official Duo documentation has instructions for both [iOS](https://guide.duo.com/iphone) and [Android](https://guide.duo.com/android) devices.
