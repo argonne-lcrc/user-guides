@@ -12,7 +12,7 @@ The LCRC operates three distinct clusters, each with its own scheduling and allo
 
 ### GPU Hours (Swing Cluster)
 
-Unlike other LCRC clusters, Swing charges time based on GPU hours instead of CPU core hours. You need to factor this in when applying for time on Swing.
+Unlike other LCRC clusters, Swing charges time based on GPU hours instead of CPU node-hours. You need to factor this in when applying for time on Swing.
 
 On Swing, the compute nodes charge as follows for each job:
 
@@ -92,12 +92,12 @@ PIs can submit requests for additional project time through the LCRC Accounts pa
 ### Review Process
 
 - The LCRC core team convenes every Tuesday to assess time requests for both new and ongoing projects.
-- Additional time can be granted up to 150K core-hours directly by the LCRC core team.
-- Requests exceeding 150K core-hours require approval from the LCRC allocations committee.
+- Additional time can be granted up to 5,000 node-hours directly by the LCRC core team.
+- Requests exceeding 5,000 node-hours might require approval from the LCRC allocations committee.
 
 ### Expiration of Additional Time
 
-PIs should note that any extra time granted but not used within the quarter will expire at the quarter's end. For example, if a PI is allocated an extra 100K core-hours and only utilizes 40K, the remaining 60K core-hours will be forfeited at the quarter's conclusion.
+PIs should note that any extra time granted but not used within the quarter will expire at the quarter's end. For example, if a PI is allocated an extra 25K node-hours and only utilizes 10K, the remaining 15K node-hours will be forfeited at the quarter's conclusion.
 
 ### Annual Time Requests for Projects
 

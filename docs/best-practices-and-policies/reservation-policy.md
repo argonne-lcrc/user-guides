@@ -6,6 +6,6 @@ To set up a reservation send an email to [support@lcrc.anl.gov](mailto:support@l
 
 * Reservations must be requested at least 8 business days in advance and are subject to availability of resources.
 * Reservations cannot be requested more than once per quarter per project.
-* Typically, reservations can be for a maximum of 100,000 core hours.
+* Typically, reservations can be for a maximum of 8,000 node hours (both on Bebop & Improv). Larger evaluation requests will be evaluated on a case-by-case basis.
 * Reservations create substantial perturbations to the scheduling of other jobs long before the reservation starts. Once a reservation is scheduled it cannot be rescheduled, and if you end up not needing or using it, the project will still be charged for the reservation time. It is like a non-refundable movie ticket.
 * If a reservation is required to host a workshop with hands-on user participation, please let us know well in advance.  This will enable us to plan the reservation window(s) during the work-day(s) to ensure minimal disruption to the user community.

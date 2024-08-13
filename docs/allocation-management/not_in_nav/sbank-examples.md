@@ -2,7 +2,7 @@
 
 Below is a set of helpful commands to help you better manage the projects you have running on LCRC Improv.
 
-All transactions displayed are in Node Hours. Each Node Hour is 128 Core Hours. Balances and transactions displayed will update every 5 minutes.
+All transactions displayed are in Node Hours. 1 Improv Node Hour is 128 Core Hours. 1 Bebop Node Hour is 36 Core Hours. Balances and transactions displayed will update every 5 minutes.
 
 ## View your Project’s Allocations
 Command: `sbank-list-allocations [options]`

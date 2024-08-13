@@ -30,23 +30,23 @@ Let's explore a sample project to illustrate how the LCRC allocation system func
 
 ### Project Life Cycle & Initial Allocation
 
-After its creation, **popcorn** would be granted an initial allocation, for instance, **20,000 core-hours for the year**.
+After its creation, **popcorn** would be granted an initial allocation, for instance, **5,000 node-hours for the quarter**.
 
 ### Usage Scenario
 
-Imagine one of the collaborating scientists runs a job that takes **10 hours** and utilizes **25, 36-core nodes**. This would consume:
+Imagine one of the collaborating scientists runs a job that takes **10 hours** and utilizes **25, 128-core nodes**. This would consume:
 
-* `10 hours (job duration) x 25 nodes x 36 cores (per node) = 9,000 core-hours`
+* `10 hours (job duration) x 25 nodes = 250 node-hours`
 
-As a result, **11,000 core-hours** would remain from the original allocation.
+As a result, **4,750 node-hours** would remain from the original allocation.
 
-### Running Out of Core-Hours
+### Running Out of Node-Hours
 
-Once all **11,000 remaining core-hours** are exhausted, the project will be unable to execute additional jobs. At this point, the team would need to consider requesting more computational time.
+Once all **4,750 remaining node-hours** are exhausted, the project will be unable to execute additional jobs. At this point, the team would need to consider requesting more computational time.
 
 ### Requesting Additional Allocation
 
-The designated PI can formally request additional core-hours for the project. This request will be subject to review and approval by the **LCRC Allocations Committee**.
+The designated PI can formally request additional node-hours for the project. This request will be subject to review and approval by the **LCRC Allocations Committee**.
 
 * **Communication**: The decision on the request will be emailed to the PI upon completion of the required web form.
 
@@ -79,7 +79,7 @@ A single user account can be associated with multiple projects and can also serv
 #### PI Responsibilities
 
 1. **User Management**: The PI is in charge of adding and removing user accounts linked to the project.
-2. **Allocation Management**: The PI administers the core-hour allocations for the project, outlining who among the project members is authorized to use what portion of the allocated resources.
+2. **Allocation Management**: The PI administers the node-hour allocations for the project, outlining who among the project members is authorized to use what portion of the allocated resources.
 
 ### Summary
 
@@ -229,25 +229,19 @@ Mid-Quarter Allocations can be granted for LCRC projects after not previously re
 ### How to Request Additional Allocations
 
 1. **Check Current Usage**: Verify usage of allocated resources using `sbank-list-allocations -p <project_name>` on Improv/Bebop; `lcrc-usage <project_name>` Swing.
-2. **Prepare Documentation**: Justify core-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
-3. **Special Criteria for Large Requests**: Provide scaling results for requests exceeding 100K core-hours (781 node hours).
+2. **Prepare Documentation**: Justify node-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
+3. **Special Criteria for Large Requests**: Provide scaling results for requests at or greater than 5,000 node-hours (both on Improv & Bebop). Certain requests might be asked to provide scaling data even for lower node-hour requests on a case-by-case basis.
 4. **Request Time**: Request the additional hours following our [Managing Your LCRC Project](../account-project-management/project-management.md#managing-your-lcrc-project) documentation above.
 > **Note**: Requests with incomplete or unclear information may result in a delay of up to two weeks in the decision-making process.
 
 ### Allocation Limits and Calculation Examples
 
-- Maximum request: **250K core-hours** (2,000 node-hours on Improv) or **half of the initial allocation**, whichever is less.
+- Maximum request: **2,000** node-hours on Improv/**7,000** node-hours on Bebop or **half of the initial allocation**, whichever is less.
 - This amount is pro-rated based on the remaining time in the quarter.
-
-**Examples**
-
-1. **Initial Allocation of 600K Core-Hours**: If you request an additional 500K core-hours 6 weeks into a 12-week quarter, you may be granted up to **125K additional core-hours**. This is calculated as half of the maximum requestable amount, since half the quarter has passed (`250K * 6/12`).
-
-2. **Initial Allocation of 200K Core-Hours**: If you request an additional 300K core-hours after 7 weeks into the quarter, the maximum you may receive is approximately **58K additional core-hours**. This is calculated by taking half of the initial allocation, prorated for the remaining 5 weeks of the quarter (`200K * 0.5 * 5/12`).
 
 ### Other Important Notes
 
 - **No allocations** are made within **two weeks before the quarter's end**
 - Project renewals are at the **start of the fiscal year**.
 - Failing to renew before the allocation deadline results in postponement to the **following quarter (Q2 onwards)**.
-- For large core-hour needs or high usage rates, consider applying through the [Director's Discretionary Allocation Program](https://www.alcf.anl.gov/science/directors-discretionary-allocation-program) in ALCF.
+- For large node-hour needs or high usage rates, consider applying through the [Director's Discretionary Allocation Program](https://www.alcf.anl.gov/science/directors-discretionary-allocation-program) in ALCF.
