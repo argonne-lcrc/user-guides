@@ -32,4 +32,4 @@ After you have [joined the **lcrc** project or a sub-project of LCRC](../project
 
 As a reminder, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov) with any issues.
 
-Once Duo MFA is configured, you can now [configure your SSH key](ssh.md) to complete our login requirements.
+Once Duo MFA is configured, you can now [configure your SSH key](ssh.md) to complete our login requirements. All future logins will require your MFA token.
