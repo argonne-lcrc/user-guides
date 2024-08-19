@@ -1,5 +1,4 @@
-*NOTE*: LCRC Duo Enrollment will begin on **August 19, 2024**. Please revisit this page on or after that time.
-To ensure your device is compatible, you can try installing the Duo Mobile App in advance.
+*NOTE*: Duo Enrollment is now open. Access to the LCRC Accounts page now requires Duo. Access to LCRC clusters will require Duo starting on **August 28, 2024**. Please ensure you have completed enrollment before then to retain access.
 
 # Enrolling in Duo MFA
 
