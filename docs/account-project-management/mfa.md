@@ -1,6 +1,6 @@
 *NOTE*: Duo Enrollment is now open. Access to the LCRC Accounts page now requires Duo. Access to LCRC clusters will require Duo starting on **August 28, 2024**. Please ensure you have completed enrollment before then to retain access.
 
-# Enrolling in Duo MFA
+## Enrolling in Duo MFA
 
 After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project) (current LCRC users should already be in a project), you will be required to enroll in the CELS Duo MFA system on your next login to the [LCRC Accounts System](https://accounts.lcrc.anl.gov). If you are already logged in, you can logout and log back in to complete the setup right away.
 
@@ -33,7 +33,7 @@ As a reminder, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov
 
 Once Duo MFA is configured, you can now [configure your SSH key](ssh.md) to complete our login requirements. All future logins will require your MFA token.
 
-# Add a Device/Secondary Auth to Duo
+## Add a Device/Secondary Auth to Duo
 
 You occasionally may need to change or add a device. Adding multiple methods of authentication is important, so that you're able to add new devices in situations when your original device may be no longer in your possession.
 
@@ -41,6 +41,6 @@ To start, visit [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) a
 
 Note, Duo Federal (our provider for this service) does not allow SMS-based authentication, so adding a second device, if you have one, is a good way to ensure you don't get locked out of your account.
 
-# Device No Longer in Your Possession
+## Device No Longer in Your Possession
 
 If you are unable to login due to no longer possessing your registered device, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
