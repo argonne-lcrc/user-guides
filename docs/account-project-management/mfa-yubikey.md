@@ -1,6 +1,8 @@
+# Yubikey for MFA
+
 ## Acquiring a Yubikey for MFA
 
-If you cannot install the Duo Mobile App for MFA to LCRC systems, you will need to be given a physical Yubikey hardware token. Please contact [LCRC Support](mailto:support@lcrc.anl.gov) to begin this process. 
+If you cannot install the Duo Mobile App for MFA to LCRC systems and if approved, you will need to be given a physical Yubikey hardware token. Please contact [LCRC Support](mailto:support@lcrc.anl.gov) to begin this process.
 
 After you have been given a Yubikey by LCRC staff for MFA either in person or by mail, contact [LCRC Support](mailto:support@lcrc.anl.gov) once again. Give them the Serial Number listed on the physical Yubikey hardware token and they will add it to your LCRC account manually. Once added and notified by LCRC staff, you should be able to login to the [LCRC Accounts page](https://accounts.lcrc.anl.gov) and LCRC clusters with your Yubikey instead of Duo. All future logins will require your MFA token.
 
@@ -33,6 +35,6 @@ Enter a passcode or select one of the following options:
 Passcode:
 ```
 
-On your physical Yubikey hardware token, press the button for 1 to 2.5 seconds. A random string of text will be entered into the CLI and a return character will be sent as well. It should automatically log you in to the cluster now.
+With the Passcode prompt shown, now on your physical Yubikey hardware token, press the button for 1 to 2.5 seconds. A random string of text will be entered into the CLI and a return character will be sent as well. It should automatically log you in to the cluster now.
 
 As a reminder, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov) with any issues.
