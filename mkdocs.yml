@@ -4,6 +4,7 @@ nav:
   - Account and Project Management:
     - Accounts and Access: account-project-management/accounts-and-access.md
     - Managing Projects: account-project-management/project-management.md
+    - Duo MFA: account-project-management/mfa.md
     - SSH: account-project-management/ssh.md
   - Allocations:
     - Allocations on LCRC Computing Resources: allocation-management/allocations.md
