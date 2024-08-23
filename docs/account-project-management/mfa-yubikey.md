@@ -30,9 +30,7 @@ Duo two-factor login for <username>
 
 Enter a passcode or select one of the following options:
 
- 1. Duo Push
-
-Passcode or option (1-1):
+Passcode:
 ```
 
 On your physical Yubikey hardware token, press the button for 1 to 2.5 seconds. A random string of text will be entered into the CLI and a return character will be sent as well. It should automatically log you in to the cluster now.
