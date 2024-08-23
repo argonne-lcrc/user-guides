@@ -1,4 +1,4 @@
-# Yubikey for MFA
+# Yubikey MFA
 
 ## Acquiring a Yubikey for MFA
 
