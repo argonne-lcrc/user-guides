@@ -43,7 +43,6 @@ nav:
     - Hardware Overview: swing/hardware-overview-swing.md
     - Running Jobs on Swing: swing/running-jobs-swing.md
   - Bebop:
-    - Bebop Rebuild FAQ: bebop/bebop-rebuild-faq.md
     - Getting Started: bebop/getting-started-bebop.md
     - Hardware Overview: bebop/hardware-overview-bebop.md
     - Running Jobs on Bebop: bebop/running-jobs-bebop.md
