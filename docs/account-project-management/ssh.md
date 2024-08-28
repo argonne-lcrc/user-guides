@@ -165,7 +165,11 @@ You have failed a Duo attempt 3 times in a row. Duo will automatically lock you 
 
 > Too many authentication failures
 
-You have failed an SSH key or Duo credential check and were kicked out to avoid a block (one will be issued after 3 failed attempts for 30 minutes). You can try again with the correct SSH key passphrase and Duo device accepted prompt.
+You have failed an SSH key or Duo credential check and were kicked out to avoid a block in Duo (a Duo block will be issued after 3 failed attempts for 30 minutes and will be cleared automatically). You can try again with the correct SSH key passphrase and Accepting your login attempt from your Duo device.
+
+> Operation Timed Out
+
+You have failed an SSH key or Duo credential check too many times and have been blocked by the Argonne firewall. You will need to send an email to LCRC support with the IP address you are trying to connect from. Please make sure to send your real, public IP and not one from your local network. After we remove the block, please check your SSH and Duo settings to correct the issue before trying your connection again to avoid future blocks.
 
 ### Downed Login Nodes
 
