@@ -2,7 +2,7 @@
 
 ## Enrolling in Duo MFA
 
-After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project) (current LCRC users should already be in a project), you will be required to enroll in the CELS Duo MFA system on your next login to the [LCRC Accounts System](https://accounts.lcrc.anl.gov). If you are already logged in, you can logout and log back in to complete the setup right away.
+After you have [joined the **lcrc** project or a sub-project of LCRC](../project-management/#join-an-existing-lcrc-project), you will be required to enroll in the CELS Duo MFA system on your next login to the [LCRC Accounts System](https://accounts.lcrc.anl.gov). If you are already logged in, you can logout and log back in to complete the setup right away.
 
 *Note*: If you cannot install the Duo Mobile App in Step *5* below, please first verify that your device OS is up to date. You can also reference the [Duo help documentation](https://help.duo.com) for a list of compatibile devices and versions. If you still cannot install the Duo Mobile App because your device cannot be updated, is not compatible, or you do not have a Smartphone/Tablet, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov) and we may assign you a [Yubikey](mfa-yubikey.md) instead.
 
