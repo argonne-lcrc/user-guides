@@ -77,7 +77,7 @@ Passcode or option (1-1): 1
 Success. Logging you in...
 ```
 
-Assuming you have only configured one device, Select *1* and press Enter to choose your configured mobile device and *Accept* the Duo push on that mobile device. You should now be logged into the desired cluster.
+Assuming you have only configured one device, type in the number *1* and press Enter to choose your configured mobile device and *Accept* the Duo push on that mobile device. You should now be logged into the desired cluster.
 
 ### Simplifying Future Logins
 
