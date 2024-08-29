@@ -7,16 +7,17 @@
     - If you don't have an account or forgot your credentials, contact [help@anl.gov](mailto:help@anl.gov) or call the Argonne Service Desk at (630) 252-9999.
     - **LCRC support cannot directly address issues with your Argonne account.**
 
-2. **Accessing LCRC Clusters**:
+2. **Joining the LCRC Project**:
     - Go to [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) and log in with your Argonne credentials.
     - Select **Join Project** on the left side.
     - Search for the **_lcrc_** project and request membership.
     - Instant membership for Argonne employees.
     - You'll receive an email confirming LCRC access.
 
-3. **Final Steps**:
+3. **Final Steps and Cluster Access**:
+    - Configure Duo MFA ([Instructions](../account-project-management/mfa.md)).
     - Add a public SSH key ([Instructions](../account-project-management/ssh.md)).
-    - Once the key is added, you can log in to the LCRC clusters.
+    - Once Duo is setup and the SSH key is added, you can log in to the LCRC clusters.
 
 ---
 
@@ -30,16 +31,17 @@
     - Upon approval, you'll receive an email notification.
     - Sponsors can check account status at [Cyber Gate Pass](https://apps.inside.anl.gov/cgp).
 
-2. **Accessing LCRC Clusters**:
+2. **Joining a sub-project of LCRC**:
     - Join an existing LCRC project.
     - Log in at [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) using your Argonne Collaborator credentials.
-    - Click **Join Project** and search for the project indicated by your sponsor.
+    - Click **Join Project** and search for the project indicated by your Argonne Sponsor/PI.
     - Request membership and await approval from your sponsor or the project owner.
     - Upon approval, you'll be added to the LCRC project and receive a home directory on the LCRC clusters.
 
-3. **Final Steps**:
+3. **Final Steps and Cluster Access**:
+    - Configure Duo MFA ([Instructions](../account-project-management/mfa.md)).
     - Add a public SSH key ([Instructions](../account-project-management/ssh.md)).
-    - Once the key is added, you can log in to the LCRC clusters.
+    - Once Duo is setup and the SSH key is added, you can log in to the LCRC clusters.
 
 ---
 
