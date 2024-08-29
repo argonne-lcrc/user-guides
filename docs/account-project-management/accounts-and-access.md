@@ -66,8 +66,8 @@
 **Transitioning to an External Collaborator**:
 
 - Apply for an [Argonne Collaborator account](https://apps.anl.gov/registration/collaborators) using your sponsor's Argonne email address after your appointment ends.
-- Cannot apply while the current Argonne appointment is active.
-- If approved within 90 days of appointment expiration, contact [LCRC support](mailto:support@lcrc.anl.gov) with old and new usernames for assistance in data access.
+- You cannot apply while the current Argonne appointment is active.
+- If approved within 90 days of appointment expiration, contact [LCRC support](mailto:support@lcrc.anl.gov) with old and new usernames for assistance in continuing LCRC access.
 
 ---
 
