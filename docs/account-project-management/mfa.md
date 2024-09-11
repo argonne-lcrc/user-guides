@@ -37,10 +37,16 @@ Once Duo MFA is configured, you can now [configure your SSH key](ssh.md) to comp
 
 You occasionally may need to change or add a device. Adding multiple methods of authentication is important, so that you're able to add new devices in situations when your original device may be no longer in your possession.
 
-To start, visit [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) and enter your Argonne login credentials on that screen.  You will be prompted to initiate a "Duo Push" or enter a code.  However, on the left side of the screen is another menu, including "Add a new device" and "My Settings & Devices".  Selecting either of those will allow you to add more authentication devices to your account.
+To start, visit [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) and enter your Argonne login credentials on that screen. You will be prompted to initiate a "Duo Push" or enter a code. However, on the left side of the screen is another menu, including "Add a new device" and "My Settings & Devices". Selecting either of those will allow you to add more authentication devices to your account. You will need to authenticate with Duo first before you can make any changes.
 
 Note, Duo Federal (our provider for this service) does not allow SMS-based authentication, so adding a second device, if you have one, is a good way to ensure you don't get locked out of your account.
 
 ## Device No Longer in Your Possession
 
 If you are unable to login due to no longer possessing your registered device, please contact [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
+
+## Setting Duo Push as the Default Option
+
+If needed, you can set Duo to Push automatically instead of choosing an authentication method on each login.
+
+To do this, visit [https://accounts.lcrc.anl.gov](https://accounts.lcrc.anl.gov) and enter your Argonne login credentials on that screen. You will be prompted to initiate a "Duo Push" or enter a code. However, on the left side of the screen is another menu. Select "My Settings & Devices". You will be prompted to authenticate first with Duo, then you can change the option "When I login" from "Ask me to choose an authentication method" to "Automatically send this device a Duo Push". Make sure to Save before exiting.
