@@ -2,10 +2,8 @@
 
 ## Overview
 
-Swing's job scheduling system is characterized by:
+Swing's job scheduling system is uniquely characterized by:
 
-- Uses [**Slurm**](../running-jobs-at-lcrc/slurm-clusters.md)
-- Uses the legacy [**`lcrc-sbank`**](../allocation-management/lcrc-sbank-allocation-accounting-system.md) accounting system
 - Allocations are calculated in [**GPU hours**](../allocation-management/allocations.md#gpu-hours-swing-cluster)
 
 ## Partition Limits
@@ -19,19 +17,18 @@ Swing currently enforces the following limits on publicly available partitions:
 - **16 GPUs (2 full nodes)** Max in use at one time.
 - **gpu** is the default partition.
 
-## Slurm Partitions
+## PBS Partitions
 
 Swing has two partitions, the default being named gpu. By default, you will be allocated 1/8th of the node resources per GPU.
 
 Nodes allow for multiple jobs from multiple users up until the resources are fully consumed (8 jobs with 1 GPU each per node, 1 job with 8 GPU per node, and everything in between).
 
-You MUST request at least 1 GPU to run a job otherwise you will see the following error:
+You **MUST** request at least 1 GPU to run a job. Additionally, you may only request the following number of GPUs per node:
 
-```
-srun: error: Please request at least 1 GPU in the partition 'gpu'
-srun: error: e.g '#SBATCH --gres=gpu:1')
-srun: error: Unable to allocate resources: Invalid generic resource (gres) specification
-```
+- 1 GPU
+- 2 GPUs
+- 4 GPUs
+- 8 GPUs
 
 | Partition Name | Number of Nodes | GPUs Per Node | GPU Memory Per Node | CPUs Per Node | DDR4 Memory Per Node | Local Scratch Disk | Operating System |
 | -------------- | --------------- | ------------- | ------------------- | ------------- | -------------------- | ------------------ | ---------------- |
@@ -40,32 +37,43 @@ srun: error: Unable to allocate resources: Invalid generic resource (gres) speci
 
 ## Submission Examples
 
-### Example `sbatch` Job Submission Script
+### Example `qsub` Job Submission Script
 
-Here is an example Slurm submission script called `gpu-app-script.sh` that requests available GPUs for the job.
+Here is an example PBS submission script called `gpu-app-script.sh` that requests a single GPU for the job.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -l
+#PBS -N gpu-test
+#PBS -A support
+#PBS -l select=1:ngpus=1
+#PBS -o logout.txt
+#PBS -j oe
+#PBS -l walltime=04:00:00
 
-#SBATCH --job-name=gpu-test
-#SBATCH --account=<my_lcrc_project_name>
-#SBATCH --nodes=2
-#SBATCH --gres=gpu:8
-#SBATCH --time=00:05:00
+cd $PBS_O_WORKDIR
+echo Working directory is $PBS_O_WORKDIR
+cat /dev/null > logout.txt
 
-srun ./your-gpu-application
+module purge
+module load nvhpc tensorflow-gpu/2.4.1
+
+printf "All Nodes in Job: $SLURM_JOB_NODELIST\n"
+printf "CUDA_VISIBLE_DEVICES: $CUDA_VISIBLE_DEVICES\n\n"
+
+nvidia-smi
+time python tf-test.py
+sleep 60
+exit 0
 ```
 
-You can then submit the script with `sbatch gpu-app-script.sh`.
+You can then submit the script with `qsub gpu-app-script.sh`.
 
 ### Example Interactive Job Submission
 
-To run an interactive job in a computing environment using Slurm, you have two main options:
+To run an interactive job in a computing environment using PBS, you can do the following:
 
-1. **Direct Node Session with srun:**
-    - Use `srun --gres=gpu:1 --pty bash` to get a session on a node with 1 GPU. This session ends once you exit the node.
+```bash
+qsub -l select=1:ngpus=1 -l walltime=15:00 -q gpu -A support -k doe -I
+```
 
-2. **Resource Allocation with salloc:**
-    - Use `salloc -N 2 --gres=gpu:4 -t 00:30:00` to allocate resources for a job. This allocates 2 nodes with 4 GPUs each for 30 minutes. The job number will be provided in the output.
-    - To see the list of allocated nodes and Slurm settings, use `printenv | grep SLURM`.
-    - After allocation, use `srun` to run your job, or SSH directly to the nodes in your allocation to execute jobs.
+This command requests 1 node for a period of 15 hour in the gpu queue. After waiting in the queue for a node to become available, a shell prompt on a compute node will appear. You may then start building applications and testing gpu affinity scripts on the compute node.
