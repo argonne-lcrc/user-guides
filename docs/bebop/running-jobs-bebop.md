@@ -50,7 +50,7 @@ Bebop currently enforces the following limits on publicly available queues:
 - **1 Hour** Default Walltime if not specified.
 - **bdwall** (Broadwell Compute Nodes) is the default queue.
 
-Use the -q option with qsub to select a queue. The default queue is bdwall.
+Use the -q option with qsub to select a queue.
 
 | Bebop Queue Name | Description                        | Number of Nodes | CPU Type                | Cores Per Node | Memory Per Node | Local Scratch Disk |
 |----------------------|------------------------------------|-----------------|-------------------------|----------------|-----------------|--------------------|

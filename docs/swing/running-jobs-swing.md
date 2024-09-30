@@ -48,7 +48,7 @@ Swing currently enforces the following limits on publicly available queues:
 - **16 GPUs (2 full nodes)** Max in use at one time.
 - **gpu** is the default partition.
 
-Use the -q option with qsub to select a queue. The default queue is gpu.
+Use the -q option with qsub to select a queue.
 
 You will be allocated 1/8th of the node resources per GPU. Nodes allow for multiple jobs from multiple users up until the resources are fully consumed (8 jobs with 1 GPU each per node, 1 job with 8 GPU per node, and everything in between).
 

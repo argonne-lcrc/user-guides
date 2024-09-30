@@ -39,7 +39,15 @@ Improv's job scheduling system is characterized by:
 
 ## Queues
 
-Use the `-q` option with `qsub` to select a queue. The default queue is `compute`. We allow up to 15 jobs per user to run at the same time while 100 total jobs can be queued to run.
+Improv currently enforces the following limits on publicly available queues:
+
+- **15 Running Jobs** per user.
+- **100 Queued Jobs** per user.
+- **3 Days (72 Hours)** Maximum Walltime.
+- **1 Hour** Default Walltime if not specified.
+- **compute** (Standard Compute Nodes) is the default queue.
+
+Use the `-q` option with `qsub` to select a queue.
 
 | Improv Queue Name | Description | Number of Nodes | CPU Type | Cores Per Node | Memory Per Node | Local Scratch Disk | Max Walltime |
 |-------------------|-------------|-----------------|----------|----------------|-----------------|--------------------|--------------|
