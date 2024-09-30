@@ -94,27 +94,10 @@ Make note of the login node name and number that you end up on.
 Request an interactive job on 1 node and 1 GPU (for 30 minutes as an example):
 
 ```console
-salloc -N 1 --gres=gpu:1 -t 00:30:00 -A <project_name>
+qsub -I -l select=1:ngpus=1 -l walltime=00:30:00 -q gpu -A <project_name>
 ```
 
-Note: The partition may not have free nodes so you might not be able to start your interactive job immediately. If a node is available and your job starts, you should see something like:
-
-```console
-salloc: Granted job allocation <job_number>
-```
-
-Once your job starts, check the node number granted to your job:
-
-```console
-squeue -u $USER
-```
-
-You should see something like:
-
-```console
-JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON) 
-<job_number> gpu bash <username> R 0:04 1 <node_number>
-```
+Note: The partition may not have free nodes so you might not be able to start your interactive job immediately.
 
 SSH into the node allocated to your job (say gpu1 for example):
 
@@ -178,8 +161,4 @@ Accepting connection(s): <node_number>:11111
 Client connected.
 ```
 
-You can now navigate to the case folder and load the case as described above. After viewing your case, you can cancel the interactive job by either exiting completely out of your node session or by using Slurm:
-
-```console
-scancel <job_number>
-```
+You can now navigate to the case folder and load the case as described above. After viewing your case, you can cancel the interactive job by either exiting completely out of your node session.
