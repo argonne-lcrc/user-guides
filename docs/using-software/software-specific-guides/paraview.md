@@ -99,17 +99,7 @@ qsub -I -l select=1:ngpus=1 -l walltime=00:30:00 -q gpu -A <project_name>
 
 Note: The partition may not have free nodes so you might not be able to start your interactive job immediately.
 
-SSH into the node allocated to your job (say gpu1 for example):
-
-```console
-ssh <node_number>
-```
-
-Change to bash shell if you aren’t already using it:
-
-```console
-bash
-```
+You will automatically SSH into the node allocated to your job (say gpu1 for example).
 
 Now, load the Paraview module:
 
