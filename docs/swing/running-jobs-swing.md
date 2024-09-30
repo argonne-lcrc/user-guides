@@ -26,8 +26,8 @@ You **MUST** request at least 1 GPU to run a job. Additionally, you may only req
 
 | Partition Name | Number of Nodes | GPUs Per Node | GPU Memory Per Node | CPUs Per Node | DDR4 Memory Per Node | Local Scratch Disk | Operating System |
 | -------------- | --------------- | ------------- | ------------------- | ------------- | -------------------- | ------------------ | ---------------- |
-| gpu | 5 | 8x NVIDIA A100 40GB | 320GB | 2x AMD EPYC 7742 64-Core Processor (128 Total Cores) | 1TB | 14TB | Ubuntu 20.04.2 LTS |
-| gpu-large | 1 | 8x NVIDIA A100 80GB | 640GB | 2x AMD EPYC 7742 64-Core Processor (128 Total Cores) | 2TB | 28TB | Ubuntu 20.04.2 LTS |
+| gpu | 5 | 8x NVIDIA A100 40GB | 320GB | 2x AMD EPYC 7742 64-Core Processor (128 Total Cores) | 1TB | 14TB | Ubuntu 22.04.5 LTS |
+| gpu-large | 1 | 8x NVIDIA A100 80GB | 640GB | 2x AMD EPYC 7742 64-Core Processor (128 Total Cores) | 2TB | 28TB | Ubuntu 22.04.5 LTS |
 
 ## Submission Examples
 
