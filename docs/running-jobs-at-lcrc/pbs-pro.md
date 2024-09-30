@@ -12,6 +12,8 @@ This document complements the information provided on the [Improv](../improv/get
 
 `ncpus`: Number of resources available to execute a program. Users are encouraged to use all of the cores on the node and pack nodes with multiple jobs when possible.
 
+`ngpus`: Only relevant on [Swing](../swing/getting-started-swing.md); Requests the specified number of GPUs. Users can only request 1, 2, 4, or 8 at a time.
+
 `job`: A job equates to a qsub. A set of resources allocated to you for a period of time. Your will execute one or more tasks on those resources during your job.
 
 `task`: A single execution on the resources of your job, often an mpirun invocation. You may run one task or many tasks during your job. You may run tasks sequentially or divide your resources up and run several tasks concurrently. Also sometimes referred to as job steps.

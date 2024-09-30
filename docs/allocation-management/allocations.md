@@ -2,27 +2,19 @@
 
 ## Overview of LCRC Clusters
 
-The LCRC operates three distinct clusters, each with its own scheduling and allocation systems:
-
-1. [**Improv**](../improv/getting-started-improv.md): Measures allocations in **node hours**.
-2. [**Bebop**](../bebop/getting-started-bebop.md): Measures allocations in **node hours**.
-3. [**Swing**](../swing/getting-started-swing.md): Measures allocations in **GPU hours**.
+The LCRC operates three distinct clusters, all of which measure allocations in node hours.
 
 ## Allocations Metrics for Each Cluster
 
-### GPU Hours (Swing Cluster)
+### Node Hours
 
-Unlike other LCRC clusters, Swing charges time based on GPU hours instead of CPU node-hours. You need to factor this in when applying for time on Swing.
+We currently allow for an *Overburn* of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:
 
-On Swing, the compute nodes charge as follows for each job:
+`qsub: Job violates queue and/or server resource limits`
 
-`GPU Hours = Number of Nodes Used x GPUs Per Node x Time in Hours`
+Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations.md#requesting-additional-project-time) when allocations are exhausted.
 
-- **Number of Nodes Used**: The number of compute nodes employed for the job.
-- **GPUs per Node**: How many GPUs used in each node.
-- **Time in Hours**: The duration for which these nodes and GPUs are used.
-
-### Node Hours (Improv and Bebop Clusters)
+#### Improv and Bebop Clusters
 
 Allocations on Improv and Bebop are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores, and 1 node on Bebop has 36 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
 
@@ -31,44 +23,9 @@ Allocations on Improv and Bebop are provided (and should be requested) in Node H
 - **Number of Nodes Used**: The quantity of compute nodes utilized for the job.
 - **Time in Hours**: The duration for which these nodes are used.
 
-Improv and Bebop currently allow for an *Overburn* of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:
+#### Swing Cluster
 
-`qsub: Job violates queue and/or server resource limits`
-
-Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations.md#requesting-additional-project-time) when allocations are exhausted.
-
-## Startup Projects and Allocations
-
-### Startup Projects Overview
-
-New Argonne employee accounts receive a "startup project" with a small balance of hours currently only on the **Swing** system.
-
-### Purpose
-
-The startup project serves multiple functions:
-
-- **Training Ground**: Familiarize yourself with system operations.
-- **Idea Incubator**: Develop and test new project concepts.
-- **User Discretion**: Use the hours for any purpose you see fit.
-
-### Allocation Details
-
-- **Initial Allocation**: 100 GPU hours on Swing.
-- **Expiration**: None. The startup hours do not have a use-by date.
-- **Additional Time**: Startup projects are not eligible for additional allocations beyond the initial hours.
-
-### Usage Guidelines
-
-- **Exclusive Usage**: The startup project should only be used by the account originally associated with it.
-- **Transition to Full Project**: If your needs exceed the startup hours, you should either apply for your own dedicated project or join an existing one.
-  
-### Special Note for Non-Argonne Employees
-
-Non-Argonne staff must be part of another active project led by an Argonne PI.
-
-### Slurm Default Account
-
-Your startup project is set as your default project in the Slurm job scheduler. To submit jobs against your startup allocation, use the following account name format: `startup-<username>`.
+Allocations on Swing are provided in Node Hours. However, on Swing, 1 Node Hour equates to 8 GPU Hours.
 
 ## Allocation Usage and Tracking
 

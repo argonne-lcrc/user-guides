@@ -1,11 +1,5 @@
 # Running Jobs on Swing
 
-## Overview
-
-Swing's job scheduling system is uniquely characterized by:
-
-- Allocations are calculated in [**GPU hours**](../allocation-management/allocations.md#gpu-hours-swing-cluster)
-
 ## Partition Limits
 
 Swing currently enforces the following limits on publicly available partitions:
