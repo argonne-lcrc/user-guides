@@ -1,6 +1,6 @@
 # Running Jobs on PBS Clusters
 
-This document complements the information provided on the [Improv](../improv/getting-started-improv.md) and [Bebop](../bebop/getting-started-bebop.md) pages, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.
+This document complements the information provided on the [Improv](../improv/getting-started-improv.md), [Bebop](../bebop/getting-started-bebop.md), and [Swing](../swing/getting-started-swing.md) pages, forming a comprehensive resource for running jobs effectively. Both pages should be referenced for a complete understanding.
 
 ## Obtaining and Managing Compute Resources
 
@@ -11,6 +11,8 @@ This document complements the information provided on the [Improv](../improv/get
 `vnode`: A virtual node, or vnode, is an abstract object representing a host or a set of resources which form a usable part of an execution host. This could be an entire host, or a nodeboard or a blade. A single host can be made up of multiple vnodes. Each vnode can be managed and scheduled independently. Each vnode in a complex must have a unique name. Vnodes on a host can share resources, such as node-locked licenses. PBS operates on vnodes. **A vnode on Improv and Bebop represents an entire host**.
 
 `ncpus`: Number of resources available to execute a program. Users are encouraged to use all of the cores on the node and pack nodes with multiple jobs when possible.
+
+`ngpus`: Only relevant on [Swing](../swing/getting-started-swing.md); Requests the specified number of GPUs. Users can only request 1, 2, 4, or 8 at a time.
 
 `job`: A job equates to a qsub. A set of resources allocated to you for a period of time. Your will execute one or more tasks on those resources during your job.
 
