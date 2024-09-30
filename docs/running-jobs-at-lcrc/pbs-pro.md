@@ -84,6 +84,7 @@ Here is a heavily commented sample PBS submission script that shows some more of
 # NOTE: adding a switch to the command line will override values in this file.
 
 # These options are MANDATORY in LCRC; Your qsub will fail if you don't provide them.
+# Adjust the number of mpiprocs as needed by each system!
 #PBS -A <project_name>
 #PBS -l select=4:mpiprocs=128
 #PBS -l walltime=HH:MM:SS
