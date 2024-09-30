@@ -66,6 +66,6 @@ The bdwall queue also has 64 nodes with a 4TB local scratch disk. You can reques
 
 ## Job Submission Examples
 
-### [Example `qsub` Job Submission](../running-jobs-at-lcrc/pbs-pro#resource-selection-and-job-placement)
+### [Example `qsub` Job Submission](../running-jobs-at-lcrc/pbs-pro.md#resource-selection-and-job-placement)
 
-### [Example Interactive Job Submission](../running-jobs-at-lcrc/pbs-pro#submitting-an-interactive-job)
+### [Example Interactive Job Submission](../running-jobs-at-lcrc/pbs-pro.md#submitting-an-interactive-job)
