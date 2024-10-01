@@ -29,12 +29,10 @@ If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro c
     * `-q <queue_name>` will place your job on the correct queue depending on the node type you want. The compute queue is the default on Improv.
     * If you want to run an executable rather than a script replace `<your jobs script>` in the example above with `-- <your executable>` (that is dash dash)
 2. `pbsq`: a user-friendly filter for `qstat` to view the status of jobs and queues on the cluster.
-3. `qstat`: view the status of jobs and queues on the cluster.
-    * Try these variations and see which you like best: `qstat, qstat -was, qstat -was1, qstat -wan, qstat -wan1`. Add `-x` to see jobs that have completed. We keep one week of history.
-4. `qalter`: update your request for resources
+3. `qalter`: update your request for resources
     * Just like `qsub`, just add a jobid at the end. Only works before the job starts;
     * If you want to change the walltime to 30 minutes: `qalter -l walltime=30:00:00 <jobid>`
-5. `qdel`: cancel a job that you don’t need. This will also kill a running job.
+4. `qdel`: cancel a job that you don’t need. This will also kill a running job.
     * `qdel <jobid>`
 
 **Note: The page numbers in the PBS guides are unique. If you search for the specified page number it will take you directly to the relevant page.**
