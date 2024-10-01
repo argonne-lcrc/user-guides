@@ -20,7 +20,7 @@ This document complements the information provided on the [Improv](../improv/get
 
 ### Quick Start
 
-If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro commands very similar though the options to qsub are quite different. We have added a handy conversion “cheat sheet” here. Here are the “Big Four” commands you will use with PBS Pro:
+If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro commands very similar though the options to qsub are quite different. We have added a handy conversion "cheat sheet" [here](https://docs.lcrc.anl.gov/allocation-management/sbank-allocation-accounting-system/#pbsslurm-conversion-chart). Here are the “Big Four” commands you will use with PBS Pro:
 
 1. `qsub`: request resources (generally compute nodes) to run your job and start your script/executable on the head node. Here is the minimal qsub allowed at the LCRC:
     * `qsub -A <project> -l select=<# of nodes>,walltime=HH:MM:SS <your job script>`
