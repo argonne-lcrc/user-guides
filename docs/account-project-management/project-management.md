@@ -62,8 +62,10 @@ Each project within the LCRC system is managed by at least one **Primary Investi
 
 ### Eligibility for PIs and Proxies
 
-* **Primary Investigator (PI)**: Must be a current Argonne employee.
-* **Proxies (Co-PIs)**: Also need to be current Argonne employees.
+* **Primary Investigator (PI)**: Must be permanent Argonne staff or Argonne associates.
+* **Proxies (Co-PIs)**: Also need to be permanent Argonne staff or Argonne associates.
+
+Resident associates, Joint Appointments, Visiting faculty/students/intern should have their ANL supervisors be the PIs for their projects.
 
 ### User Account Association
 
