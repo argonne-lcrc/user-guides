@@ -230,9 +230,9 @@ Mid-Quarter Allocations can be granted for LCRC projects after not previously re
 
 ### How to Request Additional Allocations
 
-1. **Check Current Usage**: Verify usage of allocated resources using `sbank-list-allocations -p <project_name>` on Improv/Bebop; `lcrc-usage <project_name>` Swing.
+1. **Check Current Usage**: Verify usage of allocated resources using `sbank-list-allocations -p <project_name>` on Improv, Bebop and Swing.
 2. **Prepare Documentation**: Justify node-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
-3. **Special Criteria for Large Requests**: Provide scaling results for requests at or greater than 5,000 node-hours (both on Improv & Bebop). Certain requests might be asked to provide scaling data even for lower node-hour requests on a case-by-case basis.
+3. **Special Criteria for Large Requests**: Provide scaling results for requests at or greater than 4,000 node-hours. Certain requests might be asked to provide scaling data even for lower node-hour requests on a case-by-case basis.
 4. **Request Time**: Request the additional hours following our [Managing Your LCRC Project](../account-project-management/project-management.md#managing-your-lcrc-project) documentation above.
 > **Note**: Requests with incomplete or unclear information may result in a delay of up to two weeks in the decision-making process.
 
