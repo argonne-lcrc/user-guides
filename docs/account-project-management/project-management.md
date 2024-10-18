@@ -16,7 +16,7 @@ Projects normally go through the following life cycle. Detailed descriptions of 
 * Once the project has been created, PIs can [add other users to the project, appoint Proxies (or Co-PIs), and administer the project's allocation](https://accounts.lcrc.anl.gov).
 * In advance of the annual October (Argonne's new fiscal year) re-allocation, PIs will be reminded to send in a request for the next year's allocation for their project.
 * Also in advance of the annual October re-allocation, PIs will also be required to provide a report on their project at that time. If reports had been sent in for previous quarters, those will be sufficient, if they are current. The basic goal here is to get at least one annual report for each project. This report will be used to help describe the overall use of the systems and will also be used when deciding on annual allocations for all projects. The format of the report will be roughly 2-3 pages long, with pictures highly encouraged. Projects that do not submit a report will not receive any new time for the new fiscal year until a report is received.
-* LCRC allocations granted each quarter use Argonne's fiscal calendar. Allocations are granted on the first business day of the new quarter around 10AM CST. Quarters are divided into the following time frames:
+* LCRC allocations granted each quarter use Argonne's fiscal calendar. Allocations are granted on the first day of the new fiscal quarter at midnight. Quarters are divided into the following time frames:
   * 1st Quarter (October 1 – December 31)
   * 2nd Quarter (January 1 – March 31)
   * 3rd Quarter (April 1 – June 30)
