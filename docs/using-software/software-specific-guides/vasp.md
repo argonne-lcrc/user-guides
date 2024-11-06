@@ -2,55 +2,38 @@
 
 ## Using VASP on Improv
 
-VASP can be loaded and unloaded with the following commands respectively (for these examples, I'm using `vasp/6.4.2`):
+VASP can be loaded and unloaded with the following commands respectively (for these examples, I'm using `vasp/6.4.3`):
 
 ```bash
-module load vasp/6.4.2
-module unload vasp/6.4.2 
+module load vasp/6.4.3
+module unload vasp/6.4.3
 ```
+An example script to run VASP on Improv can be found at /soft/software/custom-built/vasp/6.4.3/st/example/vasp.pbs.
 
-Below is a sample PBS script that can be used to run VASP on an Improv node with optimal performance. It will pack 8 VASP jobs onto 1 node to utilize all 128 cores.
+An example script to run VASP on Bebop can be found at /soft/software/custom-built/vasp/6.4.3_st/example/vasp.pbs.
 
-* The PBS directive `-l select=1:mpiprocs=128` requests a single node (`select=1`) with 128 CPUs, where 128 MPI processes (`mpiprocs=128`) are to be launched.
+The parallel performance of VASP can be optimized with a few INCAR tags.
+  
+We recommend using NCORE and KPAR in your INCAR file on Improv to improve parallel performance.
 
-```bash
-#!/bin/bash
+NCORE should be set to a divisor of 16 on Improv.  We find that NCORE=8 gives good parallel performance on Improv.
+You should test NCORE=2, 4, 8, and 16 for your case to get the optimal performance on Improv.
 
-#PBS -N <JOB_NAME>
-#PBS -l select=1:mpiprocs=128
-#PBS -A <PROJECT_ALLOCATION>
-#PBS -l walltime=01:00:00
+NCORE should be set to a divisor of 18 on Bebop.  We find that NCORE=6 gives good parallel performance on Bebop.
+You should test NCORE=2, 3, 6, 9 and 18 for your case to get the optimal performance on Bebop.
 
-# Note that VASP was built with openmpi version 4.1.6.
-# This method of assigning CPU affinities will not work with openmpi version 5.0.0 and above,
-# or MPICH, MVAPICH or Intel-MPI.
+Using NCORE=1 is discouraged except for GW and RPA calculations.
 
-module load vasp/6.4.2
+KPAR should be set to a divisor of the number of k-points.                        
+Setting KPAR to the number of nodes being used will give the most improvement in parallel performance.
 
-cd $PBS_O_WORKDIR
+NCORE*KPAR must be a divisor of the number of cores being used.
 
-# The following loop with spawn eight VASP jobs.
-# Each mpi task spawned by this loop will run on a unique core.
-# The output and input for each  VASP job will be in a unique subfolder.
+See the VASP wiki at https://www.vasp.at/wiki/index.php/Category:Parallelization for more details.
 
-for ii in {1..8}; do
-  # Change to unique directory for this job.
-  cd $ii
-  # Define the first CPU for this jobi.
-  let jj=(ii-1)*16
-  # Define the last CPU for this job.
-  let kk=$jj+15
-  # The RANGE variable contains the list of cpus for this job to run on.
-  export RANGE=$(eval echo {$jj..$kk} | xargs | sed -e 's/ /,/g')
-  # The MPIOPT variable contains the MPIRUN directives defining the CPU affinities.
-  export MPIOPT="--bind-to cpu-list:ordered --cpu-list $RANGE"
-  # The ampersand at the end of the next command spawns a subprocess.
-  # The --report-bindings directive is optional.
-  mpirun $MPIOPT --report-bindings -np 16 vasp_gam &
-  # Change back to PBS_O_WORKDIR.
-  cd ..
-done
+Unfortunately, the parallel performance of VASP on will be poor when using more cores than atoms.
+For calculations involving multiple k-points the KPAR tag will improve parallel scaling for small cells.
 
-# Wait for all the subprocesses to complete.
-wait
+You can run several VASP calculations in parallel in a single batch job to improve the efficiency of small VASP calculations. 
+An example script to do this can be found at /soft/software/custom-built/vasp/6.4.2/example/multiple-mpi/test.sh on Improv.
 ```
