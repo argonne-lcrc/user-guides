@@ -9,11 +9,7 @@ For an overview on our general guidelines on allocation requests and policies, p
 
 ### Node Hours
 
-We currently allow for an *Overburn* of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:
-
-`qsub: Job violates queue and/or server resource limits`
-
-Pojects can [Request Additional Project Time](https://docs.lcrc.anl.gov/account-project-management/project-management/#mid-quarter-allocations) when > 90% of the initial allocation is exhausted.
+Projects can [Request Additional Project Time](https://docs.lcrc.anl.gov/account-project-management/project-management/#mid-quarter-allocations) when > 90% of the initial allocation is exhausted.
 
 #### Improv and Bebop Clusters
 
