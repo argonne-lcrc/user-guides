@@ -238,7 +238,7 @@ Mid-Quarter Allocations can be granted for LCRC projects after not previously re
 
 ### Allocation Limits and Calculation Examples
 
-- Maximum request: **2,000** node-hours on Improv/**7,000** node-hours on Bebop or **half of the initial allocation**, whichever is less.
+- Maximum request: **2,000** node-hours on Improv/**7,000** node-hours on Bebop/**25** node-hours on Swing or **half of the initial allocation**, whichever is less.
 - This amount is pro-rated based on the remaining time in the quarter.
 
 ### Other Important Notes
