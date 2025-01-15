@@ -46,6 +46,8 @@ Bebop currently enforces the following limits on publicly available queues:
 
 - **32 Running Jobs** per user.
 - **100 Queued Jobs** per user.
+- **40 Running Nodes** per user.
+- **60 Running Nodes** per project.
 - **3 Days (72 Hours)** Maximum Walltime.
 - **1 Hour** Default Walltime if not specified.
 - **bdwall** (Broadwell Compute Nodes) is the default queue.
