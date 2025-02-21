@@ -56,10 +56,25 @@ Use the `-q` option with `qsub` to select a queue.
 | compute | Standard Compute Nodes | 805 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB DDR4 | 960GB (6TB bigdata Nodes) | 72 Hours (3 Days) |
 | bigmem | Large Memory Compute Nodes | 12 | 2x AMD EPYC 7713 64-Core Processor | 128 | 1TB DDR4 | 6TB | 72 Hours (3 Days) |
 | debug | Reduced Walltime Compute Nodes | 8 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB DDR4 | 960GB | 1 Hour |
+| backfill | Idle Compute Nodes | 825 | 2x AMD EPYC 7713 64-Core Processor | 128 | 256GB or 1TB DDR4 | 960GB or 6TB | 4 Hours |
 
 The compute queue also has 68 nodes with a 6TB local NVMe scratch disk. You can request these directly by adding `bigdata=true` to your PBS select statement. For example:
 ```
 #PBS -l select=8:ncpus=128:mpiprocs=128:bigdata=true
+```
+
+### Backfill Queue
+
+The backfill queue is used to improve the overall efficiency of the cluster by utilizing idle resources that would otherwise remain unused. Only jobs that ran out of hours may use the backfill queue. Users can submit jobs to the backfill queue by specifying it as the target queue in the PBS select statement. For example:
+
+```
+#PBS -q backfill
+```
+
+An example for interactive jobs:
+
+```
+qsub -q backfill -l select=1:ncpus=128:mpiprocs=128 -l walltime=15:00 -A support -I
 ```
 
 ## Running MPI Applications
