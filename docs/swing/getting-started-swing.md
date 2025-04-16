@@ -11,11 +11,16 @@ You cannot SSH directly into the CELS login nodes. Instead, connect using the co
 Alternatively, you can simplify future connections by adding the following block to your `~/.ssh/config`:
 
 ```bash
+Host logins.lcrc.anl.gov
+  HostName logins.lcrc.anl.gov
+  User username
+  IdentityFile ~/.ssh/id_rsa
+
 Host swing.lcrc.anl.gov swing
-  HostName      swing.lcrc.anl.gov
-  ProxyJump     logins.lcrc.anl.gov
-  User          <username>
-  IdentityFile  ~/.ssh/<ssh_private_key>
+  HostName swing.lcrc.anl.gov
+  ProxyJump logins.lcrc.anl.gov
+  User username
+  IdentityFile ~/.ssh/id_rsa
 ```
 
 After configuring this, you can connect with either:
