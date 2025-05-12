@@ -6,7 +6,7 @@ Zhao et al. found that for many VASP calculations, eight OpenMP threads per MPI 
 
 Improv's AMD EPYC 7713 processor has eight core complexes (CCXs).  Each CCX has eight cores sharing a common L3 memory cache. VASP6 can exploit the fast bandwidth of these caches with openMP.  We have tested the effect of using VASP configured to use openMP on the elapsed time for a single gamma point calculation for a ferromagnetic Pt296Fe255 cluster with VASP v6.5.1 on eight Improv nodes (1024 cores).  The results are presented in the figure below.
 
-![](assets/17460469170256.jpg)
+![](17460469170256.jpg)
 
 
 Note that using four, eight, or sixteen OpenMP threads per MPI process is more than twice as fast as pure MPI (1 OpenMP thread per MPI process) for this benchmark. VASP with eight OpenMP threads per MPI process is the fastest (2.7 times faster than one OpenMP thread per MPI process). We recommend testing the effect of the number of OpenMP threads on your calculations because the speedup with threads may be different for your calculations. 
