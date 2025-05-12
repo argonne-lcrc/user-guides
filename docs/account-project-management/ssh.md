@@ -1,5 +1,7 @@
 # Logging In and SSH Keys
 
+**LCRC only supports OpenSSH-based clients and does not support PuTTY.**
+  
 After you have [configured Duo MFA](mfa.md) for LCRC, you can continue to creating an SSH keypair. You will need **BOTH** Duo MFA and an SSH keypair configured to login to LCRC resources.
 
 ## Creating SSH Keys
