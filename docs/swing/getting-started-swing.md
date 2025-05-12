@@ -4,7 +4,7 @@
 
 Due to updated security requirements, direct SSH access to Swing is no longer permitted. All inbound access must now go through the CELS login nodes using a jump host configuration.
 
-You cannot SSH directly into the CELS login nodes. Instead, connect using the command below (replacing <username> and <ssh_private_key> accordingly):
+You cannot SSH directly into the CELS login nodes. Instead, connect using the command below (replacing `<username>` and `<ssh_private_key>` accordingly):
 
 ```bash
 ssh -o ProxyCommand="ssh -i ~/.ssh/<ssh_private_key> -W %h:%p <username>@logins.lcrc.anl.gov" -i ~/.ssh/<ssh_private_key> <username>@swing.lcrc.anl.gov
