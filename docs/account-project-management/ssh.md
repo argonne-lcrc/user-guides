@@ -66,9 +66,11 @@ You cannot SSH directly into the CELS login nodes. Instead, connect using the co
 ssh -o ProxyCommand="ssh -i ~/.ssh/<ssh_private_key> -W %h:%p <username>@logins.lcrc.anl.gov" -i ~/.ssh/<ssh_private_key> <username>@improv.lcrc.anl.gov
 ```
 
+### Setting Up SSH Config
+
 Alternatively, you can add something like the following to your .ssh/config file:
- 
-```bash 
+
+```bash
 Host logins.lcrc.anl.gov
   HostName logins.lcrc.anl.gov
   User <username>
@@ -97,20 +99,25 @@ Host chrysalis.lcrc.anl.gov chrysalis
   ProxyJump logins.lcrc.anl.gov
   User <username>
   IdentityFile ~/.ssh/<ssh_private_key>
+
+Host swing.lcrc.anl.gov swing
+  HostName swing.lcrc.anl.gov
+  ProxyJump logins.lcrc.anl.gov
+  User <username>
+  IdentityFile ~/.ssh/<ssh_private_key>
 ```
 
 If you add the above to your SSH config file, you can do the following, using Improv as an example:
- 
+
 ```bash
 ssh improv.lcrc.anl.gov
 ```
 
-or 
+or
 
 ```bash
 ssh improv
 ```
-
 
 Regardless of how you decide to SSH into LCRC, with Duo MFA also configured, you will see a Duo prompt during your SSH connection:
 
@@ -155,6 +162,163 @@ ssh improv
 ```
 
 You can apply these same methods to other clusters.
+
+## Windows Users
+
+Windows 10/11 users connecting to LCRC via Command Prompt, PowerShell, or Visual Studio Code’s SSH extension may encounter errors such as “Corrupted MAC on input” or “message authentication code incorrect.” This results from an outdated OpenSSL library in Windows.
+
+If you see this error, a simple workaround is to specify a supported MAC algorithm in your SSH command:
+
+```bash
+ssh -m hmac-sha2-512 -o ProxyCommand="ssh -q -W %h:%p -i ~/.ssh/<ssh_private_key> <username>@logins.lcrc.anl.gov" -i ~/.ssh/<ssh_private_key> <username>@improv.lcrc.anl.gov 
+```
+
+### Setting Up SSH Config on Windows (Command Prompt)
+ 
+**1. Create the .ssh directory (if it doesn't exist):**
+
+Open Command Prompt and run:
+
+```console
+if not exist "%USERPROFILE%\.ssh" md "%USERPROFILE%\.ssh"
+```
+
+**2. Generate the SSH config file with your host entries:**
+
+Run the following block exactly as shown:
+
+```console
+(
+echo Host *
+echo MACs hmac-sha2-512
+echo Host logins.lcrc.anl.gov
+echo HostName logins.lcrc.anl.gov
+echo User ^<username^>
+echo IdentityFile ~/.ssh/^<ssh_private_key^>
+echo Host bebop.lcrc.anl.gov bebop
+echo HostName bebop.lcrc.anl.gov
+echo ProxyJump logins.lcrc.anl.gov
+echo User ^<username^>
+echo IdentityFile ~/.ssh/^<ssh_private_key^>
+echo Host improv.lcrc.anl.gov improv
+echo HostName improv.lcrc.anl.gov
+echo ProxyJump logins.lcrc.anl.gov
+echo User ^<username^>
+echo IdentityFile ~/.ssh/^<ssh_private_key^>
+echo Host crossover.lcrc.anl.gov crossover
+echo HostName crossover.lcrc.anl.gov
+echo ProxyJump logins.lcrc.anl.gov
+echo User ^<username^>
+echo IdentityFile ~/.ssh/^<ssh_private_key^>
+echo Host chrysalis.lcrc.anl.gov chrysalis
+echo HostName chrysalis.lcrc.anl.gov
+echo ProxyJump logins.lcrc.anl.gov
+echo User ^<username^>
+echo IdentityFile ~/.ssh/^<ssh_private_key^>
+echo Host swing.lcrc.anl.gov swing
+echo HostName swing.lcrc.anl.gov
+echo ProxyJump logins.lcrc.anl.gov
+echo User ^<username^>
+echo IdentityFile ~/.ssh/^<ssh_private_key^>
+) > "%USERPROFILE%\.ssh\config"
+```
+
+**3. Edit the SSH config file to insert your actual details:**
+
+```console
+notepad %USERPROFILE%\.ssh\config
+```
+
+Then:
+
+* Replace `<username>` with your actual LCRC username.
+* Replace `<ssh_private_key>` with the filename of your private key (e.g., id_ed25519).
+
+**4. Test the SSH connection:**
+
+Try:
+
+`ssh improv`
+
+You'll be prompted twice for your *SSH key* password followed by a Duo prompt.
+
+### Connecting with WinSCP
+
+**Note: These steps assume you have already set up a functional SSH config file. If not, refer to the previous guide before proceeding.**
+
+**1. Open WinSCP and go to the Site Manager.**
+
+**2. Click Tools (bottom left) and select Import Sites.**
+
+<details markdown="1">
+<summary>Click to view screenshot</summary>
+
+![WinSCP 1](../images/winscp-1.png)
+
+</details>
+
+**3. A list of LCRC cluster entries should appear, pulled directly from your SSH config file.**
+
+– Ensure all relevant entries are checked, then click OK.
+
+<details markdown="1">
+<summary>Click to view screenshot</summary>
+
+![WinSCP 2](../images/winscp-2.png)
+
+</details>
+
+**4. When prompted to convert your OpenSSH private key to PuTTY format, click OK.**
+
+<details markdown="1">
+<summary>Click to view screenshot</summary>
+
+![WinSCP 3](../images/winscp-3.png)
+
+</details>
+
+**5. Enter your private key passphrase when prompted.**
+
+<details markdown="1">
+<summary>Click to view screenshot</summary>
+
+![WinSCP 4](../images/winscp-4.png)
+
+</details>
+
+**6. Save the resulting .ppk (PuTTY Private Key) file to your ~\.ssh\ directory.**
+
+<details markdown="1">
+<summary>Click to view screenshot</summary>
+
+![WinSCP 5](../images/winscp-5.png)
+
+</details>
+
+**7. You should now see the imported LCRC clusters listed in Site Manager.**
+
+* Select your desired cluster.
+* Leave the **password** field blank.
+* Click **Login** to connect.
+
+<details markdown="1">
+<summary>Click to view screenshot</summary>
+
+![WinSCP 6](../images/winscp-6.png)
+
+</details>
+
+**8. During the connection, you will be prompted to:**
+
+* Enter your **SSH private key passphrase** (you will be asked twice)
+* Complete **Duo authentication**
+
+<details markdown="1">
+<summary>Click to view screenshot</summary>
+
+![WinSCP 7](../images/winscp-7.png)
+
+</details>
 
 ## Debugging a Failed Connection
 

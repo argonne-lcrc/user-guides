@@ -110,3 +110,6 @@ extra:
 
 plugins:
   - search
+
+markdown_extensions:
+  - md_in_html
