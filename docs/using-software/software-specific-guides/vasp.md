@@ -17,10 +17,10 @@ The parallel performance of VASP can be optimized with a few INCAR tags.
 We recommend using NCORE and KPAR in your INCAR file on Improv to improve parallel performance.
 
 NCORE should be set to a divisor of 16 on Improv.  We find that NCORE=8 gives good parallel performance on Improv.
-You should test NCORE=2, 4, 8, and 16 for your case to get the optimal performance on Improv.
+To get the optimal performance on Improv, you should test NCORE=2, 4, 8, and 16 for your case.
 
 NCORE should be set to a divisor of 18 on Bebop.  We find that NCORE=6 gives good parallel performance on Bebop.
-You should test NCORE=2, 3, 6, 9 and 18 for your case to get the optimal performance on Bebop.
+To get the optimal performance on Bebop, you should test NCORE=2, 3, 6, 9, and 18 for your case.
 
 Using NCORE=1 is discouraged except for GW and RPA calculations.
 
@@ -31,9 +31,10 @@ NCORE*KPAR must be a divisor of the number of cores being used.
 
 See the VASP wiki at https://www.vasp.at/wiki/index.php/Category:Parallelization for more details.
 
-Unfortunately, the parallel performance of VASP on will be poor when using more cores than atoms.
-For calculations involving multiple k-points the KPAR tag will improve parallel scaling for small cells.
+Unfortunately, the parallel performance of VASP will be poor when using more cores than atoms.
+For calculations involving multiple k-points, the KPAR tag will improve parallel scaling for small cells.
 
-You can run several VASP calculations in parallel in a single batch job to improve the efficiency of small VASP calculations. 
+To improve the efficiency of small VASP calculations, you can run several VASP calculations in parallel in a single batch job. 
 An example script to do this can be found at /soft/software/custom-built/vasp/6.4.2/example/multiple-mpi/test.sh on Improv.
 ```
+[You can improve the performance of VASP6 on Improv by using the hybrid MPI/OpenMP build of VASP6; see this link for details.](How to run VASP6 efficiently on Improv.md)
