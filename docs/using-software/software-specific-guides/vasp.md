@@ -36,5 +36,6 @@ For calculations involving multiple k-points, the KPAR tag will improve parallel
 
 To improve the efficiency of small VASP calculations, you can run several VASP calculations in parallel in a single batch job. 
 An example script to do this can be found at /soft/software/custom-built/vasp/6.4.2/example/multiple-mpi/test.sh on Improv.
+
 ```
 [You can improve the performance of VASP6 on Improv by using the hybrid MPI/OpenMP build of VASP6; see this link for details.](How to run VASP6 efficiently on Improv.md)
