@@ -215,35 +215,3 @@ Within the project management dashboard, you can:
 * Remember to hit the **Save Project info** button post-modifications.
 
 For support or inquiries, email [support@lcrc.anl.gov](mailto:support@lcrc.anl.gov).
-
-## Mid-Quarter Allocations
-
-### Overview
-
-Mid-Quarter Allocations can be granted for LCRC projects after not previously requesting time or exhausting a current allocation. Principal Investigators (PIs) need to understand the guidelines and requirements for requesting additional computational resources.
-
-### Allocation Planning and Timing
-
-- Mid-quarter allocations are made only once per project per quarter.
-- PIs should ensure their allocated hours last the entire quarter.
-- LCRC reviews mid-quarter allocation requests once a week.
-
-### How to Request Additional Allocations
-
-1. **Check Current Usage**: Verify usage of allocated resources using `sbank-list-allocations -p <project_name>` on Improv, Bebop and Swing. Without the usage report, the allocation request will be considered incomplete and ineligible for review.
-2. **Prepare Documentation**: Justify node-hour requirements, guided by the [Sample Project Request PDF](https://accounts.lcrc.anl.gov/sample_project_request.pdf).
-3. **Special Criteria for Large Requests**: Provide scaling results for requests at or greater than 4,000 node-hours. Certain requests might be asked to provide scaling data even for lower node-hour requests on a case-by-case basis.
-4. **Request Time**: Request the additional hours following our [Managing Your LCRC Project](../account-project-management/project-management.md#managing-your-lcrc-project) documentation above.
-> **Note**: Requests with incomplete or unclear information may result in a delay of up to two weeks in the decision-making process.
-
-### Allocation Limits and Calculation Examples
-
-- Maximum request: **2,000** node-hours on Improv/**7,000** node-hours on Bebop/**25** node-hours on Swing or **half of the initial allocation**, whichever is less.
-- This amount is pro-rated based on the remaining time in the quarter.
-
-### Other Important Notes
-
-- **No allocations** are made within **two weeks before the quarter's end**
-- Project renewals are at the **start of the fiscal year**.
-- Failing to renew before the allocation deadline results in postponement to the **following quarter (Q2 onwards)**.
-- For large node-hour needs or high usage rates, consider applying through the [Director's Discretionary Allocation Program](https://www.alcf.anl.gov/science/directors-discretionary-allocation-program) in ALCF.
