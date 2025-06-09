@@ -39,7 +39,17 @@ Improv's job scheduling system is characterized by:
 
 ## Queues
 
-Use the `-q` option with `qsub` to select a queue. The default queue is `compute`. We allow up to 15 jobs per user to run at the same time while 100 total jobs can be queued to run.
+Improv currently enforces the following limits on publicly available queues:
+
+- **15 Running Jobs** per user.
+- **100 Queued Jobs** per user.
+- **40 Running Nodes** per user.
+- **60 Running Nodes** per project.
+- **3 Days (72 Hours)** Maximum Walltime.
+- **1 Hour** Default Walltime if not specified.
+- **compute** (Standard Compute Nodes) is the default queue.
+
+Use the `-q` option with `qsub` to select a queue.
 
 | Improv Queue Name | Description | Number of Nodes | CPU Type | Cores Per Node | Memory Per Node | Local Scratch Disk | Max Walltime |
 |-------------------|-------------|-----------------|----------|----------------|-----------------|--------------------|--------------|
@@ -132,4 +142,10 @@ mpirun ./hello_mpi
 **Important things to note:**
 
 - PBS Pro on Improv is currently **not** configured to allow sharing nodes. When have a node allocated to you, you receive the ENTIRE node. Ensure that you use all of your allocated nodes' resources unless you have a reason not to.
-- More information about running jobs on PBS can be found on our [Running Jobs on PBS Clusters](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro-clusters/) page.
+- More information about running jobs on PBS can be found on our [Running Jobs on PBS Clusters](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro) page.
+
+## Job Submission Examples
+
+### [Example `qsub` Job Submission](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro#resource-selection-and-job-placement)
+
+### [Example Interactive Job Submission](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro#submitting-an-interactive-job)

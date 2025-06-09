@@ -13,7 +13,7 @@ You should now see some basic information about TensorFlow. At the top of the pa
 Next, from a Swing login node for example, start an interactive job. In this example, we’ll request 2 GPUs.
 
 ```console
-gpulogin1:~$ srun --gres=gpu:2 --pty bash
+gpulogin1:~$ qsub -I -l select=1:ngpus=2 -A <project_name>
 
 ```
 

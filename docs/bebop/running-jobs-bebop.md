@@ -46,11 +46,13 @@ Bebop currently enforces the following limits on publicly available queues:
 
 - **32 Running Jobs** per user.
 - **100 Queued Jobs** per user.
+- **40 Running Nodes** per user.
+- **60 Running Nodes** per project.
 - **3 Days (72 Hours)** Maximum Walltime.
 - **1 Hour** Default Walltime if not specified.
 - **bdwall** (Broadwell Compute Nodes) is the default queue.
 
-Use the -q option with qsub to select a queue. The default queue is bdwall.
+Use the -q option with qsub to select a queue.
 
 | Bebop Queue Name | Description                        | Number of Nodes | CPU Type                | Cores Per Node | Memory Per Node | Local Scratch Disk |
 |----------------------|------------------------------------|-----------------|-------------------------|----------------|-----------------|--------------------|
@@ -66,6 +68,6 @@ The bdwall queue also has 64 nodes with a 4TB local scratch disk. You can reques
 
 ## Job Submission Examples
 
-### [Example `qsub` Job Submission](../running-jobs-at-lcrc/pbs-pro-clusters.md#resource-selection-and-job-placement)
+### [Example `qsub` Job Submission](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro#resource-selection-and-job-placement)
 
-### [Example Interactive Job Submission](../running-jobs-at-lcrc/pbs-pro-clusters.md#submitting-an-interactive-job)
+### [Example Interactive Job Submission](https://docs.lcrc.anl.gov/running-jobs-at-lcrc/pbs-pro#submitting-an-interactive-job)

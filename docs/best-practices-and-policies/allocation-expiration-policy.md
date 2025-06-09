@@ -1,8 +1,8 @@
 # Allocation Expiration Policy
 
-LCRC clusters are very heavily used, so the computer time your project has been given is a valuable resource. LCRC allocations are granted at the beginning of each fiscal quarter (generally at 10AM Central on the first non-weekend or Holiday of the new quarter).
+LCRC clusters are very heavily used, so the computer time your project has been given is a valuable resource. LCRC allocations are granted on the first day of the new fiscal quarter at midnight.
 
-At the end of each fiscal quarter, any remaining time available in your project balances will be completely removed from your bank (excluding per user startup allocations). There is no carry over between quarters.
+At the end of each fiscal quarter, any remaining time available in your project balances will be completely removed from your bank. There is no carry over between quarters.
 
 Fiscal quarters are divided into the following time frames:
 

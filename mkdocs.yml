@@ -46,6 +46,7 @@ nav:
     - Running Jobs on Bebop: bebop/running-jobs-bebop.md
   - Best Practices and Policies:
     - Best Practices and Policies Overview: best-practices-and-policies/best-practices-and-policies-overview.md
+    - Allocations Request Policy: best-practices-and-policies/allocation-request-policy.md
     - Allocations Expiration Policy: best-practices-and-policies/allocation-expiration-policy.md
     - Cybersecurity Policy: best-practices-and-policies/cybersecurity-policy.md
     - Data Policy: best-practices-and-policies/data-policy.md

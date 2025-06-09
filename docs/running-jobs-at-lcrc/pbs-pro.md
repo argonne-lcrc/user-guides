@@ -20,7 +20,7 @@ This document complements the information provided on the [Improv](../improv/get
 
 ### Quick Start
 
-If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro commands very similar though the options to qsub are quite different. We have added a handy conversion “cheat sheet” here. Here are the “Big Four” commands you will use with PBS Pro:
+If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro commands very similar though the options to qsub are quite different. We have added a handy conversion "cheat sheet" [here](https://docs.lcrc.anl.gov/allocation-management/sbank-allocation-accounting-system/#pbsslurm-conversion-chart). Here are the “Big Four” commands you will use with PBS Pro:
 
 1. `qsub`: request resources (generally compute nodes) to run your job and start your script/executable on the head node. Here is the minimal qsub allowed at the LCRC:
     * `qsub -A <project> -l select=<# of nodes>,walltime=HH:MM:SS <your job script>`
@@ -29,12 +29,10 @@ If you are an LCRC user and are familiar with Slurm, you will find the PBS Pro c
     * `-q <queue_name>` will place your job on the correct queue depending on the node type you want. The compute queue is the default on Improv.
     * If you want to run an executable rather than a script replace `<your jobs script>` in the example above with `-- <your executable>` (that is dash dash)
 2. `pbsq`: a user-friendly filter for `qstat` to view the status of jobs and queues on the cluster.
-3. `qstat`: view the status of jobs and queues on the cluster.
-    * Try these variations and see which you like best: `qstat, qstat -was, qstat -was1, qstat -wan, qstat -wan1`. Add `-x` to see jobs that have completed. We keep one week of history.
-4. `qalter`: update your request for resources
+3. `qalter`: update your request for resources
     * Just like `qsub`, just add a jobid at the end. Only works before the job starts;
     * If you want to change the walltime to 30 minutes: `qalter -l walltime=30:00:00 <jobid>`
-5. `qdel`: cancel a job that you don’t need. This will also kill a running job.
+4. `qdel`: cancel a job that you don’t need. This will also kill a running job.
     * `qdel <jobid>`
 
 **Note: The page numbers in the PBS guides are unique. If you search for the specified page number it will take you directly to the relevant page.**
@@ -84,6 +82,7 @@ Here is a heavily commented sample PBS submission script that shows some more of
 # NOTE: adding a switch to the command line will override values in this file.
 
 # These options are MANDATORY in LCRC; Your qsub will fail if you don't provide them.
+# Adjust the number of mpiprocs as needed by each system!
 #PBS -A <project_name>
 #PBS -l select=4:mpiprocs=128
 #PBS -l walltime=HH:MM:SS
