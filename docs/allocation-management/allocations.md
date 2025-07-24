@@ -3,16 +3,13 @@
 ## Overview of LCRC Clusters
 
 The LCRC operates three distinct clusters, all of which measure allocations in node hours.
+For an overview on our general guidelines on allocation requests and policies, please visit [this link](https://docs.lcrc.anl.gov/best-practices-and-policies/allocation-request-policy/).
 
 ## Allocations Metrics for Each Cluster
 
 ### Node Hours
 
-We currently allow for an *Overburn* of a project allocation. Each allocation is allowed to use 10% over the granted allocation before getting an error message. Once the project allocation is exhausted, the following error message will be displayed when submitting a job:
-
-`qsub: Job violates queue and/or server resource limits`
-
-Projects will need to [Request Additional Project Time](https://docs.lcrc.anl.gov/allocation-management/allocations.md#requesting-additional-project-time) when allocations are exhausted.
+Projects can [Request Additional Project Time](https://docs.lcrc.anl.gov/account-project-management/project-management/#mid-quarter-allocations) when > 90% of the initial allocation is exhausted.
 
 #### Improv and Bebop Clusters
 
@@ -48,9 +45,7 @@ PIs can submit requests for additional project time through the LCRC Accounts pa
 
 ### Review Process
 
-- The LCRC core team convenes every Tuesday to assess time requests for both new and ongoing projects.
-- Additional time can be granted up to 5,000 node-hours directly by the LCRC core team.
-- Requests exceeding 5,000 node-hours might require approval from the LCRC allocations committee.
+- The LCRC core team convenes every Tuesday to assess time requests for both new and ongoing projects. Additional grants will be decided on following our [Mid-Quarter Allocation Policy](https://docs.lcrc.anl.gov/account-project-management/project-management/#mid-quarter-allocations).
 
 ### Expiration of Additional Time
 

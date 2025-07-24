@@ -44,7 +44,8 @@ If you are coming to PBS from Slurm, we have added a basic conversion chart for 
 | Submission Directive | #PBS | #SBATCH |
 | Queue/Partition Selection | -q [queue_name] | -p [queue_name] |
 | Number of Nodes | -l select=[count] | -N [count] |
-| Number of CPUS per Node | -l ncpus=[count] | -ntasks-per-node=[count] |
+| Number of CPUs per Node | -l ncpus=[count] | -ntasks-per-node=[count] |
+| Number of GPUs per Node | -l ngpus=[count] | --gres=gpu:[count] |
 | Charge Account | -A [project_name] | -account=[project_name] |
 | Walltime | -l walltime=[hh:mm:ss] | -time=[hh:mm:ss] |
 | Job Name | -N [name] | -job-name=[name] |
