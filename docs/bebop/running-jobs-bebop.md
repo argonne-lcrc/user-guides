@@ -55,6 +55,7 @@ Use the -q option with qsub to select a queue. The default queue is bdwall.
 | Bebop Queue Name | Description                        | Number of Nodes | CPU Type                | Cores Per Node | Memory Per Node | Local Scratch Disk |
 |----------------------|------------------------------------|-----------------|-------------------------|----------------|-----------------|--------------------|
 | bdwall               | All Broadwell Nodes                | 672             | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB or 4 TB      |
+| backfill             | All Broadwell Nodes                | 672             | Intel Xeon E5-2695v4    | 36             | 128GB DDR4      | 15 GB or 4 TB      |
 
 ### Special Request for Large Local Scratch Disk
 
@@ -63,6 +64,21 @@ The bdwall queue also has 64 nodes with a 4TB local scratch disk. You can reques
 ```bash
 #PBS -l select=1:ncpus=36:mpiprocs=36:bigdata=true
 ```
+
+### Backfill Queue
+
+The backfill queue is used to improve the overall efficiency of the cluster by utilizing idle resources that would otherwise remain unused. Only jobs that ran out of hours may use the backfill queue. Users can submit jobs to the backfill queue by specifying it as the target queue in the PBS select statement. For example:
+
+```
+#PBS -q backfill
+```
+
+An example for interactive jobs:
+
+```
+qsub -q backfill -l select=1:ncpus=36:mpiprocs=36 -l walltime=15:00 -A support -I
+```
+
 
 ## Job Submission Examples
 

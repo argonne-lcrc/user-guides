@@ -28,6 +28,21 @@ You **MUST** request at least 1 GPU to run a job. Additionally, you may only req
 | -------------- | --------------- | ------------- | ------------------- | ------------- | -------------------- | ------------------ | ---------------- |
 | gpu | 5 | 8x NVIDIA A100 40GB | 320GB | 2x AMD EPYC 7742 64-Core Processor (128 Total Cores) | 1TB | 14TB | Ubuntu 22.04.5 LTS |
 | gpu-large | 1 | 8x NVIDIA A100 80GB | 640GB | 2x AMD EPYC 7742 64-Core Processor (128 Total Cores) | 2TB | 28TB | Ubuntu 22.04.5 LTS |
+| backfill | 6 | 8x NVIDIA A100 40GB/80GB | 320GB/640GB | 2x AMD EPYC 7742 64-Core Processor (128 Total Cores) | 1TB/2TB | 14TB/28TB | Ubuntu 22.04.5 LTS |
+
+### Backfill Queue
+
+The backfill queue is used to improve the overall efficiency of the cluster by utilizing idle resources that would otherwise remain unused. Only jobs that ran out of hours may use the backfill queue. Users can submit jobs to the backfill queue by specifying it as the target queue in the PBS select statement. For example:
+
+```
+#PBS -q backfill
+```
+
+An example for interactive jobs:
+
+```
+qsub -q backfill -l select=1:ngpus=1 -l walltime=15:00 -A support -I
+```
 
 ## Submission Examples
 
