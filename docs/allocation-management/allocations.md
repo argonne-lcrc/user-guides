@@ -9,8 +9,6 @@ For an overview on our general guidelines on allocation requests and policies, p
 
 ### Node Hours
 
-Projects can [Request Additional Project Time](https://docs.lcrc.anl.gov/account-project-management/project-management/#mid-quarter-allocations) when > 90% of the initial allocation is exhausted.
-
 #### Improv and Bebop Clusters
 
 Allocations on Improv and Bebop are provided (and should be requested) in Node Hours. 1 node on Improv has 128 CPU Cores, and 1 node on Bebop has 36 CPU Cores. When requesting or viewing your allocation(s), please take this into consideration. Balances, transactions and other sbank details displayed from sbank commands will update every 5 minutes.
@@ -37,19 +35,7 @@ Allocations on Swing are provided in Node Hours. However, on Swing, 1 Node Hour 
 
 ### When to Request Additional Time
 
-Projects at LCRC may deplete their quarterly time allocation sooner than expected due to unforeseen computational demands or additional case studies. In these instances, Principal Investigators (PIs) have the option to request extra time.
-
-### How to Request
-
-PIs can submit requests for additional project time through the LCRC Accounts page by accessing the project management screens. Requests must include proper justification for the additional time needed.
-
-### Review Process
-
-- The LCRC core team convenes every Tuesday to assess time requests for both new and ongoing projects. Additional grants will be decided on following our [Mid-Quarter Allocation Policy](https://docs.lcrc.anl.gov/account-project-management/project-management/#mid-quarter-allocations).
-
-### Expiration of Additional Time
-
-PIs should note that any extra time granted but not used within the quarter will expire at the quarter's end. For example, if a PI is allocated an extra 25K node-hours and only utilizes 10K, the remaining 15K node-hours will be forfeited at the quarter's conclusion.
+Projects that depleted their quarterly allocation before the end of the quarter should use the [backfill queue](https://docs.lcrc.anl.gov/account-project-management/project-management/#mid-quarter-allocations).
 
 ### Annual Time Requests for Projects
 
