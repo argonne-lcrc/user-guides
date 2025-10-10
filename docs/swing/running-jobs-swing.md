@@ -67,7 +67,7 @@ You **MUST** request at least 1 GPU to run a job. Additionally, you may only req
 
 ### Backfill Queue
 
-The backfill queue is used to improve the overall efficiency of the cluster by utilizing idle resources that would otherwise remain unused. Only jobs that ran out of hours may use the backfill queue. Users can submit jobs to the backfill queue by specifying it as the target queue in the PBS select statement. For example:
+The backfill queue is used to improve the overall efficiency of the cluster by utilizing idle resources that would otherwise remain unused. **Only jobs that ran out of hours may use the backfill queue, and the maximum wall-time is 4 hours.** Users can submit jobs to the backfill queue by specifying it as the target queue in the PBS select statement. For example:
 
 ```
 #PBS -q backfill
