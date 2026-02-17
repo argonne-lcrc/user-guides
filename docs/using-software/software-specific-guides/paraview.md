@@ -43,7 +43,7 @@ Click on the icon for connection (marked in red) in the figure below and then cl
 <details markdown="1">
 <summary>Click to view screenshot</summary>
 
-![Paraview 1](../images/paraview-1.png)
+![Paraview 1](../../images/paraview-1.png)
 
 </details>
 
@@ -56,7 +56,7 @@ After adding a server, you should see a panel as shown below.  You could add mul
 <details markdown="1">
 <summary>Click to view screenshot</summary>
 
-![Paraview 2](../images/paraview-2.png)
+![Paraview 2](../../images/paraview-2.jpg)
 
 </details>
 
@@ -65,6 +65,6 @@ Once connected, you should be able to navigate to your case directory on Improv.
 <details markdown="1">
 <summary>Click to view screenshot</summary>
 
-![Paraview 3](../images/paraview-3.png)
+![Paraview 3](../../images/paraview-3.png)
 
 </details>
