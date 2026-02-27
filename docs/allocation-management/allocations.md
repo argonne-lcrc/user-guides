@@ -45,6 +45,6 @@ Projects that depleted their quarterly allocation before the end of the quarter 
 
 ## Mid-Quarter Allocations
 
-Projects that have exhausted their initial quarterly allocations should use the backfill queue till the end of the quarter. Allocation requests submitted between the start of the quarter and the end of the 10th week of the quarter will also have to use the backfill queue. They will be considered for full allocation in the next quarter. Allocation requests submitted after the 10th week of a quarter will have to run in the backfill queue in the next quarter as well.
+Projects that have exhausted their initial quarterly allocations should use the backfill queue till the end of the quarter. Details for using backfill are available at the Running Jobs page for each machine in LCRC; for examples on Improv see [here](https://docs.lcrc.anl.gov/improv/running-jobs-improv/#backfill-queue).
 
 All allocation related tickets are reviewed and responded to once a week on Tuesday.
