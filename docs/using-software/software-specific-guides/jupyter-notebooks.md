@@ -13,7 +13,7 @@ ssh <username>@improv.lcrc.anl.gov
 Now we will activate a more recent version of conda for python3:
 
 ```console
-/soft/software/custom-built/anaconda3/2023.09/bin/conda init bash
+/soft/software/custom-built/miniforge3/25.3.0/bin/conda init bash
 ```
 
 You may see a lot of output here, but it will instruct you to reload your shell. For changes to take effect, close and re-open your current shell, preferably by logging out and back in.
@@ -52,7 +52,7 @@ which jupyter
 ```
 
 You should see:
-`/soft/software/custom-built/anaconda3/2023.09/bin/jupyter`
+`/soft/software/custom-built/miniforge3/25.3.0/bin/jupyter`
 
 confirming you have the right Jupyter executable loaded.
 
