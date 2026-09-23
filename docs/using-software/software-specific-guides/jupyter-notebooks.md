@@ -32,7 +32,7 @@ Now run:
 which jupyter
 ```
 
-You should see: `/software/software/custom-built/forge-anaconda/bin/jupyter`
+You should see: `/gpfs/fs1/soft/improv/software/custom-built/forge-anaconda/bin/jupyter`
 
 confirming you have the right Jupyter executable loaded.
 
