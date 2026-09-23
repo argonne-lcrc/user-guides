@@ -10,40 +10,21 @@ First, login to Improv for this example:
 ssh <username>@improv.lcrc.anl.gov
 ```
 
-Now we will activate a more recent version of conda for python3:
-
-```console
-/soft/software/custom-built/miniforge3/25.3.0/bin/conda init bash
-```
-
-You may see a lot of output here, but it will instruct you to reload your shell. For changes to take effect, close and re-open your current shell, preferably by logging out and back in.
-
-Once you log back in, you should verify you have the correct conda environment loaded:
-
-```console
-conda --version
-```
-
-This should output:
-`conda 23.7.4`
-
-If you see the version above (or the one you expect), you can move on to the next step.
-
-Start an interactive job. We have used the Improv debug queue in this example, since these nodes are always available for short testing/debugging jobs. Remember to replace PROJECT_NAME with a valid project you belong to. 
+Start an interactive job. We have used the Improv debug queue in this example, since these nodes are always available for short testing/debugging jobs. Remember to replace PROJECT_NAME with a valid project you belong to.
 
 ```console
 qsub -I -A PROJECT_NAME -l select=1:ncpus=128:mpiprocs=128,walltime=01:00:00 -q debug
 ```
 
-This command will drop you into 1 random debug node for 1 hour – in this example we will show it as i001.
+This command will drop you into 1 random debug node for 1 hour. In this example we will show it as i001.
 
-On the compute node i001, type:
+On the compute node i001, load the forge-anaconda module, which provides Jupyter:
 
 ```console
-conda activate
+module load forge-anaconda
 ```
 
-This will give you access to the newer conda environment now.
+Your prompt should now be prefixed with `(/gpfs/fs1/soft/improv/software/custom-built/forge-anaconda)`. For details on this environment, run `module help forge-anaconda`.
 
 Now run:
 
@@ -51,8 +32,7 @@ Now run:
 which jupyter
 ```
 
-You should see:
-`/soft/software/custom-built/miniforge3/25.3.0/bin/jupyter`
+You should see: `/software/software/custom-built/forge-anaconda/bin/jupyter`
 
 confirming you have the right Jupyter executable loaded.
 
